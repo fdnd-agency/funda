@@ -34,7 +34,7 @@ There is no data for a mocked endpoint. We can agree on a schema that is similar
 
 ## Resources
 
-[Backlog](https://github.com/orgs/fdnd-agency/projects/21)
+[Backlog](https://github.com/orgs/fdnd-agency/projects/21/views/1?layout=board)
 
 [Huisstijl]()  
 
