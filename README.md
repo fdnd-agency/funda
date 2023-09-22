@@ -37,5 +37,6 @@ There is no data for a mocked endpoint. We can agree on a schema that is similar
 [Backlog](https://github.com/orgs/fdnd-agency/projects/21/views/2)
 
 [Huisstijl]()  
+You can find our complete brand guide and download the necessary assets (logo, font, icons, photos etc.) [here](https://brand.funda.nl/).
 
 [Content]()  
