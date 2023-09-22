@@ -39,4 +39,5 @@ There is no data for a mocked endpoint. We can agree on a schema that is similar
 [Huisstijl]()  
 You can find our complete brand guide and download the necessary assets (logo, font, icons, photos etc.) [here](https://brand.funda.nl/).
 
-[Content]()  
+[Content](data.json)<br />
+The data in `data.json` can be used as an example schema for the page. Feel free to enrich or change this schema based on personal requirements.
