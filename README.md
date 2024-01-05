@@ -3,4 +3,4 @@
 # Projecten
 
 Jaar 1: [Favourite Houses](https://github.com/fdnd-agency/funda/blob/main/FAVOURITE_HOUSES.md)  
-Jaar 1: [Design Challenge Sprint 6]()
+Jaar 1: [Design Challenge Sprint 6](https://github.com/fdnd-agency/funda/blob/main/DESIGN_CHALLENGE_SPRINT_6.md)
