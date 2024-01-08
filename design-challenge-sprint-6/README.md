@@ -1,4 +1,4 @@
-# Design challange: the funda listing page
+# Design challenge: the funda listing page
 
 ## About Funda
 Funda (derived from "fundum," the Latin word for estate) is a Dutch organization based in Amsterdam that presents Dutch real estate on the internet. The main website of funda is funda.nl. With approximately 68 million visits per month (4 million unique). funda.nl is one of the most heavily visited housing websites in the Netherlands. The website features the entire Dutch housing market for sale, which is offered through real estate agents.
