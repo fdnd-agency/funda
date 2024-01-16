@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.detailMenu {
+    position: relative;
+}
+
+#menu{
+    background-image: url(../assets/Icon.svg);
+    list-style-type: none;
+    width: 2rem;
+    height: 2rem;
+    background-size: 100%;
+    cursor: pointer;
+    outline: none;
+}
+
+.detailMenu ul{
+    list-style-type: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 998;
+    margin-top: 3rem;
+}
+
+.detailMenu[open] ul {
+    display: block;
+}
+
+.detailMenu ul li {
+    padding: 0.5rem;
+}
+
+.detailMenu ul li a {
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+.subMenu ul{
+    position: relative;
+    margin-top: 0rem;
+}
+
+.subMenu details {
+    border-bottom: black 2px solid;
+    padding: 0.5rem;
+}
+
+.subMenu summary {
+    list-style: none;
+    position: relative;
+}
+  
+.subMenu summary::after {
+    content: url('../assets/arrow.svg');
+    position: absolute;
+    right: 0;
+    width: 2rem;
+    height: 2rem;
+}
+
+.subMenu details[open] summary::after {
+    content: url('../assets/arrow.svg');
+    transform: rotate(180deg);
+}
+
+nav {
+    background-color: #F7A100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 3rem;
+    padding: 0.5rem 1rem;
+    z-index: 999;
+}
+
+nav img {
+    height: 2rem;
+}
+
+nav div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+nav div a {
+    margin-left: .5rem;
+}
