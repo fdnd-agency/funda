@@ -44,7 +44,7 @@
     display: block;
 }
 
-.subMenu ul{
+.subMenu ul {
     position: relative;
     margin-top: 0rem;
 }
@@ -57,18 +57,20 @@
 .subMenu summary {
     list-style: none;
     position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease; 
 }
-  
+
 .subMenu summary::after {
     content: url('../assets/arrow.svg');
     position: absolute;
     right: 0;
     width: 2rem;
     height: 2rem;
+    transition: transform 0.3s ease;
 }
 
 .subMenu details[open] summary::after {
-    content: url('../assets/arrow.svg');
     transform: rotate(180deg);
 }
 
