@@ -44,34 +44,38 @@
     display: block;
 }
 
-.subMenu ul {
+.subMenu ul{
     position: relative;
     margin-top: 0rem;
 }
 
 .subMenu details {
-    border-bottom: black 2px solid;
-    padding: 0.5rem;
+    border-bottom: rgba(0, 0, 0, 0.2) 0.1rem solid;
+    padding: 1rem;
+}
+
+.subMenu details ul{
+    padding-top: 1rem;
 }
 
 .subMenu summary {
     list-style: none;
     position: relative;
-    cursor: pointer;
-    transition: transform 0.3s ease; 
 }
-
+  
 .subMenu summary::after {
     content: url('../assets/arrow.svg');
     position: absolute;
     right: 0;
+    top: -0.5rem;
     width: 2rem;
     height: 2rem;
-    transition: transform 0.3s ease;
+    transition: rotate 0.2s ease;
 }
 
 .subMenu details[open] summary::after {
-    transform: rotate(180deg);
+    content: url('../assets/arrow.svg');
+    rotate: 180deg;
 }
 
 nav {
@@ -83,6 +87,7 @@ nav {
     height: 3rem;
     padding: 0.5rem 1rem;
     z-index: 999;
+    position: fixed;
 }
 
 nav img {
