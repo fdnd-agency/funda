@@ -15,7 +15,7 @@
 
     <!-- Link to JavaScript script -->
 
-    <script defer src="scripts/v2.js" type="text/javascript">
+    <script defer src="scripts/v2.js">
 
     </script>
     <!--geen defer vanwege error in w3c validator-->
@@ -26,18 +26,18 @@
 <body><!--https://dequeuniversity.com/screenreaders/-->
 <header>
     <a href="https://www.funda.nl/koop/assendelft/huis-42349645-pronkgevel-1/">
-    <img alt="logo funda" class="log-funda" src="images/fundawonen-logo.svg">
+        <img alt="logo funda" class="log-funda" src="images/fundawonen-logo.svg">
     </a>
     <!--       <i class='bx bx-menu hamburger'></i>-->
     <button class="hamburger-icon" type="button"><img alt="menu icon" class="" src="images/menubar.png"></button>
     <nav class="menu">
 
         <ul class="menu-ul">
-            <li class="menu__li no-dot"><a href="#" class="menu-link">kopen</a></li>
-            <li class="menu__li no-dot"><a href="#" class="menu-link">huren</a></li>
-            <li class="menu__li no-dot"><a href="#" class="menu-link">verkopen</a></li>
-            <li class="menu__li no-dot"><a href="#" class="menu-link">Mijn huis</a></li>
-            <li class="menu__li no-dot"><img alt="login icon" src="images/log-in-regular-24.png"></li>
+            <li class="menu__li carousel-images__no-dot"><a href="#" class="menu-link">kopen</a></li>
+            <li class="menu__li carousel-images__no-dot"><a href="#" class="menu-link">huren</a></li>
+            <li class="menu__li carousel-images__no-dot"><a href="#" class="menu-link">verkopen</a></li>
+            <li class="menu__li carousel-images__no-dot"><a href="#" class="menu-link">Mijn huis</a></li>
+            <li class="menu__li carousel-images__no-dot"><img alt="login icon" src="images/log-in-regular-24.png"></li>
 
         </ul>
 
@@ -49,41 +49,33 @@
     <div class="gridcontainer">
 
 
-        <div class=" grid-item five-images-grid grid-container-images">
+        <div class=" gridcontainer__grid-item gridcontaienr__five-images-grid">
             <img alt="hoofdfoto huis" class="main-picture images-houses-1" src="images/hoofdfoto.jpg">
-            <div class="small-images ">
-                <img alt="hoofdfoto huis" class="images-next-to-main-image images-houses-2"
-                     src="images/eettafel.jpg">
-                <img alt="hoofdfoto huis" class="images-next-to-main-image images-houses-3" src="images/woonkamer.jpg">
-                <img alt="hoofdfoto huis" class="images-next-to-main-image images-houses-4" src="images/tuin.jpg">
-                <img alt="hoofdfoto huis" class="images-next-to-main-image images-houses-5" src="images/video.jpg">
-            </div>
-
         </div>
 
 
-        <div class="grid-item carousel-grid" tabindex="0">
+        <div class="gridcontainer__grid-item carousel-grid" tabindex="0">
             <ul class="carousel-images">
-                <li class="no-dot">
+                <li class="carousel-images__no-dot">
                     <img alt="hoofdfoto" class="small-images-carousel" src="images/plattegrond.png">
                     <p><a href="#" class="general-link">plattegrond</a> </p>
                 </li>
-                <li class="no-dot">
-                    <img alt="hoofdfoto" class="small-images-carousel" src="images/plattegrond.png">
+                <li class="carousel-images__no-dot">
+                    <img alt="hoofdfoto" class="small-images-carousel" src="images/small-images/playground.jpg">
                     <p><a href="#" class="general-link">360</a> </p>
                 </li>
-                <li class="no-dot">
-                    <img alt="hoofdfoto" class="small-images-carousel" src="images/plattegrond.png">
+                <li class="carousel-images__no-dot">
+                    <img alt="hoofdfoto" class="small-images-carousel" src="images/small-images/front-houose.jpg">
                     <p><a href="#" class="general-link">video</a> </p>
                 </li>
-                <li class="no-dot">
-                    <img alt="hoofdfoto" class="small-images-carousel" src="images/plattegrond.png">
+                <li class="carousel-images__no-dot">
+                    <img alt="hoofdfoto" class="small-images-carousel" src="images/small-images/frontdoor.jpg">
                     <p><a href="#" class="general-link">47 fotos</a> </p>
                 </li>
             </ul>
         </div>
 
-        <div class="info-grid grid-item"><!--titel kijrgen-->
+        <div class="gridconainer__info-grid gridcontainer__grid-item"><!--titel kijrgen-->
             <section class="info-house" tabindex="0">
                 <h1>pronkgevel1</h1>
                 <p>1566 LN Assendelft</p>
@@ -95,17 +87,23 @@
             <section class="price-house">
                 <h2>450.000 k.k</h2>
                 <p><a href="" class="general-link">Wat worden mijn maanlasten</a></p>
-                <p><a href="" class="general-link">contact met makelaar</a></p>
+                <p><a href="#broker" class="general-link contact-broker">contact met makelaar</a></p>
             </section>
             <div class="buttons-navigation">
-                <p class="buttons-navigation-text">klik op de volgende linkjes naar het onderwerp te gaan</p>
+                <p class="buttons-navigation-text">Klik op de volgende linkjes naar het onderwerp te gaan</p>
+                <!--                <ul>-->
+                <!--                    <li>     <button class="buttons-navigation-style" type="button"><a href="#description" class="general-link">Omschrijving</a>-->
+                <!--                    </button></li>-->
+                <!--                    <li><button class="buttons-navigation-style" type="button"><a href="#characterize" class="general-link">kenmerken</a></button></li>-->
+                <!--                    <li><button class="buttons-navigation-style" type="button"><a href="#transfer" class="general-link">overdracht</a></button></li>-->
+                <!--                    <li><button class="buttons-navigation-style" type="button"><a href="#add-Home" class="general-link">waarde checken huis</a>-->
+                <!--                    </button></li>-->
+                <!--                </ul>-->
                 <ul>
-                    <li>     <button class="buttons-navigation-style" type="button"><a href="#description" class="general-link">Omschrijving</a>
-                    </button></li>
-                    <li><button class="buttons-navigation-style" type="button"><a href="#characterize" class="general-link">kenmerken</a></button></li>
-                    <li><button class="buttons-navigation-style" type="button"><a href="#transfer" class="general-link">overdracht</a></button></li>
-                    <li><button class="buttons-navigation-style" type="button"><a href="#add-Home" class="general-link">waarde checken huis</a>
-                    </button></li>
+                    <li><a href="#description" class="buttons-navigation-style general-link">Omschrijving</a></li>
+                    <li><a href="#characterize" class="buttons-navigation-style general-link">kenmerken</a></li>
+                    <li><a href="#transfer" class="buttons-navigation-style general-link">overdracht</a></li>
+                    <li><a href="#add-Home" class="buttons-navigation-style general-link">Waarde checken huis</a></li>
                 </ul>
 
 
@@ -168,7 +166,6 @@
             <section>
                 <h2 id="characterize">Kenmerken</h2>
                 <!--https://www.funda.nl/koop/assendelft/huis-42349645-pronkgevel-1/-->
-
                 <search>
                     <form>
                         <label for="kenmerk">zoek op kenmerken</label>
@@ -177,8 +174,8 @@
                         <button type="submit" class="search-button">Zoeken</button>
                     </form>
                 </search>
-
             </section>
+
             <div tabindex="0">
                 <h3 id="transfer">overdracht</h3>
                 <dl class="dl-list">
@@ -211,6 +208,7 @@
                     <dd>2001</dd>
                     <dt>Soort dak</dt>
                     <dd>Zadeldak bedekt met pannen</dd>
+
                     <dt>Aanvaarding</dt>
                     <dd>In overleg</dd>
                 </dl>
@@ -250,14 +248,14 @@
 
                         <div class="grid-input-field">
                             <label class="label-inputfield" for="postcode"> huisnummmer</label>
-                        <input class="input-field" id="housnumber" name="housnumber" type="number"/>
+                            <input class="input-field" id="housnumber" name="housnumber" type="number"/>
 
                         </div>
 
                         <div class="grid-input-field">
                             <label class="label-inputfield" for="add"> toevoeging</label>
                             <input class="disable-input input-field" id="add" name="toevoeging" placeholder=""
-                                                            type="number"/>
+                                   type="number"/>
                         </div>
                     </div>
 
@@ -265,14 +263,14 @@
                     <button type="button" class="checkvalue">check je waarde</button>
                 </section>
             </div>
-            <div class="activity">
-                <section>
-                    <h2>activities</h2>
+            <div>
+                <h2>activiteiten</h2>
+                <div class="activity">
+                    <p class="activity__text">Aantal keer gezien:<span class="">24</span></p>
+                    <p class="activity__text">Toegevoegd aan favorieten:<span class="">24</span></p>
+                    <p class="activity__text">op funda sinds:<span class="">24</span></p>
+                </div>
 
-                    <p>Aantal keer gezien</p><span>24</span>
-                    <p>Toegevoegd aan favorieten</p><span>24</span>
-                    <p>op funda sinds:</p><span>24</span>
-                </section>
             </div>
 
             <div>
@@ -301,7 +299,7 @@
 
                     </tbody>
                 </table>
-                <button type="button" class="more-info-table">meer over</button>
+                <button type="button" class="button-show-charactize">meer over</button>
 
             </div>
 
@@ -318,20 +316,32 @@
             <div>
                 <img alt="map-images" class="image-change" src="images/map.png">
             </div>
-            <section>
-                <h2>reistijd</h2>
-                <p>Bekijk hoe lang je onderweg bent</p>
-                <a href="#">Locatie toevoegen</a>
-            </section>
-        </div>
-        <div class="broker-add grid-item">
 
-            <p>advertentie makelaar</p>
-            <img src="images/makelaar.png">
+        </div>
+        <div class="gridconainer__small-images-div">
+            <ul class="gridcontainer__small-images">
+
+
+                <li class="carousel-images__no-dot">
+                    <img alt="hoofdfoto huis" class="gridcontainer__small-images__images-next-to-main-image images-houses-2"
+                         src="images/eettafel.jpg">
+                </li>
+                <li class="carousel-images__no-dot"> <img alt="hoofdfoto huis" class="gridcontainer__small-images__images-next-to-main-image images-houses-3" src="images/woonkamer.jpg">   </li>
+                <li class="carousel-images__no-dot"> <img alt="hoofdfoto huis" class="gridcontainer__small-images__images-next-to-main-image images-houses-4" src="images/tuin.jpg">   </li>
+                <li class="carousel-images__no-dot"> <img alt="hoofdfoto huis" class="gridcontainer__small-images__images-next-to-main-image images-houses-5" src="images/video.jpg">   </li>
+                <li class="carousel-images__no-dot"> <img alt="hoofdfoto huis" class="gridcontainer__small-images__images-next-to-main-image images-houses-6" src="images/stairs.jpg">   </li>
+                <li class="carousel-images__no-dot"> <img alt="hoofdfoto huis" class="gridcontainer__small-images__images-next-to-main-image images-houses-7" src="images/street.jpg">   </li>
+            </ul>
+        </div>
+        <div class="broker-add gridcontainer__grid-item">
+
+            <p id="broker">Advertentie makelaar</p>
+            <img src="images/makelaar.png" alt="makelaar" class="images-broker">
             <button  type="submit" class="send-email">stuur een email</button>
-            <p>toon telefoonnummer</p>
+            <p class="telephonumber">toon telefoonnummer</p>
+            <p class="hide-telehponenumber">Bel 075-6218928</p>
             <div class="commercial-add">
-<!--                <p>grootte-advertiente</p>-->
+                <!--                <p>grootte-advertiente</p>-->
             </div>
         </div>
     </div>
@@ -344,3 +354,4 @@
 </html>
 
 
+<!--todo https://www.sitepoint.com/css-viewport-units-quick-start/ naar vh -->
