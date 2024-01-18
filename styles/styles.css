@@ -235,11 +235,13 @@ section {
     padding: 1rem 0;
 }
 
-@media (min-width: 756px) {
+@media (min-width: 700px) {
 
     #section_kenmerken div {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+    }
+    #section_kenmerken div h3 {
+        width: 18rem;
     }
 }
