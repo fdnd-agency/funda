@@ -2,7 +2,54 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+
+    --main-font: 'Proxima Nova', sans-serif;
+    --main-font-weight: 400;
+    --main-font-color: #333333;
+    --main-font-size: 20px;
+    --second-font-weight: 350;
+    --second-font-size: 16px;
+    --second-font-color: #999999;
+    --third-font-weight: 300;
+    --third-font-color: #0071B3;
 }
+
+h1 {
+    font-family: var(--main-font);
+    font-size: var(--main-font-size);
+    font-weight: var(--main-font-weight);
+    color: var(--main-font-color);
+}
+
+h2, summary {
+    font-family: var(--main-font);
+    font-size: var(--second-font-size);
+    font-weight: var(--second-font-weight);
+    color: var(--main-font-color);
+}
+
+h3 {
+    font-family: var(--main-font);
+    font-size: var(--second-font-size);
+    font-weight: var(--third-font-weight);
+    color: var(--second-font-color);
+}
+
+p {
+    font-family: var(--main-font);
+    font-size: var(--second-font-size);
+    font-weight: var(--third-font-weight);
+    color: var(--main-font-color);
+}
+
+a {
+    font-family: var(--main-font);
+    font-size: var(--second-font-size);
+    font-weight: var(--third-font-weight);
+    color: var(--third-font-color);
+    cursor: pointer;
+}
+
 
 .detailMenu {
     position: relative;
@@ -106,27 +153,47 @@ nav div a {
     margin-left: .5rem;
 }
 
-#main_image_section {
-    padding-top: 3rem;
-    position: relative;
+section {
+    padding-bottom: 1.5rem;
+    padding-top: 1.5rem;
     border-bottom: rgba(0, 0, 0, 0.15) 1px solid;
 }
 
-#main_image_section img {
+#main_image_section {
+    padding-top: 3rem;
+    position: relative;
+}
+
+#main_image_section #main_image {
     max-width: 100%;
 }
 
-#main_image_section div {
+#main_image_section #main_image_buttons {
     position: absolute;
     top: 4rem;
     right: 1rem;
+}
+#main_image_slider {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    overflow: scroll;
+    padding: 1rem;
+}
+#main_image_slider img {
+    width: 30%;
+
 }
 
 #main_title_section {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    border-bottom: rgba(0, 0, 0, 0.15) 1px solid;
+    margin: 0 2rem 0 2rem;
+}
+
+#section_omschrijving {
+    margin: 0 2rem 0 2rem;
 }
 
 #main_title_section div {
@@ -149,4 +216,30 @@ nav div a {
 
 #main_title_section a::before {
     content: url('../assets/calculator.svg');
+}
+
+#section_kenmerken {
+    display: flex;
+    flex-direction: column;
+    margin: 0 2rem 0 2rem;
+}
+
+#section_kenmerken div:not(:first-child):not(:last-child) {
+    border-bottom: rgba(0, 0, 0, 0.15) 1px solid;
+}
+
+#section_kenmerken div {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+@media (min-width: 756px) {
+
+    #section_kenmerken div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }
