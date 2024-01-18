@@ -32,6 +32,8 @@
 
 .detailMenu[open] ul {
     display: block;
+    background-color: white;
+    
 }
 
 .detailMenu ul li {
@@ -102,4 +104,49 @@ nav div {
 
 nav div a {
     margin-left: .5rem;
+}
+
+#main_image_section {
+    padding-top: 3rem;
+    position: relative;
+    border-bottom: rgba(0, 0, 0, 0.15) 1px solid;
+}
+
+#main_image_section img {
+    max-width: 100%;
+}
+
+#main_image_section div {
+    position: absolute;
+    top: 4rem;
+    right: 1rem;
+}
+
+#main_title_section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    border-bottom: rgba(0, 0, 0, 0.15) 1px solid;
+}
+
+#main_title_section div {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;    
+}
+
+#main_title_section div p:nth-of-type(1)::before {
+    content: url('../assets/icon3.svg');
+}
+
+#main_title_section div p:nth-of-type(2)::before {
+    content: url('../assets/icon4.svg');
+}
+
+#main_title_section div p:nth-of-type(3)::before {
+    content: url('../assets/icon5.svg');
+}
+
+#main_title_section a::before {
+    content: url('../assets/calculator.svg');
 }
