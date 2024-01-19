@@ -226,24 +226,32 @@ section {
     margin: 0 2rem 0 2rem;
 }
 
-#section_kenmerken div:not(:first-child):not(:last-child) {
+#section_kenmerken div:not(:last-child){
     border-bottom: rgba(0, 0, 0, 0.15) 1px solid;
 }
 
-#section_kenmerken div {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    padding: 1rem 0;
+#section_kenmerken h2 {
+    margin-top: 1.5rem;
 }
 
-#section_kenmerken div h3 {
+#section_kenmerken div{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0 0 1rem 0;
+}
+
+#section_kenmerken div:nth-of-type(5) {
+    padding-bottom: 0rem;
+}
+
+#section_kenmerken h3 {
     width: 18rem;
 }
 
 @media (min-width: 700px) {
 
-    #section_kenmerken div {
+    #overdracht_kenmerken div, #bouw_kenmerken div {
         display: flex;
         flex-direction: row;
     }
