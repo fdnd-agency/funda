@@ -237,13 +237,14 @@ section {
     padding: 1rem 0;
 }
 
+#section_kenmerken div h3 {
+    width: 18rem;
+}
+
 @media (min-width: 700px) {
 
     #section_kenmerken div {
         display: flex;
         flex-direction: row;
-    }
-    #section_kenmerken div h3 {
-        width: 18rem;
     }
 }
