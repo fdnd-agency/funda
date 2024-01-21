@@ -260,12 +260,16 @@ section {
     position: relative;
     display: block;
     padding: 0.5rem 0;
-    transition: rotate 0.2s ease;
+    transition: 0.2s ease;
     font-family: var(--main-font);
     font-size: var(--second-font-size);
     font-weight: var(--third-font-weight);
     color: var(--third-font-color);
     cursor: pointer;
+}
+
+#section_omschrijving details[open] summary::after {
+    content: "Volledige omshrijving inklappen";
 }
 
 @media (min-width: 700px) {
