@@ -249,6 +249,25 @@ section {
     width: 18rem;
 }
 
+#section_omschrijving summary {
+    list-style: none;
+    position: relative;
+}
+
+
+#section_omschrijving summary::after {
+    content: "Lees de volledige omschrijving";
+    position: relative;
+    display: block;
+    padding: 0.5rem 0;
+    transition: rotate 0.2s ease;
+    font-family: var(--main-font);
+    font-size: var(--second-font-size);
+    font-weight: var(--third-font-weight);
+    color: var(--third-font-color);
+    cursor: pointer;
+}
+
 @media (min-width: 700px) {
 
     #overdracht_kenmerken div, #bouw_kenmerken div {
