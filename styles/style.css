@@ -29,6 +29,19 @@ h1 {
     font-weight: var(--mainFontWeight);
 }
 
+a {
+    color: var(--thirdFontColor);
+    text-decoration: none;
+    transition: color .25s cubic-bezier(.23,1,.32,1);
+}
+a:hover {
+    color: rgb(0 97 153 / 1);
+}
+
+.container {
+    max-width: 68vw; /*61.5rem*/
+    margin: 0 auto;
+}
 /* EINDE STANDAARD STYLES */
 
 
@@ -67,9 +80,6 @@ header nav ul {
     display: flex;
     list-style: none;
 }
-/* header nav ul li {
-    
-} */
 header nav ul li a {
     color: white;
     text-decoration: none;
@@ -97,16 +107,66 @@ header nav ul li ul{
 .menuIcons .mobileMenu {
     display: none;
 }
+/* einde menu nav */
 
 
+
+/* header image */
 section.headerImage {
     width: 100%;
-    height: 50vh;
-    border: 1px solid red;
     margin-top: 3rem;
-    overflow: hidden;
 }
+.objectImages {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr;
+    height: 80vh;
+    width: 100%;
+    gap: .25rem; 
+    border: 1px solid blue;
+}
+.mainImage {
+    grid-column: 1 / span 2; /* start gridlijn 1 en eindigt bij 2 */
+    grid-row: span 2; /* eindigt bij rij 2*/
+    height: 100%;
+    background-color: hotpink;
+}
+.subImage {
+    background-color: var(--mainColor);
+}
+.objectImages a {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.objectImages a img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.detailList {
+    color: var(--thirdFontColor);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.detailList ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5em;
+    list-style: none;
+}
+.detailList a {
+    padding: 1em 0;
+}
+/* einde header image */
+
 /* EINDE HEADER */
+
+
+
+
 
 dt {
     margin: 0;
@@ -123,7 +183,7 @@ dt {
 
 
 /* MOBIEL */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 760px) {
     /* nav */
     .menu {
         display: none;
@@ -138,7 +198,42 @@ dt {
         display: none;
     }
 
+    .headerImage .container {
+        max-width: 100%;
+    }
+    .detailList {
+        overflow-x: scroll;
+    }
+
+
 }
 /* END MOBIEL */
 
+
+@media only screen and (max-width: 1020px) {
+    .objectImages {
+        grid-template-columns: 1fr;
+    }
+    .mainImage {
+        grid-column: 1 / span 3;
+    }
+    .subImage {
+        display: none; /* Hide the last two images */
+    }
+
+}
+
+
+@media only screen and (max-width: 1200px) {
+    .container {
+        max-width: 96vw;
+    }
+    .objectImages {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .subImage:nth-child(3),
+    .subImage:nth-child(4) {
+        display: none; /* Hide the last two images */
+    }
+}
 /* END RESPONSIVE */
