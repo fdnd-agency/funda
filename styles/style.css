@@ -28,13 +28,16 @@ h1 {
     font-size: 2.25rem;
     font-weight: var(--mainFontWeight);
 }
+h1, h2, h3, h4, p {
+    color: var(--mainFontColor);
+}
 
 a {
     color: var(--thirdFontColor);
     text-decoration: none;
     transition: color .25s cubic-bezier(.23,1,.32,1);
 }
-a:hover {
+main a:hover {
     color: rgb(0 97 153 / 1);
 }
 
@@ -123,13 +126,11 @@ section.headerImage {
     height: 80vh;
     width: 100%;
     gap: .25rem; 
-    border: 1px solid blue;
 }
 .mainImage {
     grid-column: 1 / span 2; /* start gridlijn 1 en eindigt bij 2 */
     grid-row: span 2; /* eindigt bij rij 2*/
     height: 100%;
-    background-color: hotpink;
 }
 .subImage {
     background-color: var(--mainColor);
@@ -159,6 +160,9 @@ section.headerImage {
 }
 .detailList a {
     padding: 1em 0;
+}
+.detailList span {
+    color: var(--secondFontColor);
 }
 /* einde header image */
 
