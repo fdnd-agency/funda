@@ -17,6 +17,7 @@
     --mainFontColor: #333333;
     --secondFontColor: #999999;
     --thirdFontColor: #0071B3;
+    --hoverOrangeColor: #de9000;
 }
 
 html {
@@ -47,15 +48,17 @@ header nav {
 }
 header nav .logo{
     width: 90px; 
-    /*display: inline-block;
-    height: 32px;
-    width: 90px; */
+}
+header nav .logo img{
+    width: 100%; 
+    height: 100%;
 }
 
 header nav div {
     display: flex;
     flex-direction: row;
     color: white;
+    align-items: center;
 }
 header nav ul {
     /* ff uitgezet zodat je alleen de button ziet voor mobile menu */
@@ -63,11 +66,34 @@ header nav ul {
     display: flex;
     list-style: none;
 }
+/* header nav ul li {
+    
+} */
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: .95em 1em;
+}
+header nav ul li a:hover,
+header nav ul li a:active {
+    background-color: var(--hoverOrangeColor);
+}
+header nav ul li ul{
+    display: none;
+}
+
 .mobileMenu,
 .inloggen {
     background: none;
     border: none;
     color: white;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+.mobileMenu span,
+.inloggen span {
+    margin-left: 0.5em;
 }
 
 
