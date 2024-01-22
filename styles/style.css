@@ -45,6 +45,7 @@ header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    overflow: hidden;
 }
 header nav .logo{
     width: 90px; 
@@ -82,8 +83,7 @@ header nav ul li ul{
     display: none;
 }
 
-.mobileMenu,
-.inloggen {
+.menuIcons a {
     background: none;
     border: none;
     color: white;
@@ -91,9 +91,11 @@ header nav ul li ul{
     align-items: center;
     text-decoration: none;
 }
-.mobileMenu span,
-.inloggen span {
+.menuIcons a span {
     margin-left: 0.5em;
+}
+.menuIcons .mobileMenu {
+    display: none;
 }
 
 
@@ -112,3 +114,31 @@ dt {
     color: #666;
     border-top: 1px solid #ededed;
 }
+
+
+
+
+/* RESPONSIVE */
+
+
+
+/* MOBIEL */
+@media only screen and (max-width: 600px) {
+    /* nav */
+    .menu {
+        display: none;
+    }
+    .menuIcons a span {
+        display: none;
+    }
+    .menuIcons .mobileMenu {
+        display: flex;
+    }
+    #mijnHuis {
+        display: none;
+    }
+
+}
+/* END MOBIEL */
+
+/* END RESPONSIVE */
