@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* STANDAARD STYLES */
+:root {
+    --mainFont: 'Proxima Nova', sans-serif;
+    --mainFontWeight: 400;
+    --secondFontWeight: 350;
+    --thirdFontWeight: 300;
+    --mainFontSize: 20px;
+    --secondFontSize: 16px;
+   
+    --mainColor: #F7A100;
+    --mainFontColor: #333333;
+    --secondFontColor: #999999;
+    --thirdFontColor: #0071B3;
+}
+
+html {
+    font-family: var(--mainFont);
+}
+
+h1 {
+    font-size: 2.25rem;
+    font-weight: var(--mainFontWeight);
+}
+
+/* EINDE STANDAARD STYLES */
+
+
+
+/* HEADER */
+/* menu nav */
+header nav {
+    width: 100vw;
+    height: 3rem;
+    padding: 0.5rem 1rem; 
+    background-color: var(--mainColor);
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header nav .logo{
+    width: 90px; 
+    /*display: inline-block;
+    height: 32px;
+    width: 90px; */
+}
+
+header nav div {
+    display: flex;
+    flex-direction: row;
+    color: white;
+}
+header nav ul {
+    /* ff uitgezet zodat je alleen de button ziet voor mobile menu */
+    /* display: none; */
+    display: flex;
+    list-style: none;
+}
+.mobileMenu,
+.inloggen {
+    background: none;
+    border: none;
+    color: white;
+}
+
+
+section.headerImage {
+    width: 100%;
+    height: 50vh;
+    border: 1px solid red;
+    margin-top: 3rem;
+    overflow: hidden;
+}
+/* EINDE HEADER */
+
+dt {
+    margin: 0;
+    padding: 0.5rem 0 0;
+    color: #666;
+    border-top: 1px solid #ededed;
+}
