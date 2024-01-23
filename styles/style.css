@@ -36,6 +36,9 @@ h2 {
     line-height: 1.75rem;
     margin-bottom: 0.5rem
 }
+h3 {
+    margin-bottom: 0.5rem;
+}
 p {
     line-height: 1.5;
     margin-bottom: 0.75rem;
@@ -70,6 +73,11 @@ main section {
 .container {
     max-width: 68vw; /*61.5rem*/
     margin: 0 auto;
+}
+.imageRight {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 /* EINDE STANDAARD STYLES */
 
@@ -151,7 +159,7 @@ section.headerImage {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr 1fr;
-    height: 80vh;
+    /* height: 80vh; */
     width: 100%;
     gap: .25rem; 
 }
@@ -186,9 +194,6 @@ section.headerImage {
     gap: 1.5em;
     list-style: none;
 }
-.detailList ul li {
-    width: 100%;
-}
 .detailList a {
     padding: 1em 0;
 }
@@ -202,15 +207,12 @@ section.headerImage {
     display: flex;
     gap: 0.35em;
     align-items: center;
-    flex-direction: column;
-    justify-content: space-between;
-    min-width: 30vw;
 }
 
 .detailImage {
     display: none;
     width: 100%;
-    height: 8vh;
+    height: 10vh;
     background: red;
     border-radius: 0.125rem;
     overflow: hidden;
@@ -263,9 +265,9 @@ section.headerImage {
     list-style: none;
 }
 .afmetingen ul li,
-.detailList ul li a,
 .detailList a,
-.iconL {
+.iconL,
+dd a:has(img) {
     display: flex;
     gap: 0.35em;
     align-items: center;
@@ -332,6 +334,19 @@ label.readMore:focus-within {
     left: -9999em;
 }
 /* END READMORE TEXT */
+.ing {
+    /* display: flex;
+    justify-content: space-between;
+    align-items: center; */
+    margin: 1.75em 0;
+    border-top: 1px solid var(--mainColor);
+    border-bottom: 1px solid var(--mainColor);
+}
+.ing p {
+    margin: 0;
+}
+
+
 
 .kenmerken > dl {
     display: grid;
@@ -435,10 +450,22 @@ label.readMore:focus-within {
     .detailList > a {
         display: none;
     }
+    .detailList ul li {
+        width: 100%;
+    }    
+    .detailList ul li a {
+        flex-direction: column;
+        justify-content: space-between;
+        min-width: 25vw;
+    }
 
     section.headerImage{
         border-bottom: 1px solid var(--borderLight);
     }
+    /* .objectImages {
+        height: 30vh;
+    } */
+
     .afmetingen span,
     .detailList span,
     .detailText img {
