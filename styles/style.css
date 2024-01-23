@@ -397,18 +397,63 @@ label.readMore:focus-within {
 .kenmerken dd dl dd {
     padding: 0.75em 0;
 }
-/* wanneer een lijst in een lijst zit: */
-/* .kenmerken dl dl {
-    grid-column: 1 / 3;
-    grid-row: 2 / 3;
-    margin-bottom: 0;
+
+
+
+.waarde {
+    background: #F7F7F7;
+    border: 1px solid #EDEDED;
+    padding: 1.5rem 1rem;
+    border-radius: 4px;
 }
-.kenmerken dl dl dt{
-    padding: 0.75em 0.75em;
+/* form */
+form {
+    /* display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1em; */
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: repeat(4, 1fr);
 }
-.kenmerken dl dl dd {
-    padding: 0.75em 0; */
-/* } */
+form div {
+    display: flex;
+    flex-direction: column;
+}
+form div:has(button) {
+    justify-content: end;
+}
+form label {
+    margin-bottom: .5rem;
+}
+form input,
+form select {
+    width: 100%;
+    border: 1px solid #CCCCCC;
+    box-shadow: 0 0 transparent, 0 0 transparent, inset 0 1px 2px 0 rgba(0,0,0,.1);
+    border-radius: 4px;
+    padding: 0.75rem 1.25em;
+    
+    font-family: var(--mainFont);
+    font-size: var(--secondFontSize);
+    color: var(--mainFontColor);
+}
+form select {
+    background-color: #EDEDED;
+}
+form button {
+    border: none;
+    background: var(--thirdFontColor);
+    border: 1px solid var(--thirdFontColor);
+    color: white;
+    padding: 0.75rem 1.25em;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+
+/* einde form */
 
 /* EINDE MAIN */
 
@@ -498,6 +543,17 @@ label.readMore:focus-within {
     }
     dt.tweeKolommen a {
         margin-top: 0.75rem;
+    }
+
+    form {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    form div:has(button) {
+        grid-column: 1/-1;
+    }
+    .waarde .imageRight {
+        flex-direction: column;
+        justify-content: flex-end;
     }
 
 }

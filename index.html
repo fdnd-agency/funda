@@ -403,13 +403,96 @@
                 </dl>
             </section>
 
-            <section class="waarde imageRight">
-                <div>
-                    <h3>Weten wat jouw huis waard is?</h3>
-                    <p>Met de funda Waardecheck krijg je binnen 10 seconden een geschatte waarde van jouw huis.</p>
+            <section class="waarde">
+                <div class="imageRight">
+                    <div>
+                        <h3>Weten wat jouw huis waard is?</h3>
+                        <p>Met de funda Waardecheck krijg je binnen 10 seconden een geschatte waarde van jouw huis.</p>
+                    </div>
+                
+                    <img src="./assets/icons/woningWaard.svg" alt="">
                 </div>
-               
-                <img src="./assets/icons/woningWaard.svg" alt="">
+
+                <form action="">
+                    <div>
+                        <label for="postcode">Postcode</label>
+                        <input type="text" name="postcode" id="postcode">
+                    </div>
+                    
+                    <div>
+                        <label for="huisNr">Huisnr.</label>
+                        <input type="text" name="huisNmr" id="huisNr">
+                    </div>
+                    
+                    <div>
+                        <label for="toevoeging">Toev.</label>
+                        <!-- <input type="number" name="toevoeging" id="toevoeging"> -->
+                        <select name="toevoeging" id="toevoeging">
+                            <option value="">-</option>
+                          </select>
+                    </div>
+                    <div>
+                        <button>Check waarde</button>
+                    </div>
+                    
+                </form>
+            </section>
+
+
+            <section>
+                <h2>Activiteit</h2>
+                <div>
+                    <img src="" alt="">
+                    <strong>75x</strong>
+                    <span>Bekeken</span>
+                </div>
+
+                <div>
+                    <img src="" alt="">
+                    <strong>12x</strong>
+                    <span>Bewaard</span>
+                </div>
+
+                <div>
+                    <img src="" alt="">
+                    <strong>31-12-2020</strong>
+                    <span>Op Funda</span>
+                </div>
+            </section>
+
+
+            <section>
+                <h2>Buurt</h2>
+
+            </section>
+
+            <section>
+                <h2>In de Buurt</h2>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="./assets/icons/school.svg" alt="">
+                            Basisschool
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./assets/icons/shop.svg" alt="">
+                            Supermarkt
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./assets/icons/bus.svg" alt="">
+                            Bushalte
+                        </a>
+                    </li>
+                </ul>
+                <a href="#"><img src="./assets/icons/ontdek.svg" alt="">Ontdek locaties in de buurt</a>
+            </section>
+
+            <section class="fundaMap">
+                <a href="#"><img src="./assets/icons/ontdek.svg" alt="">Open grotere kaart</a>
             </section>
         </div>
     </main>
