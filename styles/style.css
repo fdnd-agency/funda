@@ -98,6 +98,29 @@ main section:first-of-type {
     justify-content: space-between;
     align-items: center;
 }
+.drieKolommen {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 1em 0;
+    border-top: 1px solid var(--borderLight);
+    border-bottom: 1px solid var(--borderLight);
+}
+.drieKolommen div:has(a) a {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.75em;
+}
+.drieKolommen div:has(a) a img {
+    height: 2em;
+}
+a.icon {
+    display: flex;
+    gap: 0.35em;
+    align-items: center;
+    padding: 1.75rem 0;
+}
 /* EINDE STANDAARD STYLES */
 
 
@@ -475,11 +498,11 @@ form button:hover {
 /* einde form */
 
 .activity {
-    display: grid;
+    /* display: grid;
     grid-template-columns: repeat(3, 1fr);
     padding: 1em 0;
     border-top: 1px solid var(--borderLight);
-    border-bottom: 1px solid var(--borderLight);
+    border-bottom: 1px solid var(--borderLight); */
 }
 .activity div {
     display: flex;
@@ -609,7 +632,8 @@ form button:hover {
    
     .kenmerken dl,
     .kenmerken dd dl,
-    .kenmerken .tweeKolommen {
+    .kenmerken .tweeKolommen,
+    .locaties .drieKolommen {
         grid-template-columns: 1fr;
     }
     .kenmerken dl dl {
@@ -643,7 +667,8 @@ form button:hover {
         text-align: right;
     }
     .buurt dd:last-of-type,
-    .buurt dt:last-of-type {
+    .buurt dt:last-of-type,
+    .drieKolommen div:has(a):last-of-type a {
         border-bottom: none;
     }
     .buurt a.more {
@@ -651,6 +676,26 @@ form button:hover {
     }
     .buurt article img:not(:first-child) {
         display: flex;
+    }
+    .locaties .drieKolommen {
+        padding: 0;
+    }
+    .drieKolommen div:has(a) a {
+        position: relative;
+        flex-direction: row;
+        justify-content: unset;
+        border-bottom: 1px solid var(--borderLight);
+        padding: 1em 0;
+    }
+    .drieKolommen div:has(a) a::after {
+        position: absolute;
+        right: 0;
+
+        content: url("../assets/icons/arrowRight.svg");
+    }
+    .drieKolommen div:has(a) a img {
+        height: 2em;
+        width: 2em;
     }
 
 }
