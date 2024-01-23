@@ -7,6 +7,7 @@
 /* STANDAARD STYLES */
 :root {
     --mainFont: 'Proxima Nova', sans-serif;
+    --mainHeaderFontWeight: 600;
     --mainFontWeight: 400;
     --secondFontWeight: 350;
     --thirdFontWeight: 300;
@@ -18,6 +19,8 @@
     --secondFontColor: #999999;
     --thirdFontColor: #0071B3;
     --hoverOrangeColor: #de9000;
+
+    --borderLight: #ededed;
 }
 
 html {
@@ -26,7 +29,12 @@ html {
 
 h1 {
     font-size: 2.25rem;
-    font-weight: var(--mainFontWeight);
+    font-weight: var(--mainHeaderFontWeight);
+}
+h2 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    margin-bottom: 0.5rem
 }
 h1, h2, h3, h4, p {
     color: var(--mainFontColor);
@@ -37,8 +45,22 @@ a {
     text-decoration: none;
     transition: color .25s cubic-bezier(.23,1,.32,1);
 }
-main a:hover {
+main a:hover,
+button.txt:hover {
     color: rgb(0 97 153 / 1);
+}
+
+main section {
+    padding: 1em 0;
+}
+
+button.txt {
+    font-size: 1em;
+    background: none;
+    border: none;
+    color: var(--thirdFontColor);
+    margin-top: 0.5rem;
+    cursor: pointer;
 }
 
 .container {
@@ -118,6 +140,7 @@ header nav ul li ul{
 section.headerImage {
     width: 100%;
     margin-top: 3rem;
+    border-bottom: 2px solid var(--mainColor);
 }
 .objectImages {
     display: grid;
@@ -170,14 +193,75 @@ section.headerImage {
 
 
 
-
-
-dt {
-    margin: 0;
-    padding: 0.5rem 0 0;
-    color: #666;
-    border-top: 1px solid #ededed;
+/* MAIN */
+.details {
+    border-bottom: 1px solid var(--borderLight);
 }
+.details > div:first-of-type {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.details .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: .75rem;
+}
+.afmetingen {
+    margin-top: 0.75rem;
+}
+.afmetingen ul {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    list-style: none;
+}
+.imageMap {
+    text-align: center;
+}
+.imageMap div {
+    width: 3.75rem;
+    height: 3.75rem;
+    border-radius: 4px;
+    background: lightgray;
+}
+.imageMap a {
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+}
+.details strong {
+    font-size: 1.25em;
+}
+
+.kenmerken dl {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin-bottom: 1.75rem;
+}
+dt,
+dd {
+    margin: 0;
+    padding: 0.75rem 0;
+    color: #666;
+    border-bottom: 1px solid var(--borderLight);
+}
+/* wanneer een lijst in een lijst zit: */
+dl dl {
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+    padding-left: 1rem;
+}
+
+
+/* EINDE MAIN */
+
+
+
+
+
+
 
 
 
@@ -207,6 +291,13 @@ dt {
     }
     .detailList {
         overflow-x: scroll;
+    }
+    section.headerImage{
+        border-bottom: 1px solid var(--borderLight);
+    }
+   
+    .kenmerken dl {
+        grid-template-columns: 1fr;
     }
 
 
