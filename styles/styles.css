@@ -192,25 +192,15 @@ main section:nth-of-type(2) span{
     display: none;
 }
 
-#section_kenmerken h2 {
+main section:nth-of-type(5) h2 {
     margin-top: 1.5rem;
     padding-bottom: 0.3rem;
     border-bottom: rgba(0, 0, 0, 0.15) 1px solid;
 }
 
-#section_kenmerken dl:nth-of-type(5) {
-    padding-bottom: 0rem;
-}
-
-#section_kenmerken dd {
+main section:nth-of-type(5) dd {
     border-bottom: rgba(0, 0, 0, 0.15) 1px solid;
     padding: 0.5rem 0;
-}
-
-#opp_kenmerken h2 {
-    padding: 0.5rem 0;
-    border-bottom: rgba(0, 0, 0, 0.15) 1px solid;
-    font-weight: var(--third-font-weight);
 }
 
 #gebruikers_opp_h2 {
@@ -252,11 +242,11 @@ main section:nth-of-type(2) span{
     margin-left: -3rem;
 }
 
-#section_ing {
+main section:nth-of-type(4) {
     margin: 0 2rem 0 2rem;
 }
 
-#section_ing div {
+main section:nth-of-type(4) div {
     display: flex;
     justify-content: space-between;
 }
