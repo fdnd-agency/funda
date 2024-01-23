@@ -57,7 +57,7 @@ html {
     scroll-behavior: smooth;
 }
 
-#menu{
+#menu {
     background-image: url(../assets/Icon.svg);
     list-style-type: none;
     width: 2rem;
@@ -67,7 +67,7 @@ html {
     outline: none;
 }
 
-.detailMenu ul{
+.detailMenu ul {
     list-style-type: none;
     position: fixed;
     top: 0;
@@ -82,7 +82,6 @@ html {
 .detailMenu[open] ul {
     display: block;
     background-color: white;
-    
 }
 
 .detailMenu ul li {
@@ -95,7 +94,7 @@ html {
     display: block;
 }
 
-.subMenu ul{
+.subMenu ul {
     position: relative;
     margin-top: 0rem;
 }
@@ -105,7 +104,7 @@ html {
     padding: 1rem;
 }
 
-.subMenu details ul{
+.subMenu details ul {
     padding-top: 1rem;
 }
 
@@ -113,7 +112,7 @@ html {
     list-style: none;
     position: relative;
 }
-  
+
 .subMenu summary::after {
     content: url('../assets/arrow.svg');
     position: absolute;
@@ -180,6 +179,7 @@ section {
     top: 4rem;
     right: 1rem;
 }
+
 #main_image_slider {
     display: flex;
     flex-direction: row;
@@ -187,9 +187,9 @@ section {
     overflow: scroll;
     padding: 1rem;
 }
+
 #main_image_slider img {
     width: 30%;
-
 }
 
 #main_title_section {
@@ -206,7 +206,7 @@ section {
 #main_title_section div {
     display: flex;
     flex-direction: row;
-    gap: 1rem;    
+    gap: 1rem;
 }
 
 #main_title_section div p {
@@ -216,7 +216,6 @@ section {
 #main_title_section div p::after {
     font-weight: var(--third-font-weight);
 }
-
 
 #main_title_section div p:nth-of-type(1)::before {
     content: url('../assets/icon3.svg');
@@ -240,34 +239,57 @@ section {
     margin: 0 2rem 0 2rem;
 }
 
-#section_kenmerken div:not(:last-child) {   
-    border-bottom: rgba(0, 0, 0, 0.15) 1px solid;
-}
-
 #section_kenmerken h2 {
     margin-top: 1.5rem;
+    padding-bottom: 0.1rem;
 }
 
-#section_kenmerken div{
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+#section_kenmerken dl {
     padding: 0 0 1rem 0;
 }
 
-#section_kenmerken div:nth-of-type(5) {
+#section_kenmerken dl:nth-of-type(5) {
     padding-bottom: 0rem;
+}
+
+#section_kenmerken dd {
+    border-bottom: rgba(0, 0, 0, 0.15) 1px solid;
+    padding: 1rem 0;
+}
+
+#opp_kenmerken div {
+    margin-left: 1.5rem;
+}   
+
+#opp_kenmerken h2 {
+    padding: 0.5rem 0;
+    border-bottom: rgba(0, 0, 0, 0.15) 1px solid;
+    font-weight: var(--third-font-weight);
+}
+
+#gebruikers_opp_h2 {
+    font-weight: var(--third-font-weight);
 }
 
 #section_kenmerken h3 {
     width: 18rem;
+    padding-top: 0.5rem;
+}
+
+#energie_kenmerken a {
+    margin-left: 3rem;
+}
+
+#energie_kenmerken a::before {
+    content: url('../assets/Energy-label.svg');
+    position: absolute;
+    margin-left: -3rem;
 }
 
 #section_omschrijving summary {
     list-style: none;
     position: relative;
 }
-
 
 #section_omschrijving summary::after {
     content: "Lees de volledige omschrijving";
@@ -287,26 +309,33 @@ section {
 }
 
 @media (min-width: 700px) {
+    #overdracht_kenmerken, #bouw_kenmerken, #opp_kenmerken, #indeling_kenmerken, #energie_kenmerken {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto); 
+    }
 
-    #overdracht_kenmerken div, #bouw_kenmerken div {
-        display: flex;
-        flex-direction: row;
+    #section_kenmerken dt {
+        border-bottom: rgba(0, 0, 0, 0.15) 1px solid;
+        padding: 1rem 0;
     }
-    #main_title_section div:nth-of-type(2) {
-        flex-direction: row;
+
+    #opp_kenmerken dt:nth-child(-n+6) {
+        margin-left: 1.5rem;
     }
+
     #main_title_section div p:nth-of-type(1)::after {
         content: "wonen";
-        margin: 0 0.5rem 0 0.25rem;    
+        margin: 0 0.5rem 0 0.25rem;
     }
-    
+
     #main_title_section div p:nth-of-type(2)::after {
         content: "perceel";
-        margin: 0 0.5rem 0 0.25rem;    
+        margin: 0 0.5rem 0 0.25rem;
     }
-    
+
     #main_title_section div p:nth-of-type(3)::after {
         content: "slaapkamers";
-        margin: 0 0.5rem 0 0.25rem;    
-    }    
+        margin: 0 0.5rem 0 0.25rem;
+    }
 }
