@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    line-height: 1.5;
 
     --main-font: 'Proxima Nova', sans-serif;
     --main-font-weight: 400;
@@ -205,7 +206,7 @@ section {
 
 #main_title_section div {
     display: flex;
-    flex-direction: row;
+    flex-direction: ;
     gap: 1rem;
 }
 
@@ -233,6 +234,11 @@ section {
     content: url('../assets/calculator.svg');
 }
 
+#main_title_section div:first-of-type span{
+    margin: 0 0.5rem 0 0.25rem;
+    display: none;
+}
+
 #section_kenmerken {
     display: flex;
     flex-direction: column;
@@ -251,12 +257,8 @@ section {
 
 #section_kenmerken dd {
     border-bottom: rgba(0, 0, 0, 0.15) 1px solid;
-    padding: 1rem 0;
+    padding: 0.5rem 0;
 }
-
-#opp_kenmerken div {
-    margin-left: 1.5rem;
-}   
 
 #opp_kenmerken h2 {
     padding: 0.5rem 0;
@@ -274,14 +276,14 @@ section {
 #opp_kenmerken dt:nth-child(5),
 #opp_kenmerken dd:nth-child(4),
 #opp_kenmerken dd:nth-child(6) {
-    margin-left: 1.5rem;
+    padding-left: 1.5rem;
 }
 
 #kad_kenmerken dt:nth-child(3),
 #kad_kenmerken dt:nth-child(5),
 #kad_kenmerken dd:nth-child(4),
 #kad_kenmerken dd:nth-child(6) {
-    margin-left: 1.5rem;
+    padding-left: 1.5rem;
 }
 
 #kad_kenmerken p:first-of-type{
@@ -301,6 +303,15 @@ section {
     content: url('../assets/Energy-label.svg');
     position: absolute;
     margin-left: -3rem;
+}
+
+#section_ing {
+    margin: 0 2rem 0 2rem;
+}
+
+#section_ing div {
+    display: flex;
+    justify-content: space-between;
 }
 
 #section_omschrijving summary {
@@ -340,26 +351,20 @@ section {
     #opp_kenmerken dd:nth-child(2),
     #opp_kenmerken dd:nth-child(4),
     #opp_kenmerken dd:nth-child(6) {
-        margin-left: 0;
+        padding-left: 0;
     }
 
     #kad_kenmerken dd:nth-child(4),
     #kad_kenmerken dd:nth-child(6) {
-        margin-left: 0;
+        padding-left: 0;
     }
 
-    #main_title_section div p:nth-of-type(1)::after {
-        content: "wonen";
-        margin: 0 0.5rem 0 0.25rem;
+    #main_title_section div:first-of-type span{
+        display: inline-block;
     }
 
-    #main_title_section div p:nth-of-type(2)::after {
-        content: "perceel";
-        margin: 0 0.5rem 0 0.25rem;
-    }
-
-    #main_title_section div p:nth-of-type(3)::after {
-        content: "slaapkamers";
-        margin: 0 0.5rem 0 0.25rem;
+    #main_title_section div:nth-of-type(2) {
+        display: flex;
+        flex-direction: row;
     }
 }
