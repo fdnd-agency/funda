@@ -452,6 +452,29 @@ form button {
     font-size: 1em;
 }
 
+.activity {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 1em 0;
+    border-top: 1px solid var(--borderLight);
+    border-bottom: 1px solid var(--borderLight);
+}
+.activity div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.75em;
+    border-right: 1px solid var(--borderLight);
+}
+.activity div:last-of-type {
+    border-right: unset;
+}
+.activity img {
+    height: 1.25em;
+}
+
+
 
 /* einde form */
 
