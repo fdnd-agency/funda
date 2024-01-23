@@ -121,6 +121,9 @@ a.icon {
     align-items: center;
     padding: 1.75rem 0;
 }
+.w100 {
+    width: 100%;
+}
 /* EINDE STANDAARD STYLES */
 
 
@@ -557,6 +560,9 @@ form button:hover {
     display: block;
 }
 
+.fundaMapMobile {
+    display: none;
+}
 
 
 /* EINDE MAIN */
@@ -671,7 +677,8 @@ form button:hover {
     .drieKolommen div:has(a):last-of-type a {
         border-bottom: none;
     }
-    .buurt a.more {
+    .buurt a.more,
+    .fundaMap {
         display: none;
     }
     .buurt article img:not(:first-child) {
@@ -696,6 +703,10 @@ form button:hover {
     .drieKolommen div:has(a) a img {
         height: 2em;
         width: 2em;
+    }
+
+    .fundaMapMobile {
+        display: block;
     }
 
 }
