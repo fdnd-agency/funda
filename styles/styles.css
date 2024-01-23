@@ -252,7 +252,11 @@ main section:nth-of-type(2) span{
     font-family: var(--main-font);
     font-size: var(--main-font-size);
     font-weight: var(--main-font-weight);
+    transition: backdrop-filter 0.2s ease;
 }
+
+#my-popover::backdrop {
+    backdrop-filter: blur(8px);}
 
 #popover_open::before {
     content: url('../assets/plus.svg');
