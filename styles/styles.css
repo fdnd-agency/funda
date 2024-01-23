@@ -241,11 +241,8 @@ section {
 
 #section_kenmerken h2 {
     margin-top: 1.5rem;
-    padding-bottom: 0.1rem;
-}
-
-#section_kenmerken dl {
-    padding: 0 0 1rem 0;
+    padding-bottom: 0.3rem;
+    border-bottom: rgba(0, 0, 0, 0.15) 1px solid;
 }
 
 #section_kenmerken dl:nth-of-type(5) {
@@ -269,6 +266,26 @@ section {
 
 #gebruikers_opp_h2 {
     font-weight: var(--third-font-weight);
+}
+
+#opp_kenmerken dt:nth-child(1),
+#opp_kenmerken dd:nth-child(2),
+#opp_kenmerken dt:nth-child(3),
+#opp_kenmerken dt:nth-child(5),
+#opp_kenmerken dd:nth-child(4),
+#opp_kenmerken dd:nth-child(6) {
+    margin-left: 1.5rem;
+}
+
+#kad_kenmerken dt:nth-child(3),
+#kad_kenmerken dt:nth-child(5),
+#kad_kenmerken dd:nth-child(4),
+#kad_kenmerken dd:nth-child(6) {
+    margin-left: 1.5rem;
+}
+
+#kad_kenmerken p:first-of-type{
+    margin-top: 0.5rem;
 }
 
 #section_kenmerken h3 {
@@ -309,7 +326,7 @@ section {
 }
 
 @media (min-width: 700px) {
-    #overdracht_kenmerken, #bouw_kenmerken, #opp_kenmerken, #indeling_kenmerken, #energie_kenmerken {
+    #section_kenmerken dl{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, auto); 
@@ -320,8 +337,15 @@ section {
         padding: 1rem 0;
     }
 
-    #opp_kenmerken dt:nth-child(-n+6) {
-        margin-left: 1.5rem;
+    #opp_kenmerken dd:nth-child(2),
+    #opp_kenmerken dd:nth-child(4),
+    #opp_kenmerken dd:nth-child(6) {
+        margin-left: 0;
+    }
+
+    #kad_kenmerken dd:nth-child(4),
+    #kad_kenmerken dd:nth-child(6) {
+        margin-left: 0;
     }
 
     #main_title_section div p:nth-of-type(1)::after {
