@@ -53,7 +53,9 @@ a {
     transition: color .25s cubic-bezier(.23,1,.32,1);
 }
 main a:hover,
-button.txt:hover {
+button.txt:hover,
+label.readMore:hover,
+.buurt article h2:hover {
     color: rgb(0 97 153 / 1);
 }
 
@@ -82,6 +84,10 @@ main section:first-of-type {
     font-size: .75em;
     padding: 0.25rem 0.5rem;
     margin-bottom: 0.5rem;
+}
+.more:after {
+    content: url("../assets/icons/chevronRight.svg");
+    padding-left: 1em;
 }
 .container {
     max-width: 68vw; /*61.5rem*/
@@ -301,7 +307,6 @@ dd a:has(img) {
     text-align: center;
     margin-top: 1rem;
     width: 100%;
-    height: 100%;
 }
 .imageMap a img {
     width: 100%;
@@ -367,7 +372,7 @@ label.readMore:focus-within {
     margin-bottom: 1.75rem;
 }
 .kenmerken dl dt {
-    color: #666;
+    color: var(--secondFontColor);
 }
 .kenmerken dl dd {
     color: var(--mainFontColor);
@@ -415,7 +420,7 @@ label.readMore:focus-within {
 
 .waarde {
     background: #F7F7F7;
-    border: 1px solid #EDEDED;
+    border: 1px solid var(--borderLight);
     padding: 1.5rem 1rem;
     border-radius: 4px;
 }
@@ -452,7 +457,7 @@ form select {
     color: var(--mainFontColor);
 }
 form select {
-    background-color: #EDEDED;
+    background-color: var(--borderLight);
 }
 form button {
     border: none;
@@ -467,6 +472,7 @@ form button {
 form button:hover {
     background: rgb(0 97 153 / 1);
 }
+/* einde form */
 
 .activity {
     display: grid;
@@ -490,9 +496,45 @@ form button:hover {
     height: 1.25em;
 }
 
+.buurt article {
+    border: 1px solid var(--borderLight);
+    border-radius: 8px;
+}
+.buurt article > div {
+    padding: 1rem;
+    border-bottom: 1px solid var(--borderLight);
+}
+.buurt article > div a {
+    display: grid;
+    grid-template-columns: 1fr 10fr 1fr;
+    gap: 1rem;
+}
+.buurt article h2 {
+    color: var(--thirdFontColor);
+}
+.buurt article img:not(:first-child) {
+    display: none;
+    place-self: center end;
+}
+.buurt dl {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0.25rem 1rem;
+}
+.buurt dt, .buurt dd {
+    /* margin: 0 0.75em; */
+    padding: 0.75rem;
+    border-bottom: 1px solid var(--borderLight);
+}
+.buurt dt {
+    color: var(--secondFontColor);
+}
+.buurt a.more{
+    padding: 1.75rem;
+    display: block;
+}
 
 
-/* einde form */
 
 /* EINDE MAIN */
 
@@ -593,6 +635,22 @@ form button:hover {
     .waarde .imageRight {
         flex-direction: column;
         justify-content: flex-end;
+    }
+    .buurt article {
+        box-shadow: 0px 8px 12px -3px #0000001A;
+    }
+    .buurt dd {
+        text-align: right;
+    }
+    .buurt dd:last-of-type,
+    .buurt dt:last-of-type {
+        border-bottom: none;
+    }
+    .buurt a.more {
+        display: none;
+    }
+    .buurt article img:not(:first-child) {
+        display: flex;
     }
 
 }
