@@ -184,7 +184,8 @@ section.headerImage {
 .detailList a {
     padding: 1em 0;
 }
-.detailList span {
+.detailList span,
+.afmetingen span {
     color: var(--secondFontColor);
 }
 /* einde header image */
@@ -217,6 +218,13 @@ section.headerImage {
     gap: 1.5rem;
     list-style: none;
 }
+.afmetingen ul li,
+.detailList ul li a,
+.detailList a {
+    display: flex;
+    gap: 0.35em;
+}
+
 .imageMap {
     text-align: center;
 }
@@ -234,26 +242,74 @@ section.headerImage {
 .details strong {
     font-size: 1.25em;
 }
+.description div {
+    max-height:8em;
+    overflow:hidden;
+    
+    mask:linear-gradient(red calc(100% - 2em), transparent);
+}
 
-.kenmerken dl {
+.kenmerken > dl {
     display: grid;
     grid-template-columns: 1fr 2fr;
     margin-bottom: 1.75rem;
 }
-dt,
-dd {
+.kenmerken dl dt {
+    color: #666;
+}
+.kenmerken dl dd {
+    color: var(--mainFontColor);
+}
+.kenmerken > dl > dt,
+.kenmerken > dl > dd {
     margin: 0;
     padding: 0.75rem 0;
-    color: #666;
     border-bottom: 1px solid var(--borderLight);
 }
-/* wanneer een lijst in een lijst zit: */
-dl dl {
-    grid-column: 1 / 3;
-    grid-row: 2 / 3;
-    padding-left: 1rem;
+
+.kenmerken dd:has(dl) {
+    /* background-color: red; */
+    grid-column: 1/-1;
+    padding: 0;
+}
+.kenmerken dd dl {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+.kenmerken .tweeKolommen {
+    grid-column: 1/-1;
+
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+.kenmerken .eenKolom {
+    grid-column: 1/-1;
+}
+.kenmerken dd dl dt,
+.kenmerken dd dl dd {
+    border-bottom: 1px solid var(--borderLight);
+    padding: 0.75em 0.75em;
+}
+.kenmerken dd dl dt:last-of-type,
+.kenmerken dd dl dd:last-of-type{
+    border-bottom: none;
 }
 
+.kenmerken dd dl dd {
+    padding: 0.75em 0;
+}
+/* wanneer een lijst in een lijst zit: */
+/* .kenmerken dl dl {
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+    margin-bottom: 0;
+}
+.kenmerken dl dl dt{
+    padding: 0.75em 0.75em;
+}
+.kenmerken dl dl dd {
+    padding: 0.75em 0; */
+/* } */
 
 /* EINDE MAIN */
 
@@ -296,10 +352,24 @@ dl dl {
         border-bottom: 1px solid var(--borderLight);
     }
    
-    .kenmerken dl {
+    .kenmerken dl,
+    .kenmerken dd dl,
+    .kenmerken .tweeKolommen {
         grid-template-columns: 1fr;
     }
-
+    .kenmerken dl dl {
+        grid-column: unset;
+    }
+    .kenmerken dd dl dt {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+    .kenmerken dl dl dd{
+        padding: 0.75em 0.75em;
+    }
+    dt.tweeKolommen a {
+        margin-top: 0.75rem;
+    }
 
 }
 /* END MOBIEL */
