@@ -116,6 +116,7 @@ main section{
 .drieKolommen div:has(a) a img {
     height: 2em;
 }
+/* iconen */
 a.icon {
     display: flex;
     gap: 0.75em;
@@ -133,6 +134,20 @@ button:has(i) {
 .add {
     content: url("../assets/icons/arrowRight.svg");
 }
+.next {
+    width: 3rem;
+    height: 3rem;
+    right: 0.5rem;
+    background: white;
+    border-radius: 2px;
+    box-shadow: 0px 1px 0px 0px #0000001A;
+    cursor: pointer;
+}
+.next i {
+    content: url("../assets/icons/chevronRightBlue.svg");
+}
+
+/* einde iconen */
 .w100 {
     width: 100%;
 }
@@ -602,13 +617,13 @@ form button:hover {
     justify-content: end;
     gap: 1em;
 }
-.reisTijd ul {
+ul.buttonList {
     display: flex;
     flex-direction: row;
     list-style: none;
     margin-bottom: 1em;
 }
-.reisTijd ul li button {
+ul.buttonList li button {
     font-size: 1em;
     border: unset;
     background: unset;
@@ -616,12 +631,38 @@ form button:hover {
     border-bottom: 2px solid var(--borderLight);
     cursor: pointer
 }
-.reisTijd ul li:first-child button,
-.reisTijd ul li button:active
+ul.buttonList li:first-child button,
+ul.buttonList li button:active
  {
     background-color: #E6F2F7;
     border-color: #0071B3;
     color: #0071B3;
+}
+
+.vergelijkbaar > div {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    width: 100%;
+    gap: 2rem;
+}
+.vergelijkbaar h4 {
+    margin-top: .5rem;
+    margin-bottom: .25rem;
+    color: var(--thirdFontColor);
+}
+.vergelijkbaar p {
+    color: var(--secondFontColor);
+}
+.vergelijkbaar strong {
+    color: var(--mainFontColor);
+}
+.vergelijkbaar .next {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: 5rem auto;
 }
 /* EINDE MAIN */
 
