@@ -836,8 +836,8 @@ ul.socials {
 /* RESPONSIVE */
 @media only screen and (max-width: 1200px) {
     .container,
-    .gridContainer {
-        max-width: 90vw!important;
+    div.gridContainer {
+        max-width: 90vw;
     }
     .objectImages {
         grid-template-columns: repeat(3, 1fr);
@@ -845,6 +845,11 @@ ul.socials {
     .subImage:nth-child(3),
     .subImage:nth-child(4) {
         display: none; /* Hide the last two images */
+    }
+}
+@media only screen and (min-width: 1200x) {
+    .gridContainer {
+        max-width: 90vw;
     }
 }
 
