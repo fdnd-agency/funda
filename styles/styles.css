@@ -612,4 +612,21 @@ main section:nth-of-type(4) div {
         width: 25vw;
     }
 
+    #tablet_footer{
+        display: grid;
+        padding: 3rem 4rem;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 2rem;
+        background-color: var(--background-color-footer);
+        width: 100vw;
+    }
+    .list_sections:nth-of-type(1) { grid-area: 1 / 1 / 1 / 2; }
+    .list_sections:nth-of-type(2)  { grid-area: 1 / 2 / 2 / 3; }
+    .list_sections:nth-of-type(3)  { grid-area: 1 / 3 / 3 / 4; }
+    .list_sections:nth-of-type(4) { grid-area: 1 / 4 / 4 / 5; }
+    .list_sections:nth-of-type(5) { grid-area: 2 / 1 / 3 / 3; }
+    .list_sections:nth-of-type(6) { grid-area: 2 / 1 / 4 / 3; }
+    .list_sections:nth-of-type(7) { grid-area: 2 / 1 / 5 / 3; }
 }
