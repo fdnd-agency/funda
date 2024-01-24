@@ -835,7 +835,8 @@ ul.socials {
 
 /* RESPONSIVE */
 @media only screen and (max-width: 1200px) {
-    .container {
+    .container,
+    .gridContainer {
         max-width: 90vw;
     }
     .objectImages {
