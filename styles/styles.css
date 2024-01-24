@@ -265,7 +265,6 @@ dd {
     width: 200px;
 }
 
-/*todo hier nog naar kijken met de max width voor op mobiel*/
 .grid-container-neighbor {
     display: grid;
     grid-template-columns: 10em 1fr;
@@ -347,7 +346,6 @@ dd {
 }
 
 
-/*todo andere classnmaes voor grid en volgorde nog aanpassen boven naar beneden en checken op onnodige classnames*/
 .broker-add {
     display: grid;
 }
