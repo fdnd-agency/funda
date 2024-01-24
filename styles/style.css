@@ -837,7 +837,7 @@ ul.socials {
 @media only screen and (max-width: 1200px) {
     .container,
     .gridContainer {
-        max-width: 90vw;
+        max-width: 90vw!important;
     }
     .objectImages {
         grid-template-columns: repeat(3, 1fr);
@@ -862,11 +862,8 @@ ul.socials {
     }
     .gridContainer {
         display: unset;
-        /* display: grid; */
-        /* grid-template-columns: 1fr; */
         max-width: unset;
         margin: unset;
-        /* gap: unset; */
     }
     .container:has(.sideBar) {
         display: none;
