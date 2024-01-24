@@ -199,8 +199,6 @@ header nav div {
     align-items: center;
 }
 header nav ul {
-    /* ff uitgezet zodat je alleen de button ziet voor mobile menu */
-    /* display: none; */
     display: flex;
     list-style: none;
 }
@@ -246,7 +244,6 @@ section.headerImage {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr 1fr;
-    /* height: 80vh; */
     width: 100%;
     gap: .25rem; 
 }
@@ -289,7 +286,6 @@ section.headerImage {
     color: var(--secondFontColor);
 }
 
-/* dubbel > nog fixen */
 .detailList ul li a {
     display: flex;
     gap: 0.35rem;
@@ -425,9 +421,6 @@ label.readMore:focus-within {
 }
 /* END READMORE TEXT */
 .ing {
-    /* display: flex;
-    justify-content: space-between;
-    align-items: center; */
     margin: 1.75rem 0;
     border-top: 1px solid var(--mainColor);
     border-bottom: 1px solid var(--mainColor);
@@ -457,7 +450,6 @@ label.readMore:focus-within {
 }
 
 .kenmerken dd:has(dl) {
-    /* background-color: red; */
     grid-column: 1/-1;
     padding: 0;
 }
@@ -498,10 +490,6 @@ label.readMore:focus-within {
 }
 /* form */
 form {
-    /* display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 1em; */
     display: grid;
     grid-gap: 1rem;
     grid-template-columns: repeat(4, 1fr);
