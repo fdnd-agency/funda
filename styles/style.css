@@ -874,6 +874,10 @@ ul.buttonList li button:active
         display: block;
     }
 
+    .container:has(.sideBar) {
+        display: grid;
+    }
+
 }
 /* END MOBIEL */
 
@@ -889,11 +893,15 @@ ul.buttonList li button:active
         display: none; /* Hide the last two images */
     }
     .gridContainer {
-        display: grid;
-        grid-template-columns: 1fr;
+        display: unset;
+        /* display: grid; */
+        /* grid-template-columns: 1fr; */
         max-width: unset;
         margin: unset;
         /* gap: unset; */
+    }
+    .container:has(.sideBar) {
+        display: none;
     }
 
 }
