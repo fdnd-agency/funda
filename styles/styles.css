@@ -517,8 +517,6 @@ main section:nth-of-type(4) div {
     #tablet_footer{
         display: grid;
         padding: 3rem 4rem;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
         grid-column-gap: 0px;
         grid-row-gap: 2rem;
         background-color: var(--background-color-footer);
@@ -615,8 +613,6 @@ main section:nth-of-type(4) div {
     #tablet_footer{
         display: grid;
         padding: 3rem 4rem;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
         grid-column-gap: 0px;
         grid-row-gap: 2rem;
         background-color: var(--background-color-footer);
