@@ -888,6 +888,18 @@ ul.socials {
         order: 1;
     }
 
+    .endPageList {
+        border-top: 1px solid var(--borderLight);
+        padding: 1rem 0;
+        justify-content: unset;
+    }
+    .endPageList.detailList ul {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
 }
 /* alles boven de ipad/ tablet */
 @media only screen and (min-width: 1020px) {
@@ -922,16 +934,16 @@ ul.socials {
         display: none;
     }
 
-    .detailList {
+    .headerImage .detailList {
         overflow-x: scroll;
     }
-    .detailList > a {
+    .headerImage .detailList > a {
         display: none;
     }
-    .detailList ul li {
+    .headerImage .detailList ul li {
         width: 100%;
     }    
-    .detailList ul li a {
+    .headerImage .detailList ul li a {
         flex-direction: column;
         justify-content: space-between;
         min-width: 25vw;
