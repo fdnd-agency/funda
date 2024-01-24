@@ -14,6 +14,7 @@
     --main-font-color: #333333;
     --second-font-color: #999999;
     --third-font-color: #0071B3;
+    --background-color-footer: #EDEDED;
 }
 
 h1 {
@@ -23,7 +24,7 @@ h1 {
     color: var(--main-font-color);
 }
 
-h2, summary {
+h2, summary, label {
     font-family: var(--main-font);
     font-size: var(--second-font-size);
     font-weight: var(--second-font-weight);
@@ -150,7 +151,7 @@ nav div details ul details[open] summary::after {
 
 /* section ---------------------------------------------------------------------------------------------------------------------- */
 
-section {
+section:not(:nth-of-type(5)) {
     border-bottom: rgba(0, 0, 0, 0.15) 1px solid;
     position: relative;
 }
@@ -255,7 +256,8 @@ main section:nth-of-type(2) span{
 }
 
 #my-popover::backdrop {
-    backdrop-filter: blur(8px);}
+    backdrop-filter: blur(8px);
+}
 
 #popover_open::before {
     content: url('../assets/plus.svg');
@@ -351,6 +353,107 @@ main section:nth-of-type(4) div {
 
 #section_omschrijving details[open] summary::after {
     content: "Volledige omshrijving inklappen";
+}
+
+footer {
+    background-color: var(--background-color-footer);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer details {
+    border-bottom: rgba(0, 0, 0, 0.15) 1px solid;
+    width: 90vw;
+}
+
+footer details ul {
+    padding-left: 2rem;
+    padding-bottom: 1rem;
+}
+
+footer details summary {
+    list-style: none;
+    position: relative;
+    width: 100%;
+}
+
+footer details summary {
+    list-style-type: none;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    padding: 1rem 1rem 1rem 2rem;
+    position: relative;
+}
+
+footer details summary::before {
+    content: url(../assets/arrow.svg);
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: rotate 0.2s ease;
+    position: absolute;
+    left: 0;
+    top: 0.5rem
+}
+
+footer details[open] summary::before {
+    rotate: 180deg; 
+}
+
+footer div details ul {
+    list-style: none;
+    position: relative;
+    width: 100%;
+}
+
+footer div:nth-of-type(2) {
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    padding: 1rem 0;
+}
+
+footer select {
+    font-family: var(--main-font);
+    font-size: var(--second-font-size);
+    font-weight: var(--third-font-weight);
+    color: var(--main-font-color);
+    width: 100%;
+    height: 3rem;
+    border: rgba(0, 0, 0, 0.15) 1px solid;
+    padding-left: 1rem;
+}
+
+footer div:nth-of-type(3) ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+    list-style: none;
+    gap: 1rem;
+}
+
+footer div:nth-of-type(4) {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+
+footer div:nth-of-type(4) ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+    list-style: none;
+    gap: 1rem;
 }
 
 @media (min-width: 700px) {
