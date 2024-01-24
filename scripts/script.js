@@ -43,21 +43,3 @@ function showtelephonenumber(){
     });
 
 }
-
-// refactor code for less duplicate code not finish
-// function opentoggle(hamburger,description,characterize){
-//     let buttonhamber = document.querySelector(hamburger);
-//     let buttondescription =document.querySelector(description);
-//     let buttoncharaterize = document.querySelector(characterize);
-//
-//     buttonhamber.addEventListener('click', () => {
-//         buttonhamber.classList.toggle('menu-ul-open');
-//     })
-//     buttondescription.addEventListener('click', () => {
-//         buttondescription.classList.toggle('open-description');
-//     })
-//     buttoncharaterize.addEventListener('click', () => {
-//         buttoncharaterize.classList.toggle('open-characterize');
-//     });
-// }
-// opentoggle('.hamburger-icon','.full-description','.button-show-charactize');
