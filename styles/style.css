@@ -96,6 +96,9 @@ main section{
     max-width: 68vw; /*61.5rem*/
     margin: 0 auto;
 }
+.container:has(.sideBar) {
+    width: 100%;
+}
 .imageRight {
     display: flex;
     justify-content: space-between;
@@ -171,7 +174,7 @@ button.btn {
 header nav {
     width: 100vw;
     height: 3rem;
-    padding: 0.5rem 1rem; 
+    padding: 0.5rem 12rem; 
     background-color: var(--mainColor);
     position: fixed;
     top: 0;
@@ -838,6 +841,10 @@ ul.socials {
     .container,
     div.gridContainer {
         max-width: 90vw;
+        margin: 0 auto;
+    }
+    header nav {
+        padding: 0.5rem 3.5rem;
     }
     .objectImages {
         grid-template-columns: repeat(3, 1fr);
@@ -865,7 +872,7 @@ ul.socials {
     .subImage {
         display: none; /* Hide the last two images */
     }
-    .gridContainer {
+    div .gridContainer {
         display: unset;
         max-width: unset;
         margin: unset;
