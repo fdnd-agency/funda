@@ -146,8 +146,17 @@ button:has(i) {
 .next i {
     content: url("../assets/icons/chevronRightBlue.svg");
 }
-
 /* einde iconen */
+button.btn {
+    background: orange;
+    border: none;
+    color: white;
+    border-radius: 2px;
+    padding: 0.75rem 1rem;
+    width: 100%;
+    font-size: 1em;
+    cursor: pointer;
+}
 .w100 {
     width: 100%;
 }
@@ -196,7 +205,8 @@ header nav ul li a {
     padding: .95em 1em;
 }
 header nav ul li a:hover,
-header nav ul li a:active {
+header nav ul li a:active,
+button.btn:hover {
     background-color: var(--hoverOrangeColor);
 }
 header nav ul li ul{
@@ -531,13 +541,6 @@ form button:hover {
 }
 /* einde form */
 
-.activity {
-    /* display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    padding: 1em 0;
-    border-top: 1px solid var(--borderLight);
-    border-bottom: 1px solid var(--borderLight); */
-}
 .activity div {
     display: flex;
     flex-direction: column;
@@ -595,9 +598,6 @@ form button:hover {
     display: none;
 }
 
-.reisTijd > div {
-    /* test */
-}
 .reisTijd .locatie {
     display: grid;
     grid-template-columns: 1fr 8fr 1fr;
@@ -664,6 +664,72 @@ ul.buttonList li button:active
     bottom: 0;
     margin: 5rem auto;
 }
+
+/* sidebar */
+.sideBar .kopperMakelaar {
+    border: 1px solid var(--borderLight);
+    border-radius: 4px;
+    margin-top: 3em;
+    margin-bottom: 1rem;
+}
+.sideBar .kopperMakelaar > div:nth-child(1) {
+    padding: 1rem 1.25rem;
+}
+.sideBar .containerImage {
+    position: relative;
+}
+.sideBar .containerImage span {
+    position: absolute;
+    right: 0;
+}
+.sideBar .image {
+    width: 6vw;
+    height: 6vw;
+    border-radius: 2px;
+    overflow: hidden;
+}
+.sideBar .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.sideBar .kopperMakelaar h3 {
+    color: var(--thirdFontColor);
+    margin-top: .75rem;
+}
+.sideBar button.btn {
+    width: 100%;
+}
+.sideBar div:has(button){
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    border-top: 1px solid var(--borderLight);
+    padding: 1rem 1.25rem;
+}
+.sideBar div a,
+.sideBar ul li {
+    display: flex;
+    align-items: center;
+    gap: 0.75em;
+}
+.sideBar ul {
+    list-style: none;
+}
+.sideBar div a img {
+    width: 1.5rem;
+}
+.sideBar div a img:not(:first-child) {
+    height: 1.5rem;
+}
+
+.ikea {
+    margin-top: 2rem;
+}
+
+
+/* einde sidebar  */
+
 /* EINDE MAIN */
 
 
@@ -822,7 +888,24 @@ ul.buttonList li button:active
     .subImage {
         display: none; /* Hide the last two images */
     }
+    .gridContainer {
+        display: grid;
+        grid-template-columns: 1fr;
+        max-width: unset;
+        margin: unset;
+        /* gap: unset; */
+    }
 
+}
+
+@media only screen and (min-width: 1020px) {
+    .gridContainer {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        max-width: 68vw;
+        margin: 0 auto;
+        gap: 2em;
+    }
 }
 
 
