@@ -168,6 +168,8 @@ section:nth-of-type(3), section:nth-of-type(4) {
 
 main section:nth-of-type(1) {
     width: 100vw;
+    border-bottom: var(--main-color) 0.1rem solid;
+
 }
 
 main section:nth-of-type(1) #main_image {
