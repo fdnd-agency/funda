@@ -2,53 +2,44 @@ ShowHamburgerMenu();
 ShowMoreTextDescription();
 ShowMoreTextCharacterize();
 showtelephonenumber();
-clickBroker();
-function ShowHamburgerMenu () {
-    let buttonicon = document.querySelector('.hamburger-icon');
-    buttonicon.addEventListener('click', () => {
 
-        let menu = document.querySelector('.menu-ul');
-        menu.classList.toggle('menu-ul-open');
+function ShowHamburgerMenu () {/*hamburger menu*/
+    let button = document.querySelector('.hamburger-icon');/*select icon hamburger*/
+    let menu = document.querySelector('.menu-ul');
 
-    })
+    button.addEventListener('click', () => {/*clickfunction*/
+        menu.classList.toggle('menu-ul-open');/*open the menue*/
+
+    });
 }
 function ShowMoreTextDescription(){
     let buttonFullDescription = document.querySelector('.full-description');
+    let hideDescription = document.querySelector('.hide-description');
     buttonFullDescription.addEventListener('click', () => {
 
-        let menu = document.querySelector('.hide-description');
-        menu.classList.toggle('open-description');
 
-    })
+        hideDescription.classList.toggle('open-description');
+
+    });
 }
 function ShowMoreTextCharacterize(){
     let buttonFullCharacterize = document.querySelector('.button-show-charactize');
+    let hideText = document.querySelector('.hide-characterize');
     buttonFullCharacterize.addEventListener('click', () => {
-        let menu = document.querySelector('.hide-characterize');
-        menu.classList.toggle('open-characterize');
 
-    })
+        hideText.classList.toggle('open-characterize');
+
+    });
 }
+
 function showtelephonenumber(){
     let telephonnumber = document.querySelector('.telephonumber');
     let phoneNumber = document.querySelector('.hide-telehponenumber');
-
     telephonnumber.addEventListener("click", () => {
         phoneNumber.classList.toggle('open-telephonenumber');
-        telephonnumber.scrollIntoView({behavior: 'smooth'});
+        // telephonnumber.scrollIntoView({behavior: 'smooth'});
 
 
-    });
-
-}
-function clickBroker(){
-    let brokerdiv = document.querySelector('.broker-add');
-    let clickContact = document.querySelector('.contact-broker');
-    let mql = window.matchMedia("(max-width: 768px)");
-    clickContact.addEventListener("click", () => {
-        if(mql){
-            brokerdiv.scrollIntoView({behavior: 'smooth'});
-        }
     });
 
 }

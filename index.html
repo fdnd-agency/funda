@@ -6,352 +6,327 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="detailpagina funda" name="description">
 
-    <!-- Link to CSS -->
-    <link href="styles/style.css" rel="stylesheet" type="text/css">
-
-    <!-- Link to boxicons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
-
-    <!-- Link to JavaScript script -->
-
-    <script defer src="scripts/v2.js">
-
-    </script>
-    <!--geen defer vanwege error in w3c validator-->
-
-    <title>Detailpagina</title>
-    <!--    hier werkt de rode knp weer niet oorzaak niet bekend-->
+    <script defer src="scripts/script.js"></script><!--defer zodat er geen errors in de console log zitten-->
+    <link href="styles/styles.css" rel="stylesheet" type="text/css">
+    <title>detailpagina</title>
 </head>
-<body><!--https://dequeuniversity.com/screenreaders/-->
+<body>
+<!--https://dequeuniversity.com/screenreaders/-->
+<!--https://codepen.io/joostf/pen/MOxQex--><!--voorbeeld-->
+<!--https://www.funda.nl/koop/assendelft/huis-42349645-pronkgevel-1/-->
 <header>
     <a href="https://www.funda.nl/koop/assendelft/huis-42349645-pronkgevel-1/">
         <img alt="logo funda" class="log-funda" src="images/fundawonen-logo.svg">
     </a>
-    <!--       <i class='bx bx-menu hamburger'></i>-->
-    <button class="hamburger-icon" type="button"><img alt="menu icon" class="" src="images/menubar.png"></button>
+
+    <button class="hamburger-icon" type="button"><img alt="menu icoon" src="images/icons/mobileMenu.svg">
+    </button>
+
     <nav class="menu">
 
-        <ul class="menu-ul">
-            <li class="menu__li carousel-images__no-dot"><a href="#" class="menu-link">kopen</a></li>
-            <li class="menu__li carousel-images__no-dot"><a href="#" class="menu-link">huren</a></li>
-            <li class="menu__li carousel-images__no-dot"><a href="#" class="menu-link">verkopen</a></li>
-            <li class="menu__li carousel-images__no-dot"><a href="#" class="menu-link">Mijn huis</a></li>
-            <li class="menu__li carousel-images__no-dot"><img alt="login icon" src="images/log-in-regular-24.png"></li>
-
+        <ul class="menu-ul" role="menu">
+            <li class="menu__li carousel-images__no-dot"><a class="menu-link" href="#" role="menuitem">kopen</a></li>
+            <li class="menu__li carousel-images__no-dot"><a class="menu-link" href="#" role="menuitem">huren</a></li>
+            <li class="menu__li carousel-images__no-dot"><a class="menu-link" href="#" role="menuitem">verkopen</a></li>
+            <li class="menu__li carousel-images__no-dot"><a class="menu-link" href="#" role="menuitem">Mijn huis</a>
+            </li>
+            <li class="menu__li carousel-images__no-dot">
+                <button role="button" type="button" class="login-button"><img alt="login icoon" src="images/icons/logIn.svg"></button>
+            </li>
         </ul>
 
     </nav>
 </header>
-
+<!--todo aria toevoegen-->
 
 <main>
-    <div class="gridcontainer">
+    <div class="gridcontaienr__five-images-grid"><!--hoofdimage en kleine foto's-->
+        <img alt="hoofdfoto huis" class="main-picture" src="images/hoofdfoto.jpg">
+        <ul class="gridcontainer__small-images">
+            <li class="carousel-images__no-dot">
+                <img alt="hoofdfoto huis"
+                     class="gridcontainer__small-images_carousel-images images-houses-dining-room"
+                     src="images/eettafel.jpg">
+            </li>
+            <li class="carousel-images__no-dot"><img alt="woonkamer"
+                                                     class="gridcontainer__small-images_carousel-images livingroom"
+                                                     src="images/woonkamer.jpg"></li>
+            <li class="carousel-images__no-dot"><img alt="garden"
+                                                     class="gridcontainer__small-images_carousel-images "
+                                                     src="images/tuin.jpg"></li>
+            <li class="carousel-images__no-dot"><img alt="video van het huis"
+                                                     class="gridcontainer__small-images_carousel-images"
+                                                     src="images/video.jpg"></li>
+            <li class="carousel-images__no-dot"><img alt="gamg met trappen"
+                                                     class="gridcontainer__small-images_carousel-images"
+                                                     src="images/stairs.jpg"></li>
+            <li class="carousel-images__no-dot"><img alt="straat van het huis"
+                                                     class="gridcontainer__small-images_carousel-images"
+                                                     src="images/street.jpg"></li>
+        </ul>
+        <ul class="carousel-images">
+            <li class="carousel-images__no-dot">
+                <img alt="plattgrond" class="small-images-carousel" src="images/plattegrond.png">
+                <p><a class="general-link" href="#">plattegrond</a></p>
+            </li>
+            <li class="carousel-images__no-dot">
+                <img alt="360 view" class="small-images-carousel" src="images/small-images/playground.jpg">
+                <p><a class="general-link" href="#">360</a></p>
+            </li>
+            <li class="carousel-images__no-dot">
+                <img alt="video" class="small-images-carousel" src="images/small-images/front-houose.jpg">
+                <p><a class="general-link" href="#">video</a></p>
+            </li>
+            <li class="carousel-images__no-dot">
+                <img alt="alle foto's" class="small-images-carousel" src="images/small-images/frontdoor.jpg">
+                <p><a class="general-link" href="#">47 fotos</a></p>
+            </li>
+        </ul>
+    </div>
 
 
-        <div class=" gridcontainer__grid-item gridcontaienr__five-images-grid">
-            <img alt="hoofdfoto huis" class="main-picture images-houses-1" src="images/hoofdfoto.jpg">
-        </div>
 
+    <div class="grid-broker-price"><!--this must be a div because the 2 elements must on desktop next to each other-->
+        <section>
+            <h1> pronkgevel1</h1>
+            <span class="grid-broker-price__information"><img src="images/icons/wonen.svg" alt="wonen vierkante meter">136m² wonen</span>
+            <!--no <p> because the content is not next to each other-->
+            <span class="grid-broker-price__information"><img src="images/icons/perceel.svg" alt="wonen vierkante meter">164m² perceel</span>
+            <span class="grid-broker-price__information"><img src="images/icons/bed.svg" alt="wonen vierkante meter">4 slaapkamers</span>
+            <h2 class="grid-broker-price__price_house">450.000 k.k</h2><!--this is h2 because it must be visisble-->
+            <p><a class="general-link" href=""><img src="images/icons/calculator.svg" alt="wonen vierkante meter">Wat worden mijn maanlasten</a></p>
+        </section>
 
-        <div class="gridcontainer__grid-item carousel-grid" tabindex="0">
-            <ul class="carousel-images">
-                <li class="carousel-images__no-dot">
-                    <img alt="hoofdfoto" class="small-images-carousel" src="images/plattegrond.png">
-                    <p><a href="#" class="general-link">plattegrond</a> </p>
-                </li>
-                <li class="carousel-images__no-dot">
-                    <img alt="hoofdfoto" class="small-images-carousel" src="images/small-images/playground.jpg">
-                    <p><a href="#" class="general-link">360</a> </p>
-                </li>
-                <li class="carousel-images__no-dot">
-                    <img alt="hoofdfoto" class="small-images-carousel" src="images/small-images/front-houose.jpg">
-                    <p><a href="#" class="general-link">video</a> </p>
-                </li>
-                <li class="carousel-images__no-dot">
-                    <img alt="hoofdfoto" class="small-images-carousel" src="images/small-images/frontdoor.jpg">
-                    <p><a href="#" class="general-link">47 fotos</a> </p>
-                </li>
-            </ul>
-        </div>
+        <section class="broker-add">
+            <h2 id="broker">Advertentie makelaar</h2>
+            <img alt="foto van demakelaar" class="images-broker" src="images/makelaar.png">
 
-        <div class="gridconainer__info-grid gridcontainer__grid-item"><!--titel kijrgen-->
-            <section class="info-house" tabindex="0">
-                <h1>pronkgevel1</h1>
-                <p>1566 LN Assendelft</p>
-                <span>136m²</span>
-                <span>164m²</span>
-                <span>4 slaapkamers</span>
-            </section>
-
-            <section class="price-house">
-                <h2>450.000 k.k</h2>
-                <p><a href="" class="general-link">Wat worden mijn maanlasten</a></p>
-                <p><a href="#broker" class="general-link contact-broker">contact met makelaar</a></p>
-            </section>
-            <div class="buttons-navigation">
-                <p class="buttons-navigation-text">Klik op de volgende linkjes naar het onderwerp te gaan</p>
-                <!--                <ul>-->
-                <!--                    <li>     <button class="buttons-navigation-style" type="button"><a href="#description" class="general-link">Omschrijving</a>-->
-                <!--                    </button></li>-->
-                <!--                    <li><button class="buttons-navigation-style" type="button"><a href="#characterize" class="general-link">kenmerken</a></button></li>-->
-                <!--                    <li><button class="buttons-navigation-style" type="button"><a href="#transfer" class="general-link">overdracht</a></button></li>-->
-                <!--                    <li><button class="buttons-navigation-style" type="button"><a href="#add-Home" class="general-link">waarde checken huis</a>-->
-                <!--                    </button></li>-->
-                <!--                </ul>-->
-                <ul>
-                    <li><a href="#description" class="buttons-navigation-style general-link">Omschrijving</a></li>
-                    <li><a href="#characterize" class="buttons-navigation-style general-link">kenmerken</a></li>
-                    <li><a href="#transfer" class="buttons-navigation-style general-link">overdracht</a></li>
-                    <li><a href="#add-Home" class="buttons-navigation-style general-link">Waarde checken huis</a></li>
-                </ul>
-
-
-            </div>
-            <section>
-                <h2 id="description">Omschrijving</h2>
-                <p tabindex="0">Een pronkgevel is een gevel van een gebouw, dat is ontworpen om te imponeren. Het
-                    betreft
-                    meestal de
-                    voorgevel van een gebouw, waarbij er veel aandacht is besteed aan de architectuur, er zijn
-                    betere
-                    materialen gebruikt en decoraties benadrukken de belangrijkste onderdelen. Deze mooie
-                    omschrijving</p>
-                <button class="full-description" type="button">lees volledige omschrijving</button>
-                <p class="hide-description" tabindex="0">zie je ook bij deze eindwoning in Saendelft, recht
-                    tegenover een
-                    groot speelveld. Met vier slaapkamers, goede isolatie en energielabel A is dit een perfect huis
-                    waar je
-                    samen, of met kinderen, fantastisch kunt wonen. Parkeren kan voor de deur en in de zijstraat.
-
-                    Deze eindwoning hoeft niet te pronken als een pauw, want de buitengevel trekt direct de
-                    aandacht. Ook
-                    het uitzicht aan de voorzijde, naar openbaar groen en volop speelruimte voor de kinderen, is
-                    fantastisch. Het is maar 3,5 kilometer naar de oprit van de A8 en na ongeveer 10 minuten bereik
-                    je het
-                    kruispunt van de A7 en A8. Ga je voor werk naar Amsterdam, Haarlem of Schiphol dan woon je in
-                    Saendelft
-                    op de perfecte plek. Natuurlijk is openbaar vervoer uitgebreid voorzien in zo'n moderne
-                    woonwijk.
-                    Streekbussen en het spoor sluiten uitstekend aan op de omliggende steden. Bij het treinstation,
-                    ongeveer
-                    5 minuten fietsen, vlak bij liggen verschillende scholen zowel peuter-, basis- als voortgezet
-                    onderwijs,
-                    geclusterd met buitenschoolse opvang en crèches. Voor de dagelijkse boodschappen kun je terecht
-                    in het
-                    winkelcentrum met twee supermarkten, Albert Heijn en Vomar, een Hema, speciaalzaken,
-                    verswinkels,
-                    boetieks en restaurants.
-
-                    Indeling:
-                    Begane grond:
-                    Open het poortje naar de geheel bestrate voortuin en loop naar de voordeur. In de brede hal zie
-                    je de
-                    trapopgang, meterkast en de toiletruimte met fonteintje. De lichte kleur op de wanden en de
-                    ramen in de
-                    voordeur versterken het gevoel van ruimte.
-                    In de tuingerichte woonkamer zie je, omdat het een eindwoning is, ramen aan twee zijden.
-                    Openslaande
-                    deuren geven toegang tot de achtertuin en doordat de eettafel vlak naast de open keuken staat,
-                    kun je de
-                    woonkamer grotendeels als zitkamer indelen.
-                    In de keuken staat een lichte hoekopstelling met een elektrische kookplaat, afzuigkap,
-                    vaatwasser,
-                    koel-/vriescombinatie, een oven en een magnetron. Ben je een echte keukenfanaat en wil je een
-                    stapje
-                    hoger, dan is de ruimte in de keuken groot genoeg om jouw droomkeuken met eiland te realiseren.
-
-                </p>
-            </section>
-            <section>
-                <h2 id="characterize">Kenmerken</h2>
-                <!--https://www.funda.nl/koop/assendelft/huis-42349645-pronkgevel-1/-->
-                <search>
-                    <form>
-                        <label for="kenmerk">zoek op kenmerken</label>
-                        <label for="kenmerk"></label><input id="kenmerk" name="q" placeholder="zoeken kenmerken"
-                                                            type="search"/>
-                        <button type="submit" class="search-button">Zoeken</button>
-                    </form>
-                </search>
-            </section>
-
-            <div tabindex="0">
-                <h3 id="transfer">overdracht</h3>
-                <dl class="dl-list">
-                    <dt>vraagprijs</dt>
-                    <dd>€ 450.000 kosten koper
-                    </dd>
-                    <dt>Vraagprijs per m²</dt>
-                    <dd>€ 3.309
-                    </dd>
-                    <dt>Aangeboden sinds</dt>
-                    <dd>Log in om te bekijken</dd>
-                    <dt>Status</dt>
-                    <dd>
-                        Beschikbaar
-                    </dd>
-                    <dt>Aanvaarding</dt>
-                    <dd>In overleg</dd>
-
-                </dl>
-                <h3>bouw</h3>
-                <dl>
-                    <dt>Soort woonhuis</dt>
-                    <dd>
-                        Eengezinswoning, hoekwoning
-                    </dd>
-                    <dt>Soort bouw</dt>
-                    <dd>Bestaande bouw
-                    </dd>
-                    <dt>Bouwjaar</dt>
-                    <dd>2001</dd>
-                    <dt>Soort dak</dt>
-                    <dd>Zadeldak bedekt met pannen</dd>
-
-                    <dt>Aanvaarding</dt>
-                    <dd>In overleg</dd>
-                </dl>
-
-                <button class="button-show-charactize" type="button">bekijk alle kenmerken</button>
-                <dl class="hide-characterize">
-                    <dt>vraagprijs</dt>
-                    <dd>kosten koper</dd>
-                    <dt>vraagprijs</dt>
-                    <dd>kosten koper</dd>
-                    <dt>vraagprijs</dt>
-                    <dd>kosten koper</dd>
-                    <dt>vraagprijs</dt>
-                    <dd>kosten koper</dd>
-                    <dt>vraagprijs</dt>
-                    <dd>kosten koper</dd>
-                    <dt>vraagprijs</dt>
-                    <dd>kosten koper</dd>
-                    <dt></dt>
-                    <dd></dd>
-                    <dt></dt>
-                    <dd></dd>
-                </dl>
-            </div>
-            <div>
-                <section class="add-my-home" id="add-Home">
-                    <h3>Wat is jouw huis waard?</h3>
-                    <p tabindex="0">Krijg direct inzicht in de waarde en populariteit van je huis door je adres toe
-                        te voegen in Mijn Huis.</p>
-                    <div class="input-field-address">
-                        <div class="grid-input-field-postcode">
-                            <label for="housnumber" class="label-inputfield">geef je postcode</label>
-                            <input class="input-field" id="postcode" name="postcode" placeholder=""/>
-
-                        </div>
-
-
-                        <div class="grid-input-field">
-                            <label class="label-inputfield" for="postcode"> huisnummmer</label>
-                            <input class="input-field" id="housnumber" name="housnumber" type="number"/>
-
-                        </div>
-
-                        <div class="grid-input-field">
-                            <label class="label-inputfield" for="add"> toevoeging</label>
-                            <input class="disable-input input-field" id="add" name="toevoeging" placeholder=""
-                                   type="number"/>
-                        </div>
-                    </div>
-
-
-                    <button type="button" class="checkvalue">check je waarde</button>
-                </section>
-            </div>
-            <div>
-                <h2>activiteiten</h2>
-                <div class="activity">
-                    <p class="activity__text">Aantal keer gezien:<span class="">24</span></p>
-                    <p class="activity__text">Toegevoegd aan favorieten:<span class="">24</span></p>
-                    <p class="activity__text">op funda sinds:<span class="">24</span></p>
-                </div>
-
-            </div>
-
-            <div>
-                <h2>buurt</h2>
-
-                <table>
-                    <thead>
-                    <tr>
-                        <th>waterrijk</th>
-                        <th></th> <!-- Added an empty column -->
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>inwoners</td>
-                        <td>w5610</td>
-                    </tr>
-                    <tr>
-                        <td>Gezin met kinderen</td>
-                        <td>55%</td>
-                    </tr>
-                    <tr>
-                        <td>Gem. vraagprijs / m²</td>
-                        <td>€ 3.692</td>
-                    </tr>
-
-                    </tbody>
-                </table>
-                <button type="button" class="button-show-charactize">meer over</button>
-
-            </div>
-
-            <div class="in-de-buurt"><h2>In de buurt</h2>
-                <ul>
-                    <li>
-                        <a href="">basischool</a></li>
-                    <li><a href="">supermarkt</a></li>
-                    <li><a href="">bushalter</a>
-                    </li>
-                </ul>
-
-            </div>
-            <div>
-                <img alt="map-images" class="image-change" src="images/map.png">
-            </div>
-
-        </div>
-        <div class="gridconainer__small-images-div">
-            <ul class="gridcontainer__small-images">
-
-
-                <li class="carousel-images__no-dot">
-                    <img alt="hoofdfoto huis" class="gridcontainer__small-images__images-next-to-main-image images-houses-2"
-                         src="images/eettafel.jpg">
-                </li>
-                <li class="carousel-images__no-dot"> <img alt="hoofdfoto huis" class="gridcontainer__small-images__images-next-to-main-image images-houses-3" src="images/woonkamer.jpg">   </li>
-                <li class="carousel-images__no-dot"> <img alt="hoofdfoto huis" class="gridcontainer__small-images__images-next-to-main-image images-houses-4" src="images/tuin.jpg">   </li>
-                <li class="carousel-images__no-dot"> <img alt="hoofdfoto huis" class="gridcontainer__small-images__images-next-to-main-image images-houses-5" src="images/video.jpg">   </li>
-                <li class="carousel-images__no-dot"> <img alt="hoofdfoto huis" class="gridcontainer__small-images__images-next-to-main-image images-houses-6" src="images/stairs.jpg">   </li>
-                <li class="carousel-images__no-dot"> <img alt="hoofdfoto huis" class="gridcontainer__small-images__images-next-to-main-image images-houses-7" src="images/street.jpg">   </li>
-            </ul>
-        </div>
-        <div class="broker-add gridcontainer__grid-item">
-
-            <p id="broker">Advertentie makelaar</p>
-            <img src="images/makelaar.png" alt="makelaar" class="images-broker">
-            <button  type="submit" class="send-email">stuur een email</button>
+            <button class="send-email" type="submit">stuur een email</button>
             <p class="telephonumber">toon telefoonnummer</p>
             <p class="hide-telehponenumber">Bel 075-6218928</p>
-            <div class="commercial-add">
-                <!--                <p>grootte-advertiente</p>-->
-            </div>
-        </div>
+        </section>
+
     </div>
+    <section class="links-subjects">
+        <p class="buttons-navigation-text">Klik op de volgende linkjes naar het onderwerp te gaan</p>
+
+        <ul>
+            <li><a class="buttons-navigation-style general-link" href="#description">Omschrijving</a></li>
+            <li><a class="buttons-navigation-style general-link" href="#characterize">kenmerken</a></li>
+            <li><a class="buttons-navigation-style general-link" href="#transfer">overdracht</a></li>
+            <li><a class="buttons-navigation-style general-link" href="#add-home">Waarde checken huis</a></li>
+        </ul>
+    </section>
+
+    <section>
+        <h2 id="description">Omschrijving</h2>
+        <p>Een pronkgevel is een gevel van een gebouw, dat is ontworpen om te imponeren. Het
+            betreft
+            meestal de
+            voorgevel van een gebouw, waarbij er veel aandacht is besteed aan de architectuur, er zijn
+            betere
+            materialen gebruikt en decoraties benadrukken de belangrijkste onderdelen. Deze mooie
+            omschrijving</p>
+        <button class="full-description" type="button">lees volledige omschrijving</button>
+
+        <p class="hide-description">Zie je ook bij deze eindwoning in Saendelft, recht
+            tegenover een
+            groot speelveld. Met vier slaapkamers, goede isolatie en energielabel A is dit een perfect huis
+            waar je
+            samen, of met kinderen, fantastisch kunt wonen. Parkeren kan voor de deur en in de zijstraat.
+
+            Deze eindwoning hoeft niet te pronken als een pauw, want de buitengevel trekt direct de
+            aandacht. Ook
+            het uitzicht aan de voorzijde, naar openbaar groen en volop speelruimte voor de kinderen, is
+            fantastisch. Het is maar 3,5 kilometer naar de oprit van de A8 en na ongeveer 10 minuten bereik
+            je het
+            kruispunt van de A7 en A8. Ga je voor werk naar Amsterdam, Haarlem of Schiphol dan woon je in
+            Saendelft
+            op de perfecte plek. Natuurlijk is openbaar vervoer uitgebreid voorzien in zo'n moderne
+            woonwijk.
+            Streekbussen en het spoor sluiten uitstekend aan op de omliggende steden. Bij het treinstation,
+            ongeveer
+            5 minuten fietsen, vlak bij liggen verschillende scholen zowel peuter-, basis- als voortgezet
+            onderwijs,
+            geclusterd met buitenschoolse opvang en crèches. Voor de dagelijkse boodschappen kun je terecht
+            in het
+            winkelcentrum met twee supermarkten, Albert Heijn en Vomar, een Hema, speciaalzaken,
+            verswinkels,
+            boetieks en restaurants.
+
+            Indeling:
+            Begane grond:
+            Open het poortje naar de geheel bestrate voortuin en loop naar de voordeur. In de brede hal zie
+            je de
+            trapopgang, meterkast en de toiletruimte met fonteintje. De lichte kleur op de wanden en de
+            ramen in de
+            voordeur versterken het gevoel van ruimte.
+            In de tuingerichte woonkamer zie je, omdat het een eindwoning is, ramen aan twee zijden.
+            Openslaande
+            deuren geven toegang tot de achtertuin en doordat de eettafel vlak naast de open keuken staat,
+            kun je de
+            woonkamer grotendeels als zitkamer indelen.
+            In de keuken staat een lichte hoekopstelling met een elektrische kookplaat, afzuigkap,
+            vaatwasser,
+            koel-/vriescombinatie, een oven en een magnetron. Ben je een echte keukenfanaat en wil je een
+            stapje
+            hoger, dan is de ruimte in de keuken groot genoeg om jouw droomkeuken met eiland te realiseren.
+
+        </p>
+    </section>
+    <section>
+        <h2 id="characterize">Kenmerken</h2>
+
+        <search>
+            <form role="search">
+                <label aria-label="zoek op kenmekern" for="kenmerk">zoek op kenmerken</label>
+                <label aria-label="geef zoekopdracht op" for="kenmerk"></label><input id="kenmerk" name="q"
+                                                                                      placeholder="zoeken kenmerken"
+                                                                                      type="search"/>
+                <button class="search-button" type="submit">Zoeken</button>
+            </form>
+        </search>
+
+        <h3 id="transfer">overdracht</h3>
+
+        <dl>
+            <dt>vraagprijs</dt>
+            <dd>€ 450.000 kosten koper
+            </dd>
+            <dt>Vraagprijs per m²</dt>
+            <dd>€ 3.309
+            </dd>
+            <dt>Aangeboden sinds</dt>
+            <dd>Log in om te bekijken</dd>
+            <dt>Status</dt>
+            <dd>
+                Beschikbaar
+            </dd>
+            <dt>Aanvaarding</dt>
+            <dd>In overleg</dd>
+        </dl>
+
+        <h3>bouw</h3>
+        <dl>
+            <dt>Soort woonhuis</dt>
+            <dd>Eengezinswoning, hoekwoning</dd>
+            <dt>Soort bouw</dt>
+            <dd>Bestaande bouw</dd>
+            <dt>Bouwjaar</dt>
+            <dd>2001</dd>
+            <dt>Soort dak</dt>
+            <dd>Zadeldak bedekt met pannen</dd>
+
+            <dt>Aanvaarding</dt>
+            <dd>In overleg</dd>
+            <dt>energielabel</dt>
+            <dd>a</dd>
+        </dl>
+
+        <button class="button-show-charactize" type="button">bekijk alle kenmerken</button>
+
+        <dl class="hide-characterize">
+            <dt>energielabel</dt>
+            <dd>a</dd>
+            <dt>vraagprijs</dt>
+            <dd>kosten koper</dd>
+            <dt>vraagprijs</dt>
+            <dd>kosten koper</dd>
+            <dt>vraagprijs</dt>
+            <dd>kosten koper</dd>
+            <dt>vraagprijs</dt>
+            <dd>kosten koper</dd>
+            <dt>vraagprijs</dt>
+            <dd>kosten koper</dd>
+        </dl>
+    </section>
+    <section>
+        <h3 id="add-home">Wat is jouw huis waard?</h3>
+
+        <p class="add-home__text-value-home">Krijg direct inzicht in de waarde en populariteit van je huis
+            door
+            je adres toe
+            te voegen in Mijn Huis.</p>
+
+        <div class="input-field-address"><!--deze div is noodzakelijk voor het positoneren van de inputfields-->
+            <label class="label-inputfield-postcode" for="housnumber"> postcode</label>
+            <input class="input-field-postcode" id="postcode" name="postcode" placeholder=""/>
+
+            <label class="label-inputfield-number" for="postcode"> huisnr</label>
+            <input class="input-field-number" id="housnumber" name="housnumber" type="number"/>
+
+            <label class="label-inputfield-ad" for="add"> toevoeging</label>
+            <input class="input-field-add" id="add" name="toevoeging" placeholder=""
+                   type="number"/>
+        </div>
+
+        <button class="checkvalue" type="button">check je waarde</button>
+    </section>
+    <section>
+        <h2>activiteiten</h2>
+        <p class="activity__text">Aantal keer gezien:<span class=""><img src="images/icons/eye.svg" alt="icoon gezien">24</span></p>
+        <p class="activity__text">Toegevoegd aan favorieten:<span class=""><img src="images/icons/heartGrey.svg" alt="icoon calender">24</span></p>
+        <p class="activity__text">op funda sinds:<span class=""><img src="images/icons/calendarGrey.svg" alt="icoon calender">24</span></p>
+
+    </section>
+    <section>
+        <h2>buurt</h2>
+
+        <div class="grid-container-neighbor"><!--div vanwege positioneren items-->
+            <p class="watterijk">waterrijk</p>
+            <p class="inowners">inwoners</p>
+            <p class="numbers">w5610</p>
+            <p class="house-family">Gezin met kinderen</p>
+            <p class="percentage">55%</p>
+            <p class="m2">Gem. vraagprijs m²</p>
+            <p class="bedrag">3692</p>
+            <button class="button-show-charactize" role="button" type="button">meer over</button>
+        </div>
+    </section>
+    <section>
+        <h2>In de buurt</h2>
+        <ul>
+            <li><img src="images/icons/school.svg" alt="school">
+                <a href="">basischool</a></li>
+            <li><img src="images/icons/shop.svg" alt="school"><a href="">supermarkt</a></li>
+            <li><img src="images/icons/bus.svg" alt="school"><a href="">bushalte</a>
+            </li>
+        </ul>
+    </section>
+
+
+    <section>
+        <h2>plattegrond</h2>
+        <img alt="foto plattegrond" class="image-change" src="images/map.png">
+    </section>
 </main>
-<footer>
 
+<footer class="grid-container-footer">
+    <ul class="first-bloc">
+        <li class="carousel-images__no-dot"><a href="#" class="footer-links">Verkoop je huis op funda</a></li>
+        <li class="carousel-images__no-dot"><a href="#" class="footer-links">Check je woningwaarde</a></li>
+        <li class="carousel-images__no-dot"><a href="#" class="footer-links">Zoek een NVM-makelaar</a></li>
+        <li class="carousel-images__no-dot"><a href="#" class="footer-links">Volg de woningmarkt:funda index</a></li>
+    </ul>
+    <ul class="second-block">
+        <li class="carousel-images__no-dot"><a href="#" class="footer-links">inzichten&inspiratie</a></li>
+        <li class="carousel-images__no-dot"><a href="#" class="footer-links">Inloggen mijn huis</a></li>
+        <li class="carousel-images__no-dot"><a href="#" class="footer-links">Alles over een huis kopen</a></li>
+        <li class="carousel-images__no-dot"><a href="#" class="footer-links">Alles over een huis verkopen</a></li>
+    </ul>
+    <ul class="tird-block">
+        <li class="carousel-images__no-dot"><a href="#" class="footer-links">Voor makelaars</a></li>
+        <li class="carousel-images__no-dot"><a href="#" class="footer-links">meld je aan bij funda</a></li>
+        <li class="carousel-images__no-dot"><a href="#" class="footer-links">Plaats een promoot objecten</a></li>
+        <li class="carousel-images__no-dot"><a href="#" class="footer-links">meer funda</a></li>
+    </ul>
+    <ul class="fouthr-block">
+        <li class="carousel-images__no-dot"><a href="#" class="footer-links">over funda</a></li>
+        <li class="carousel-images__no-dot"><a href="#" class="footer-links">Werken bij funda</a></li>
+        <li class="carousel-images__no-dot"><a href="#" class="footer-links">Voor adverteerders</a></li>
+        <li class="carousel-images__no-dot"><a href="#" class="footer-links">Redactioneeel beleid</a></li>
+    </ul>
 </footer>
-
 </body>
 </html>
-
-
-<!--todo https://www.sitepoint.com/css-viewport-units-quick-start/ naar vh -->
