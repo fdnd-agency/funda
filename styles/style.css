@@ -21,6 +21,7 @@
     --hoverOrangeColor: #de9000;
 
     --borderLight: #ededed;
+    --borderDark: #CCCCCC;
 }
 
 html {
@@ -53,6 +54,7 @@ a {
     transition: color .25s cubic-bezier(.23,1,.32,1);
 }
 main a:hover,
+footer a:hover,
 button.txt:hover,
 label.readMore:hover,
 .buurt article h2:hover {
@@ -512,9 +514,10 @@ form label {
     margin-bottom: .5rem;
 }
 form input,
-form select {
+form select,
+select {
     width: 100%;
-    border: 1px solid #CCCCCC;
+    border: 1px solid var(--borderDark);
     box-shadow: 0 0 transparent, 0 0 transparent, inset 0 1px 2px 0 rgba(0,0,0,.1);
     border-radius: 4px;
     padding: 0.75rem 1.25em;
@@ -729,19 +732,176 @@ ul.buttonList li button:active
 
 
 /* einde sidebar  */
+.endPageList {
+    border-top: 1px solid lightgrey;
+    padding: 1rem 0;
+}
+
 
 /* EINDE MAIN */
 
 
 
+footer {
+    width: 100%;
+    background-color: var(--borderLight);
+}
+/* first section */
+footer div section.topFooter {
+    padding: 2.5em 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+footer div section.topFooter div h4 {
+    margin-bottom: 1.75rem;
+}
+footer div section.topFooter div ul {
+    list-style: none;
+}
+footer div section.topFooter div ul li a {
+    display: block;
+    width: 100%;
+    padding-bottom: 1.75rem;
+}
+/* second section */
+footer div section.bottomFooter {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 2.5em 0;
+}
+footer div section.bottomFooter p {
+    margin-bottom: 0;
+}
+footer div section.bottomFooter div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+}
+footer div section.bottomFooter div:last-child {
+    gap: .5rem;
+}
+footer div section.bottomFooter div:nth-child(2) {
+    display: flex;
+    flex-direction: row;
+    gap: .5rem;
+    align-items: center;
+    place-self: end;
+}
+footer div section.bottomFooter div:nth-child(2) ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: .5rem;
+}
+footer div section.bottomFooter div:nth-child(2) ul li::before {
+    content: "• "; color: black;
+}
 
+.line {
+    display: block;
+    height: 4px;
+    width: 100%;
+    background-color: var(--mainColor);
+}
+.line.grey {
+    height: 2px;
+    background-color: var(--borderDark);
+}
 
-
+ul.socials {
+    list-style: none;
+    display: flex;
+    gap: 0.5rem;
+}
+.socials a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background: white;
+    border-radius: 2px;
+    width: 2.75rem;
+    height: 2.75rem;
+}
+.socials img {
+    width: 1.75em;
+    height: 1.5em;
+}
 
 
 
 
 /* RESPONSIVE */
+@media only screen and (max-width: 1200px) {
+    .container {
+        max-width: 90vw;
+    }
+    .objectImages {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .subImage:nth-child(3),
+    .subImage:nth-child(4) {
+        display: none; /* Hide the last two images */
+    }
+}
+
+
+/* IPAD / TABLET */
+@media only screen and (max-width: 1020px) {
+    .objectImages {
+        grid-template-columns: 1fr;
+    }
+    .mainImage {
+        grid-column: 1 / span 3;
+    }
+    .subImage {
+        display: none; /* Hide the last two images */
+    }
+    .gridContainer {
+        display: unset;
+        /* display: grid; */
+        /* grid-template-columns: 1fr; */
+        max-width: unset;
+        margin: unset;
+        /* gap: unset; */
+    }
+    .container:has(.sideBar) {
+        display: none;
+    }
+    footer div:first-child section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    footer div section.bottomFooter {
+        flex-direction: column;
+    }
+    footer div section.bottomFooter div:nth-child(1) {
+        order: 2;
+    }
+    footer div section.bottomFooter div:nth-child(2) {
+        place-self: center;
+        flex-direction: column;
+        order: 3;
+    }
+    footer div section.bottomFooter div:last-child {
+        flex-direction: column;
+        align-items: flex-start;
+        order: 1;
+    }
+
+}
+/* alles boven de ipad/ tablet */
+@media only screen and (min-width: 1020px) {
+    .gridContainer {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        max-width: 90vw;
+        margin: 0 auto;
+        gap: 2em;
+    }
+}
+/* END IPAD/ TABLET */
 
 
 
@@ -877,56 +1037,39 @@ ul.buttonList li button:active
     .container:has(.sideBar) {
         display: grid;
     }
+    .container:has(.sideBar) .ikea {
+        margin-bottom: 2rem;
+    }
+
+    footer div:first-child section {
+        grid-template-columns: 1fr;
+    }
+    footer div section.topFooter div h4 {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0;
+    }
+    footer div section.topFooter div h4::before {
+        content: url("../assets/icons/arrowDown.svg");
+        width: 2rem;
+        text-align: center;
+    }
+    footer div section.topFooter div {
+        border-top: 1px solid var(--borderDark);
+        padding: 0.5rem 0;
+    }
+    footer div section.topFooter div:last-child {
+        border-bottom: 1px solid var(--borderDark);
+    }
+    footer div section.topFooter div ul {
+        display: none;
+        padding-left: 2rem;
+    }
+    footer div section.topFooter div ul li a {
+        padding-bottom: 1rem;
+    }
 
 }
 /* END MOBIEL */
 
-
-@media only screen and (max-width: 1020px) {
-    .objectImages {
-        grid-template-columns: 1fr;
-    }
-    .mainImage {
-        grid-column: 1 / span 3;
-    }
-    .subImage {
-        display: none; /* Hide the last two images */
-    }
-    .gridContainer {
-        display: unset;
-        /* display: grid; */
-        /* grid-template-columns: 1fr; */
-        max-width: unset;
-        margin: unset;
-        /* gap: unset; */
-    }
-    .container:has(.sideBar) {
-        display: none;
-    }
-
-}
-
-@media only screen and (min-width: 1020px) {
-    .gridContainer {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        max-width: 68vw;
-        margin: 0 auto;
-        gap: 2em;
-    }
-}
-
-
-@media only screen and (max-width: 1200px) {
-    .container {
-        max-width: 90vw;
-    }
-    .objectImages {
-        grid-template-columns: repeat(3, 1fr);
-    }
-    .subImage:nth-child(3),
-    .subImage:nth-child(4) {
-        display: none; /* Hide the last two images */
-    }
-}
 /* END RESPONSIVE */
