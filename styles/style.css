@@ -897,7 +897,7 @@ ul.socials {
     .gridContainer {
         display: grid;
         grid-template-columns: 2fr 1fr;
-        max-width: 90vw;
+        max-width: 68vw;
         margin: 0 auto;
         gap: 2em;
     }
