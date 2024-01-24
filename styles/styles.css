@@ -605,7 +605,22 @@ main section:nth-of-type(8) img {
     max-width: 25vh;
 }
 
+main section:nth-of-type(9) ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 1rem;
+}
 
+main section:nth-of-type(9) ul li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+main section:nth-of-type(9) ul li img {
+    margin-right: 1rem;
+}
 
 /* media queries ---------------------------------------------------------------------------------------------------------------------- */
 
@@ -881,5 +896,12 @@ main section:nth-of-type(8) img {
         align-items: center;
         justify-content: center;
         border-top: rgba(0, 0, 0, 0.15) 1px solid;
+    }
+
+    main section:nth-of-type(9) ul {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        gap: 1rem;
     }
 }
