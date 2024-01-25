@@ -138,7 +138,6 @@ nav ul li {
     width: 50%;
     height: 5em;
     object-fit: cover;
-    box-sizing: border-box;
     flex: 1 0 20vw;
     max-width: 100%;
     padding: 7px 8px 7px 8px;
@@ -156,7 +155,7 @@ nav ul li {
 .image-stacks__photo svg {
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 45%;
     transform: translate(-50%, -50%);
     fill: white;
     width: var(--icon-svg-size);
@@ -504,13 +503,23 @@ h2 {
     }
 
     .object-primary {
+        position: relative;
         margin: 0;
-        grid-area: object-primary;
     }
 
     .object-primary__details .map-button {
         top: 15%;
         left: 70%;
+    }
+
+    .contact-banner {
+        display: block;
+        position: sticky;
+        width: 15em;
+        height: 22em;
+        border: grey solid 1px;
+        padding: .5em;
+        border-radius: 10px;
     }
 
     .contact-banner .contact-banner__header {
@@ -526,15 +535,6 @@ h2 {
         }
     }
 
-    .contact-banner {
-        display: block;
-        width: 15em;
-        height: 22em;
-        border: grey solid 1px;
-        padding: .5em;
-        border-radius: 10px;
-        grid-area: contact-banner;
-    }
 
     .contact-banner__info {
         display: flex;
