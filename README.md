@@ -1,6 +1,3 @@
-<img width="123" alt="image" src="https://github.com/fdnd-agency/funda/assets/1061632/971b90d8-5c19-46a1-a19c-5414aee155c3">
-
-# Projecten
-
-* Jaar 1: [Design Challenge Sprint 6](https://github.com/fdnd-agency/funda/blob/main/design-challenge-sprint-6/README.md) 
-* Jaar 2: [Favourite Houses](https://github.com/fdnd-agency/funda/blob/main/favourite-houses/README.md)  
+#Funda design challenge sprint 6
+<img width="400px" alt="image" src="https://github.com/rutgerkock/funda/assets/114153177/69501f6b-d721-46f0-8bc0-25b049de7d51">
+<img width="200" alt="image" src="https://github.com/rutgerkock/funda/assets/114153177/628e7ddb-3547-4468-ad68-10c82078f5fd">
