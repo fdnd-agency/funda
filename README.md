@@ -28,5 +28,20 @@ Je kunt de website op Telefoon, Tablet en desktop openen op deze link: https://l
 - Responsive
 - Mobile first
 
-## Checklist
-- [ x ]
+## Checklist pagina
+
+- [x] Buurt blokje
+- [x] Kaart blokje
+- [x] Reis blokje
+- [x] Responsive nav-bar
+- [x] Responsive footer
+- [x] Responsive sections
+- [x] Responsive main-image
+- [x] Kenmerken tabel
+- [x] Belangrijkste kenmerken
+- [x] Uitklapbare beschrijving
+- [x] Ing sectie
+- [x] Vergelijkbaar in de buurt sectie
+- [x] Sidebar
+- [ ] Menu subitems
+- [ ] Mobiele dropdown
