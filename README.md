@@ -18,7 +18,7 @@ De pagina werd opnieuw gebouwd door een intern team, zijn er dingen die ze mee k
 
 De pagina is responsive en is Mobile first ontworpen en gemaakt. 
 
-Hier staat de website: [https://koopreynders.github.io/the-client-case/](https://rutgerkock.github.io/funda/)
+Hier staat de website: [rutgerkock.github.io/funda](https://rutgerkock.github.io/funda/)
 
 ## Gebruik
 
