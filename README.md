@@ -18,7 +18,15 @@ Opdrachtomschrijving
 
 > Het maken (nabouwen) van een detailpagina en verbeteren waar nodig is in hardcode vanille html, css en javascript. En ervoor zorgen dat de code mobile first wordt gebouwd.
 
-## Ontwerpprobleem en oplossing
 ## Gebruik van website
+Je kunt de website op Telefoon, Tablet en desktop openen op deze link: https://lmikkers.github.io/funda/
+[https://lmikkers.github.io/funda/](https://lmikkers.github.io/funda/)
+
 ## Kenmerken
+- HTML
+- CSS
+- Responsive
+- Mobile first
+
 ## Checklist
+- [ x ]
