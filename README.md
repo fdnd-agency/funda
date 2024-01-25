@@ -4,11 +4,10 @@
 
 
 ## Inhoudsopgave
-- Opdrachtgever
-- Ontwerpprobleem en oplossing
-- Gebruik van de website
-- Kenmerken met technische opzet en belangrijke onderdelen
-- Checklist wel gelukt / niet gelukt
+- [](Opdrachtgever)
+- [](Gebruik van de website)
+- [](Kenmerken met technische opzet en belangrijke onderdelen)
+- [](Checklist wel gelukt / niet gelukt)
 
 ## Opdrachtgever 
 ### Funda
