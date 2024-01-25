@@ -84,6 +84,7 @@ Checklist pagina
 - [ ] Buurt blokje
 - [ ] Kaart blokje
 - [ ] Reis blokje
+- [ ] Inklapbare kenmerken lijst
 - [x] Responsive nav-bar
 - [x] Responsive footer
 - [x] Responsive sections
