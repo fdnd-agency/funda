@@ -4,10 +4,10 @@
 
 
 ## Inhoudsopgave
-- [https://github.com/Lmikkers/funda/blob/main/README.md#opdrachtgever](Opdrachtgever)
-- [https://github.com/Lmikkers/funda/blob/main/README.md#gebruik-van-website](Gebruik van de website)
-- [https://github.com/Lmikkers/funda/blob/main/README.md#kenmerken](Kenmerken met technische opzet en belangrijke onderdelen)
-- [https://github.com/Lmikkers/funda/blob/main/README.md#checklist-pagina](Checklist wel gelukt / niet gelukt)
+- [Opdrachtgever](https://github.com/Lmikkers/funda/blob/main/README.md#opdrachtgever)
+- [Gebruik website](https://github.com/Lmikkers/funda/blob/main/README.md#gebruik-van-website)
+- [Kenmerken](https://github.com/Lmikkers/funda/blob/main/README.md#kenmerken)
+- [Checklist](https://github.com/Lmikkers/funda/blob/main/README.md#checklist-pagina)
 
 ## Opdrachtgever 
 ### Funda
