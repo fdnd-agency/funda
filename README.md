@@ -93,4 +93,4 @@ Checklist pagina
 - [x] Uitklapbare beschrijving
 - [x] Ing sectie
 - [x] Vergelijkbaar in de buurt sectie
-
+- [x] Mobiele dropdown
