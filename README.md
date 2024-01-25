@@ -25,7 +25,17 @@ Je kunt de website op Telefoon, Tablet en desktop openen op deze link: https://l
 - HTML
 - CSS
 - Responsive
-- Mobile first
+
+### HTML
+Structuur: `<header>` `<main>` `<footer>`
+
+Onderverdeeld in:  `<nav>` `<section>` `<article>` `<div>`
+
+### CSS
+De CSS heb ik gelinkt in de `<head>`
+
+### Responsive
+Om te zorgen dat de website goed functioneert op meerdere devices heb ik gebruikt gemaakt van `@media only screen and (min-width: ...px)`
 
 ## Checklist pagina
 
