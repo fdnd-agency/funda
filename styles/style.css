@@ -377,7 +377,9 @@ h2 {
     .image-stacks__photo,
     .image-stacks__video {
         display: flex;
+        flex-direction: column;
         justify-content: center;
+        align-items: center;
     }
 
     .image-stacks__video img,
@@ -387,9 +389,8 @@ h2 {
 
     .image-stacks__video span,
     .image-stacks__photo span {
-        justify-content: start;
         font-size: 18px;
-        margin: 0 0 0 4em;
+        margin: 0 0 0 .5em;
         font-size: 17px;
     }
 
@@ -458,27 +459,22 @@ h2 {
 
     .image-stacks__main {
         grid-area: main;
-        background-color: red;
     }
 
     .image-stacks__video {
         grid-area: video;
-        background-color: blue;
     }
 
     .image-stacks__photo {
         grid-area: photo;
-        background-color: green;
     }
 
     .image-stacks__remain1 {
         grid-area: remain1;
-        background-color: pink;
     }
 
     .image-stacks__remain2 {
         grid-area: remain2;
-        background-color: pink;
     }
 
     .image-stacks__main span,
