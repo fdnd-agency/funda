@@ -47,6 +47,7 @@ Om te zorgen dat de website goed functioneert op meerdere devices heb ik gebruik
 - [x] Responsive sections
 - [x] Responsive main-image
 - [x] Kenmerken tabel
+- [ ] Kenmerken tabel op mobiel in/uit klappen
 - [x] Belangrijkste kenmerken
 - [x] Uitklapbare beschrijving
 - [x] Ing sectie
