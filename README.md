@@ -26,7 +26,7 @@ De website is bedoeld voor een brede doelgroep van verschillende soorten mensen.
 
 ## Kenmerken
 
-De website is gebouwd met [HTML](#html) en [CSS](#CSS), alle interacties zijn volledig zonder [JAVASCRIPT](#JAVASCRIPT) gerealiseerd.
+De website is gebouwd met [HTML](#html) en [CSS](#CSS), alle interacties zijn volledig zonder [JAVASCRIPT](#JAVASCRIPT) gerealiseerd, door gebruik te maken van ```<detail>``` elementen en ```popover``` elementen.
 
 ### HTML
 
