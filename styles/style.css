@@ -430,7 +430,7 @@ h2 {
 @media (min-width: 900px) {
 
     nav ul li {
-        font-size: 1.5em;
+        font-size: 1.2em;
     }
 
     .image-stacks {
@@ -528,7 +528,6 @@ h2 {
 
     .contact-banner {
         display: block;
-        position: sticky;
         width: 15em;
         height: 22em;
         border: grey solid 1px;
@@ -549,10 +548,15 @@ h2 {
         }
     }
 
+    h4 {
+        font-size: 16px;
+    }
 
     .contact-banner__info {
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
         margin: 2em 0 0 0;
         gap: 1.5em;
     }
