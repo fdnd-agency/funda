@@ -12,8 +12,11 @@
 
 ## Opdrachtgever 
 ### Funda
+Funda is een vastgoedplatform voor consumenten en ondernemers. Via Funda kun je huizen kopen, verkopen en huren.
 
-<img width="200" src="https://github.com/Lmikkers/funda/assets/94455811/64b03ace-0d63-43a6-a2ce-446206bab7c5">
+Opdrachtomschrijving
+
+> Het maken (nabouwen) van een detailpagina en verbeteren waar nodig is in hardcode vanille html, css en javascript. En ervoor zorgen dat de code mobile first wordt gebouwd.
 
 ## Ontwerpprobleem en oplossing
 ## Gebruik van website
