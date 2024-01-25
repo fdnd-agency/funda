@@ -1,6 +1,12 @@
-<img width="123" alt="image" src="https://github.com/fdnd-agency/funda/assets/1061632/971b90d8-5c19-46a1-a19c-5414aee155c3">
+# Funda Design Challenge Sprint 6
 
-# Projecten
+<img src="https://github.com/Lmikkers/funda/assets/94455811/60f4b070-09ce-48e2-8338-ccde900e7967">
 
-* Jaar 1: [Design Challenge Sprint 6](https://github.com/fdnd-agency/funda/blob/main/design-challenge-sprint-6/README.md) 
-* Jaar 2: [Favourite Houses](https://github.com/fdnd-agency/funda/blob/main/favourite-houses/README.md)  
+� titel van het project
+� screenshot van de website
+� inhoudsopgave
+� opdrachtgever
+� ontwerpprobleem en oplossing
+� gebruik van de website ��
+� Kenmerken met technische opzet en belangrijke onderdelen
+� checklist wel gelukt / niet gelukt
