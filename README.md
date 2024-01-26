@@ -35,6 +35,28 @@ Onderverdeeld in:  `<nav>` `<section>` `<article>` `<div>`
 ### CSS
 De CSS heb ik gelinkt in de `<head>`
 
+Ik heb de veel voorkomende styles genoteerd in de `root`, zodat ik dit overal makkelijk kan gebruiken
+```css
+:root {
+    --mainFont: 'Proxima Nova', sans-serif;
+    --mainHeaderFontWeight: 600;
+    --mainFontWeight: 400;
+    --secondFontWeight: 350;
+    --thirdFontWeight: 300;
+    --mainFontSize: 20px;
+    --secondFontSize: 16px;
+   
+    --mainColor: #F7A100;
+    --mainFontColor: #333333;
+    --secondFontColor: #999999;
+    --thirdFontColor: #0071B3;
+    --hoverOrangeColor: #de9000;
+
+    --borderLight: #ededed;
+    --borderDark: #CCCCCC;
+}
+```
+
 ### Responsive
 Om te zorgen dat de website goed functioneert op meerdere devices heb ik gebruikt gemaakt van `@media only screen and (min-width: ...px)`
 
