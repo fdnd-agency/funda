@@ -29,8 +29,7 @@ Redesign the favorite houses page of a user.
 
 ## Data
 
-There is no data for a mocked endpoint. We can agree on a schema that is similar to the existing content on that page but since we expect data to be enhanced with extra fields, it will be up to the students to define the proper schema.
-
+There is a database in Directus you can use.
 
 ## Resources
 
