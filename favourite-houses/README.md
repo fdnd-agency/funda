@@ -18,12 +18,14 @@ Redesign the favorite houses page of a user.
 ### User stories
 
 1) As a User, I want to be able to see all my saved houses so that I can have a general impression of which houses I'm interested in.
-  
-2) As a User, I want to be able to see all te details of a saved house so that I can reconsider if it is still a house I want to keep in my favorite houses list.
-   
-4) As a User, I want to be able to create custom ratting points so that so I have a better control over qualities of the object that I value.
+  * shows a picture of the house
+  * shows a price tag
+  * shows details (plot area, house size, rooms, energy label)
+  * shows the broker
 
-5) As a User, I want be able to create custom lists of houses that can then be shared with another user so that we can together and on asynchronous way veto or approve houses that we like.
+2) As a User, I want to be able to add a note for myself so that I can keep track of important information.
+   
+3) As a User, I want to be able to add a rating to a house so that I can keep track of what I like.
 
 ## Data
 
