@@ -35,7 +35,7 @@ There is a database in Directus you can use.
 
 ### [Backlog](https://github.com/orgs/fdnd-agency/projects/21/views/2)
 
-### [Huisstijl](https://brand.funda.nl)  
+### [Huisstijl](https://brand.funda.nl/)  
 You can find our complete brand guide and download the necessary assets (logo, font, icons, photos etc.) [here](https://brand.funda.nl/).
 
 ### Content
