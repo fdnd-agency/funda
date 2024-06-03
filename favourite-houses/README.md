@@ -33,10 +33,10 @@ There is a database in Directus you can use.
 
 ## Resources
 
-[Backlog](https://github.com/orgs/fdnd-agency/projects/21/views/2)
+### [Backlog](https://github.com/orgs/fdnd-agency/projects/21/views/2)
 
-[Huisstijl]()  
+### [Huisstijl](https://brand.funda.nl)  
 You can find our complete brand guide and download the necessary assets (logo, font, icons, photos etc.) [here](https://brand.funda.nl/).
 
-[Content](data.json)<br />
-The data in `data.json` can be used as an example schema for the page. Feel free to enrich or change this schema based on personal requirements.
+### Content
+The data can be found in Directus.
