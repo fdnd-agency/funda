@@ -23,9 +23,9 @@ Redesign the favorite houses page of a user.
   * shows details (plot area, house size, rooms, energy label)
   * shows the broker
 
-### 2) As a User, I want to be able to add a note for myself so that I can keep track of important information.
-   
-### 3) As a User, I want to be able to add a rating to a house so that I can keep track of what I like.
+### 2) As a User, I want to be able to add a rating to a house so that I can keep track of what I like.
+
+### 3) As a User, I want be able to create custom lists of houses so that I can easily catagorize houses.
 
 ## Data
 
