@@ -10,7 +10,7 @@ Funda helps individuals during one of the most significant decisions in life: fi
 
 Currently funda has a feature that is under utilized with great potential for better UX. The [saved houses section](https://www.funda.nl/en/mijn/bewaard/)(needs login) could be improved into a more collaborative and data enriched experience. Currently it's possible to save a house as favorite and rated it based on a few points but it can be improved.
 
-We want to add scores to custom points that the user will define and be able to filter and order based on these custom ratings. Also, looking for a house is most of the times a collaboration between two or more people, so we want to give the opportunity to users to collaborate on this quest.
+We want to add scores to custom points that the user will define and be able to filter and order based on these custom ratings. Also, when you have a lot of houses, you may want to categorize them into different lists. Make sure that the user can create a list and add houses to them.
 
 ### Epic
 Redesign the favorite houses page of a user.
