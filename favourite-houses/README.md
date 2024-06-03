@@ -15,17 +15,17 @@ We want to add scores to custom points that the user will define and be able to 
 ### Epic
 Redesign the favorite houses page of a user.
 
-### User stories
+## User stories
 
-1) As a User, I want to be able to see all my saved houses so that I can have a general impression of which houses I'm interested in.
+### 1) As a User, I want to be able to see all my saved houses so that I can have a general impression of which houses I'm interested in.
   * shows a picture of the house
   * shows a price tag
   * shows details (plot area, house size, rooms, energy label)
   * shows the broker
 
-2) As a User, I want to be able to add a note for myself so that I can keep track of important information.
+### 2) As a User, I want to be able to add a note for myself so that I can keep track of important information.
    
-3) As a User, I want to be able to add a rating to a house so that I can keep track of what I like.
+### 3) As a User, I want to be able to add a rating to a house so that I can keep track of what I like.
 
 ## Data
 
