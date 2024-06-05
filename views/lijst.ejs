@@ -1,0 +1,22 @@
+<%- include('./partials/head') %>
+
+<ul>
+  <% list.houses.forEach(house => { %>
+  <li>
+    <img
+      src="https://fdnd-agency.directus.app/assets/<%= house.f_houses_id.poster_image.id %>"
+      alt=""
+    />
+    <div>
+      <h2><%=  house.f_houses_id.street %> <%=  house.f_houses_id.house_nr %></h2>
+      <p><%= house.f_houses_id.postal_code %></p>
+      <p><%= house.f_houses_id.city %></p>
+      <p><%= house.f_houses_id.price %></p>
+      <p><%= house.f_houses_id.agent %></p>
+    </div>
+    <button>Rate</button>
+  </li>
+  <% }) %>
+</ul>
+
+<%- include('./partials/foot') %>

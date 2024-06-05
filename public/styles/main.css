@@ -1,0 +1,92 @@
+@font-face {
+  font-family: AvenirRoman;
+  src: url(../fonts/Avenir-roman.ttf);
+}
+
+@font-face {
+  font-family: AvenirMedium;
+  src: url(../fonts/Avenir-medium.ttf);
+}
+
+@font-face {
+  font-family: AvenirBlack;
+  src: url(../fonts/Avenir\ -black.ttf);
+}
+
+:root {
+  /* ===== Colors ===== */
+  --primary-orange: #f7a100;
+  --primary-black: #333333;
+  --primary-white: #ffffff;
+  --primary-blue: #0071b3;
+  --hover-blue: #0a4669;
+  --primary-grey: #e6f2f7;
+
+  /* ====== Transition ====== */
+
+  /* Spacing */
+
+  /* Borders */
+
+  /* default font */
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  font-family: AvenirMedium;
+  list-style: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--primary-white);
+}
+
+span {
+  font-weight: bold;
+  color: var(--primary-black);
+}
+
+a {
+  color: var(--primary-black);
+  text-decoration: none;
+}
+
+h1 {
+  color: var(--primary-black);
+}
+
+h2 {
+  color: var(--primary-black);
+}
+
+p {
+  text-align: center;
+}
+
+/* navbar */
+
+.wrapper-nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+.wrapper-nav nav:nth-child(1) {
+  display: flex;
+}
+
+.wrapper-nav nav ul {
+  display: flex;
+}
+
+/* index */
+
+.wrapper-index {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
