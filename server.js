@@ -62,6 +62,15 @@ app.get('/lijsten/:id', function (request, response) {
     })
   })
 
+  app.post('/lijsten/:id', function (request, response) {
+    if (request.body.clientside) {
+        response.render('lijst', { added: true });
+    } else {
+        response.redirect(303, '/succes/');
+    }
+});
+
+
 
 // 3. Start the web server
 

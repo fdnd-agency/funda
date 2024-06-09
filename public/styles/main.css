@@ -16,6 +16,7 @@
 :root {
   /* ===== Colors ===== */
   --primary-orange: #f7a100;
+  --primary-button: var(--primary-orange);
   --primary-black: #333333;
   --primary-white: #ffffff;
   --primary-blue: #0071b3;
@@ -36,13 +37,9 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  line-height: 1.5;
+
   font-family: proximaRegular;
   list-style: none;
-}
-
-html {
-  overflow: auto;
 }
 
 body {
@@ -55,6 +52,7 @@ body {
 
 body.alter {
   --primary-orange: #de9000;
+  --primary-button: var(--primary-blue);
   --primary-black: #53241b;
   --primary-white: #ffffff;
   --primary-blue: #2c81b3;
@@ -78,10 +76,6 @@ h1 {
 
 h2 {
   color: var(--primary-black);
-}
-
-p {
-  text-align: center;
 }
 
 /* navbar */
@@ -220,6 +214,7 @@ header {
   transform: translateX(-125%);
   border-radius: 0 20px 20px 0;
   transition: 0.3s;
+  z-index: 10000;
 }
 
 .wrapper-nav nav ul.moved {
@@ -293,63 +288,11 @@ main {
   height: 85%;
 }
 
-/* index */
-
-.wrapper-index {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100%;
-  justify-content: center;
+main > div {
+  position: fixed;
 }
 
-.wrapper-index img {
-  width: 40%;
-  height: auto;
-}
-
-@media (width > 44em) {
-  .wrapper-index img {
-  }
-}
-
-/* lijsten.ejs */
-.wrapper-lists {
-  padding: 2em;
-}
-
-.wrapper-lists ul {
-  display: flex;
-  flex-direction: column;
-  gap: 2em;
-}
-
-.wrapper-lists ul li {
-  display: flex;
-  flex-direction: column;
-  background-color: var(--primary-grey);
-  border-radius: 20px;
-  align-items: center;
-  padding: 1em;
-}
-
-/* lijst.ejs */
-
-/* foot.ejs */
-
-footer {
-  height: 5%;
-}
-
-footer div {
-  display: flex;
-  padding: 1em 2em;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: flex-end;
-}
-
-.switch{
+.switch {
   display: none;
 }
 
@@ -357,7 +300,7 @@ footer div {
   position: absolute;
   display: inline-block;
   width: 60px;
-  height: 34px; 
+  height: 34px;
   display: block;
 }
 
@@ -412,4 +355,305 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+/* index */
+
+.wrapper-index {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+}
+
+.wrapper-index img {
+  width: 40%;
+  height: auto;
+}
+
+/* lijsten.ejs */
+.wrapper-lists {
+  padding: 2em;
+}
+
+.wrapper-lists ul {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.wrapper-lists ul li {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--primary-grey);
+  border-radius: 20px;
+  align-items: center;
+  padding: 1em;
+}
+
+/* lijst.ejs */
+
+body:has(.wrapper-house) {
+  height: unset;
+}
+
+.wrapper-house {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+}
+
+.wrapper-house ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 90%;
+  gap: 2em;
+}
+
+.wrapper-house ul .houseDetail {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--primary-grey);
+  border-radius: 20px;
+  width: 20em;
+  min-height: 27em;
+  align-items: flex-start;
+  padding: 1em;
+  position: relative;
+}
+
+.wrapper-house ul .houseDetail img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.wrapper-house ul .houseDetail > div {
+  display: grid;
+  justify-items: start;
+  grid-template-rows: 0.8fr 1fr;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  color: var(--hover-blue);
+  padding-bottom: 0.2em;
+}
+
+.js .wrapper-house ul .houseDetail button {
+  font-size: 1em;
+  display: block;
+  background-color: transparent;
+  border: none;
+  color: var(--primary-button);
+  position: relative; /* Zorg ervoor dat het pseudo-element correct wordt geplaatst */
+}
+
+.js .wrapper-house ul .houseDetail button::before {
+  content: "+";
+  padding-right: 0.2em;
+  display: inline-block;
+  transition: transform 0.3s ease; /* Voeg een overgang toe voor een soepele rotatie */
+}
+
+.js .wrapper-house ul .houseDetail button.rotate::before {
+  transform: rotate(45deg);
+}
+
+
+.wrapper-house ul .houseDetail button{
+  display: none;
+}
+
+.js .wrapper-house ul .houseDetail form {
+  display: none;
+}
+
+.ShowForm {
+  display: flex !important;
+}
+
+.wrapper-house ul .houseDetail form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1em auto ;
+
+  &::before {
+    width: 80%;
+    border-top: 1px solid  var(--primary-button);
+    content: "";
+    margin: 5px auto;
+  }
+}
+
+.wrapper-house ul .houseDetail form .overall{
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.wrapper-house ul .houseDetail form ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.8em;
+  margin-bottom: 1em;
+}
+
+.wrapper-house ul .houseDetail form ul li {
+  width: fit-content;
+  margin: auto;
+  text-align: center;
+}
+
+.wrapper-house ul .houseDetail form ul li .stars {
+  display: flex;
+  column-gap: 0.1em;
+}
+
+.stars label {
+  padding: 0.125em;
+  color: var(--primary-black);
+}
+
+.stars label::after {
+  content: "★";
+}
+.stars input {
+  position: absolute;
+  left: -999em;
+}
+
+input:checked + label,
+.stars:has(input:nth-of-type(5):checked) label:nth-of-type(-n + 5),
+.stars:has(input:nth-of-type(4):checked) label:nth-of-type(-n + 4),
+.stars:has(input:nth-of-type(3):checked) label:nth-of-type(-n + 3),
+.stars:has(input:nth-of-type(2):checked) label:nth-of-type(-n + 2),
+.stars:has(input:nth-of-type(1):checked) label:nth-of-type(-n + 1) {
+  color: var(--primary-button);
+}
+
+.stars:has(label:nth-of-type(5):hover) label:nth-of-type(-n + 5),
+.stars:has(label:nth-of-type(4):hover) label:nth-of-type(-n + 4),
+.stars:has(label:nth-of-type(3):hover) label:nth-of-type(-n + 3),
+.stars:has(label:nth-of-type(2):hover) label:nth-of-type(-n + 2),
+.stars:has(label:nth-of-type(1):hover) label:nth-of-type(-n + 1) {
+  color: var(--primary-button);
+  transform: scale(1.4);
+}
+
+.stars:focus-within {
+  outline: solid 0.1px var(--primary-button);
+  border-radius: 20px;
+}
+
+.wrapper-house ul .houseDetail form textarea[name="notities"]{
+  background-color: #e6f2f7;
+  border: 1px solid var(--primary-orange);
+}
+
+.wrapper-house ul .houseDetail form button[type="submit"] {
+  font-size: 1em;
+  display: block;
+  border: none;
+  color: var(--primary-button);
+  &::before {
+    content: "";
+  }
+}
+
+.wrapper-house ul .houseDetail .circular {
+  width: 10%;
+  height: 10%;
+  position: absolute;
+  inset: 0;
+  left: 90%;
+  top: 92%;
+  display: none;
+  transform-origin: center center;
+  animation: 2s linear 0s infinite rotate;
+}
+
+.load {
+  display: block !important;
+}
+
+.wrapper-house ul .houseDetail form .path {
+  stroke: var(--primary-color);
+  stroke-dasharray: 1, 200;
+  stroke-dashoffset: 0;
+  stroke-linecap: round;
+  animation: 1.5s ease-in-out 0s infinite dash;
+}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -35px;
+    stroke: #3a3b3c;
+  }
+  100% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -124px;
+  }
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@media (width > 28em) {
+  .favorites {
+    justify-content: center;
+  }
+  .favorites li a img {
+    object-fit: cover;
+  }
+}
+
+
+@media (width > 44em) {
+  body:has(.wrapper-house) {
+    height: 100vh;
+    overflow-x: hidden;
+  }
+  .wrapper-house {
+    padding: 1em;
+    display: block;
+    height: unset;
+    width: 100vw;
+    height: 100%;
+  }
+
+  .wrapper-house ul {
+    flex-direction: row;
+    width: 100%;
+    max-width: unset;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+  }
+}
+
+/* foot.ejs */
+
+footer {
+  height: 5%;
+}
+
+footer div {
+  display: flex;
+  padding: 1em 2em;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
