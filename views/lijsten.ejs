@@ -1,16 +1,16 @@
 <%- include('./partials/head') %>
 
 <section class="wrapper-lists">
-  <h1>favoriete lijsten</h1>
+  <h1>selecteer huis</h1>
   <ul>
     <% if (lists && lists.length > 0) { %> 
       <% lists.forEach(list => { %>
         <li>
-          <img src="/images/download.svg" alt="" height="200" width="200">
-          <h2><%= list.title %></h2>
-          <form action="/lijsten/<%= list.id %>" method="GET">
-            <button type="submit">Bekijk lijst</button>
-          </form>
+          <a href="/lijsten/<%= list.id %>">
+            <img src="/images/download.svg" alt="" height="200" width="200">
+            <h2><%= list.title %></h2>
+            <p>Bekijk lijst</p>
+          </a>
         </li>
       <% }) %> 
     <% } else { %>

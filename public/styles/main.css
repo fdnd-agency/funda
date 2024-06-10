@@ -146,6 +146,12 @@ header {
   }
   &:nth-of-type(3) {
     top: 32px;
+    &::after {
+      content: "menu";
+      position: absolute;
+      left: -8px;
+      color: var(--primary-white);
+    }
   }
 }
 
@@ -168,6 +174,9 @@ header {
     top: 30px;
     left: 14px;
     transform: translateY(-6px) rotate(135deg);
+    &::after {
+      content: "";
+    }
   }
 }
 
@@ -289,7 +298,7 @@ main {
 }
 
 main > div {
-  position: fixed;
+  position: relative;
 }
 
 .switch {
@@ -299,8 +308,10 @@ main > div {
 .js .switch {
   position: absolute;
   display: inline-block;
-  width: 60px;
-  height: 34px;
+  width: 30px;
+  left: 10px;
+  top: 20px;
+  height: 17px;
   display: block;
 }
 
@@ -325,10 +336,10 @@ main > div {
 .slider:before {
   position: absolute;
   content: "";
-  height: 26px;
-  width: 26px;
+  height: 13px;
+  width: 13px;
   left: 4px;
-  bottom: 4px;
+  top: 2px;
   background-color: var(--primary-white);
   -webkit-transition: 0.4s;
   transition: 0.4s;
@@ -343,9 +354,9 @@ input:focus + .slider {
 }
 
 input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
+  -webkit-transform: translateX(9px);
+  -ms-transform: translateX(9px);
+  transform: translateX(9px);
 }
 
 /* Rounded sliders */
@@ -375,6 +386,10 @@ input:checked + .slider:before {
 /* lijsten.ejs */
 .wrapper-lists {
   padding: 2em;
+  & h1 {
+    text-align: center;
+    padding: 1em 0;
+  }
 }
 
 .wrapper-lists ul {
@@ -383,13 +398,40 @@ input:checked + .slider:before {
   gap: 2em;
 }
 
-.wrapper-lists ul li {
+.wrapper-lists ul li a{
   display: flex;
   flex-direction: column;
   background-color: var(--primary-grey);
   border-radius: 20px;
   align-items: center;
   padding: 1em;
+  width: 20em;
+
+  &:hover{
+    scale: 1.2;
+    transition: 0.2s;
+  }
+}
+
+.wrapper-lists ul li p {
+  text-align: center;
+  font-size: 1em;
+  display: block;
+  background-color: transparent;
+  border: none;
+  color: var(--primary-button);
+  position: relative;
+}
+
+@media (width > 44em) {
+  .wrapper-lists ul {
+    flex-direction: row;
+    width: 100%;
+    max-width: unset;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+  }
 }
 
 /* lijst.ejs */
@@ -404,6 +446,11 @@ body:has(.wrapper-house) {
   align-items: center;
   height: 100%;
   justify-content: center;
+
+  & h1 {
+    text-align: center;
+    padding: 1em 0;
+  }
 }
 
 .wrapper-house ul {
@@ -450,22 +497,21 @@ body:has(.wrapper-house) {
   background-color: transparent;
   border: none;
   color: var(--primary-button);
-  position: relative; /* Zorg ervoor dat het pseudo-element correct wordt geplaatst */
+  position: relative;
 }
 
 .js .wrapper-house ul .houseDetail button::before {
   content: "+";
   padding-right: 0.2em;
   display: inline-block;
-  transition: transform 0.3s ease; /* Voeg een overgang toe voor een soepele rotatie */
+  transition: transform 0.3s ease; 
 }
 
 .js .wrapper-house ul .houseDetail button.rotate::before {
   transform: rotate(45deg);
 }
 
-
-.wrapper-house ul .houseDetail button{
+.wrapper-house ul .houseDetail button {
   display: none;
 }
 
@@ -481,19 +527,20 @@ body:has(.wrapper-house) {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 1em auto ;
+  margin: 1em auto;
 
   &::before {
     width: 80%;
-    border-top: 1px solid  var(--primary-button);
+    border-top: 1px solid var(--primary-button);
     content: "";
     margin: 5px auto;
   }
 }
 
-.wrapper-house ul .houseDetail form .overall{
+.wrapper-house ul .houseDetail form .overall {
   text-align: center;
   margin-bottom: 1em;
+  border: none;
 }
 
 .wrapper-house ul .houseDetail form ul {
@@ -550,7 +597,7 @@ input:checked + label,
   border-radius: 20px;
 }
 
-.wrapper-house ul .houseDetail form textarea[name="notities"]{
+.wrapper-house ul .houseDetail form textarea[name="notities"] {
   background-color: #e6f2f7;
   border: 1px solid var(--primary-orange);
 }
@@ -563,6 +610,10 @@ input:checked + label,
   &::before {
     content: "";
   }
+}
+
+.succes {
+  color: yellowgreen;
 }
 
 .wrapper-house ul .houseDetail .circular {
@@ -605,7 +656,7 @@ input:checked + label,
   }
 }
 
-@keyframes rotate {
+/* @keyframes rotate {
   to {
     transform: rotate(1turn);
   }
@@ -618,8 +669,7 @@ input:checked + label,
   .favorites li a img {
     object-fit: cover;
   }
-}
-
+} */
 
 @media (width > 44em) {
   body:has(.wrapper-house) {

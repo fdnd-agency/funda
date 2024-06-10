@@ -67,33 +67,40 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 // clientside voor de post
-starForms.addEventListener('submit', function(event) {
-    event.preventDefault(); // Voorkom standaardgedrag van het formulier
-    loadingcircle.classList.add("load")
-    // Maak een FormData-object van het formulier
-    let starItem = new FormData(this);
+// Voeg een event listener toe aan elk formulier
 
-    // Voeg 'clientside' toe aan de FormData
-    starItem.append('clientside', true);
 
-    // Voer het fetch-verzoek uit naar de delete-endpoint van de server
-    fetch(this.action, {
-        method: this.method,
-        body: starItem
-    })
-    .then(response => {
-        if (response.ok) {
-            // waneer het item succesvol is verwijderd voert hij het volgende uit
-            loadingcircle.classList.remove("load");
-            formSubmit.classList.add('succes')
-        } else {
-            // Als er een fout optreedt, geef dan een foutmelding weer
-            console.error('Er is een fout opgetreden');
-        }
-    })
-    .catch(error => {
-        console.error('Er is een fout opgetreden:', error);
-    });
-    
-});
+// starForms.forEach(starForm => {
+//   starForm.addEventListener('submit', function(event) {
+//     loadingcircle.classList.add("load");
+
+//     // Maak een FormData-object van het formulier
+//     let starItem = new FormData(this);
+
+//     // Voeg 'clientside' toe aan de FormData
+//     starItem.append('clientside', true);
+
+//     // Voer het fetch-verzoek uit naar de server
+//     fetch(this.action, {
+//       method: this.method,
+//       body: starItem
+//     })
+//     .then(response => {
+//       if (response.ok) {
+//         // Wanneer het item succesvol is verzonden, voert hij het volgende uit
+//         loadingcircle.classList.remove("load");
+//         formSubmit.classList.add('succes');
+//       } else {
+//         // Als er een fout optreedt, geef dan een foutmelding weer
+//         console.error('Er is een fout opgetreden');
+//       }
+//     })
+//     .catch(error => {
+//       console.error('Er is een fout opgetreden:', error);
+//     });
+
+//     // Voorkom standaardgedrag van het formulier
+//     event.preventDefault();
+//   });
+// });
 

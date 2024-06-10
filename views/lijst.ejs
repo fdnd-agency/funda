@@ -1,51 +1,57 @@
 <%- include('./partials/head') %>
 
 <section class="wrapper-house">
-  <h1>jouw favorite huizen</h1>
-<ul>
-  <% list.houses.forEach(house => { %>
-  <li class="houseDetail">
-    <picture>
-      <source srcset="https://fdnd-agency.directus.app/assets/<%= house.f_houses_id.poster_image.id %>?format=avif" type="image/avif">
-      <source srcset="https://fdnd-agency.directus.app/assets/<%= house.f_houses_id.poster_image.id %>?format=webp" type="image/webp">
-      <img class="image-size" src="https://fdnd-agency.directus.app/assets/<%= house.f_houses_id.poster_image.id %>" loading="lazy" width="<%= house.f_houses_id.poster_image.width %>" height="<%= house.f_houses_id.poster_image.height %>">
-    </picture>
-    <div>
-      <div>
-        <h2><%=  house.f_houses_id.street %> <%=  house.f_houses_id.house_nr %></h2>
-      </div>
-      <div>
-        <p><%= house.f_houses_id.postal_code %></p>
-        <p><%= house.f_houses_id.city %></p>
-        <p><%= house.f_houses_id.price %></p>
-        <p><%= house.f_houses_id.agent %></p>
-      </div>
-    </div>
-    <button id='house<%= house.id %>'>Rate</button>
-    <form action="/lijsten/:id" method="post" id='houseForm<%= house.id %>'>
-      <input type="hidden" name="TheStars" value="<%= house.id %>">
-      <div class="overall">
-        <%- include('./partials/stars', {type: 'Algemeen'}) %>
-        <p>Algemeen</p>
-      </div>
-      <ul>
-        <li><%- include('./partials/stars', {type: 'Keuken'}) %><p>Keuken</p></li>
-        <li><%- include('./partials/stars', {type: 'Tuin'}) %><p>Tuin</p></li>
-        <li><%- include('./partials/stars', {type: 'Ligging'}) %><p>Ligging</p></li>
-        <li><%- include('./partials/stars', {type: 'Badkamer'}) %><p>Badkamer</p></li>
-        <li><%- include('./partials/stars', {type: 'Prijs'}) %><p>Prijs</p></li>
-        <li><%- include('./partials/stars', {type: 'Oppervlakte'}) %><p>Oppervlakte</p></li>
-      </ul>
-      <label for="notities">Maak notitie aan</label>
-        <textarea name="notities" placeholder="schrijf hier je notitie"></textarea>
-      <button type="submit" id="houseSubmit<%= house.id %>">sumbit</button>
-      <svg class='circular' viewbox='25 25 50 50'>
-        <circle class='path' cx='50' cy='50' r='20' fill='none' stroke-width='2' stroke-miterlimit='10' ></circle>
-    </svg>
-    </form>
-  </li>
-  <% }) %>
-</ul>
+  <% if (list.houses && list.houses.length > 0) { %> 
+    <h1>jouw favorite huizen</h1>
+    <ul>
+      <% list.houses.forEach(house => { %>
+        <li class="houseDetail">
+          <picture>
+            <source srcset="https://fdnd-agency.directus.app/assets/<%= house.f_houses_id.poster_image.id %>?format=avif" type="image/avif">
+            <source srcset="https://fdnd-agency.directus.app/assets/<%= house.f_houses_id.poster_image.id %>?format=webp" type="image/webp">
+            <img class="image-size" src="https://fdnd-agency.directus.app/assets/<%= house.f_houses_id.poster_image.id %>" loading="lazy" width="<%= house.f_houses_id.poster_image.width %>" height="<%= house.f_houses_id.poster_image.height %>">
+          </picture>
+          <div>
+            <div>
+              <h2><%= house.f_houses_id.street %> <%= house.f_houses_id.house_nr %></h2>
+            </div>
+            <div>
+              <p><%= house.f_houses_id.postal_code %></p>
+              <p><%= house.f_houses_id.city %></p>
+              <p><%= house.f_houses_id.price %></p>
+              <p><%= house.f_houses_id.agent %></p>
+            </div>
+          </div>
+          <button id='house<%= house.id %>'>Rate</button>
+          <form action="/lijsten/:id" method="post" id='houseForm<%= house.id %>'>
+            <input type="hidden" name="house_id" value="<%= house.f_houses_id.id %>">
+            <input type="hidden" name="list_id" value="<%= house.f_list_id.id %>">
+
+            <fieldset class="overall">
+              <%- include('./partials/stars', {type: 'Algemeen', houseId: house.id}) %>
+              <p>Algemeen</p>
+            </fieldset>
+            <ul>
+              <li><%- include('./partials/stars', {type: 'Keuken', houseId: house.id}) %><p>Keuken</p></li>
+              <li><%- include('./partials/stars', {type: 'Tuin', houseId: house.id}) %><p>Tuin</p></li>
+              <li><%- include('./partials/stars', {type: 'Ligging', houseId: house.id}) %><p>Ligging</p></li>
+              <li><%- include('./partials/stars', {type: 'Badkamer', houseId: house.id}) %><p>Badkamer</p></li>
+              <li><%- include('./partials/stars', {type: 'Prijs', houseId: house.id}) %><p>Prijs</p></li>
+              <li><%- include('./partials/stars', {type: 'Oppervlakte', houseId: house.id}) %><p>Oppervlakte</p></li>
+            </ul>
+            <label for="notities">Maak notitie aan</label>
+            <textarea name="notities" placeholder="schrijf hier je notitie"></textarea>
+            <button type="submit" id="houseSubmit<%= house.id %>">sumbit</button>
+            <svg class='circular' viewbox='25 25 50 50'>
+              <circle class='path' cx='50' cy='50' r='20' fill='none' stroke-width='2' stroke-miterlimit='10'></circle>
+            </svg>
+          </form>
+        </li>
+      <% }) %> 
+    </ul>
+  <% } else { %>
+    <p style="text-align: center;">Welkom bij je lijst klik <a style="color: var(--primary-button);" href="https://www.funda.nl/en/zoeken/koop/?selected_area=%5B%22nl%22%5D">hier</a> om wat huizen toe te voegen</p>
+  <% } %>
 </section>
 
 <%- include('./partials/foot') %>
