@@ -63,31 +63,34 @@ app.get('/lijsten/:id', function (request, response) {
   })
 
 
-app.post('/lijsten/:id', function(request, response) {
-  let body = JSON.stringify({
-    house: Number(request.body.house_id),
-    list: Number(request.body.list_id),
-    user: 11,
-    rating: JSON.stringify(request.body.rating),
-    note: request.body.notities
-  })
-
-console.log(body)
-
-  fetchJson('https://fdnd-agency.directus.app/items/f_feedback/?limit=8000&filter[house][_eq]=${request.body.house_id',{
-    method: 'POST',
-    body: body,
-    headers: {
-      'Content-Type' : 'application/json; charset=UTF-8',
-    },
-  }).then((postResponse) => {
-    if (request.body.clientside) {
-              response.render('lijst', { added: true });
-          } else {
-              response.redirect(303, '/succes/');
-          }
-      });
-  })
+  app.post('/lijsten/:id', function(request, response) {
+    let body = JSON.stringify({
+      house: Number(request.body.house_id),
+      list: Number(request.body.list_id),
+      user: 11,
+      rating: JSON.stringify(request.body.rating),
+      note: request.body.notities
+    });
+  
+    console.log(body);
+  
+    fetchJson(`https://fdnd-agency.directus.app/items/f_feedback/?limit=8000&filter[house][_eq]=${request.body.house_id}`, {
+      method: 'POST',
+      body: body,
+      headers: {
+        'Content-Type': 'application/json; charset=UTF-8',
+      },
+    }).then((postResponse) => {
+      if (request.body.clientside) {
+        response.render('lijst', { added: true });
+      } else {
+        response.redirect(303, '/succes/');
+      }
+    }).catch(error => {
+      console.error('Fetch error:', error);
+      response.status(500).send('Internal Server Error');
+    });
+  });
 
 
 // 3. Start the web server
