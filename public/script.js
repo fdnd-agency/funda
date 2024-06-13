@@ -16,56 +16,42 @@ let starForms = document.querySelectorAll(".houseDetail form[id^='houseForm']");
 const formSubmit = document.querySelector(".wrapper-house ul .houseDetail form button[id^='houseSubmit']"); // submit rate button
 
 
-
-
-// changes funda logo
-document.addEventListener("DOMContentLoaded", (event) => {
+// changes funda theme [alter is de secondary color pallete]
   checkbox.addEventListener("change", () => {
     if (checkbox.checked) {
       body.classList.add("alter");
-    } else {
-      body.classList.remove("alter");
-    }
-
-    if (checkbox.checked) {
-      // Check if the checkbox is checked
       hero.src = "/images/01-funda-Orange.png"; // Set the image to dark mode
     } else {
+      body.classList.remove("alter");
       hero.src = "/images/02-funda-Blue.png"; // Set the image to light mode
     }
   });
-});
 
 //  burgermenu function
-document.addEventListener("DOMContentLoaded", () => {
   openBtn.addEventListener("click", () => {
     openBtn.classList.toggle("active");
     mobilenav.classList.toggle("moved");
   });
-});
+
 
 // show form
-document.addEventListener("DOMContentLoaded", () => {
-  houseButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      const houseId = button.id.replace("house", "houseForm");
-      const starFormElement = document.getElementById(houseId);
-      if (starFormElement) {
-        starFormElement.classList.toggle("ShowForm");
+houseButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const houseId = button.id.replace("house", "houseForm");
+    const starFormElement = document.getElementById(houseId);
+    if (starFormElement) {
+      starFormElement.classList.toggle("ShowForm");
 
-        if (starFormElement.classList.contains("ShowForm")) {
-          button.textContent = "Close";
-          button.classList.add("rotate");
-        } else {
-          button.textContent = "Rate";
-          button.classList.remove("rotate");
-        }
+      if (starFormElement.classList.contains("ShowForm")) {
+        button.textContent = "Close";
+        button.classList.add("rotate");
+      } else {
+        button.textContent = "Rate";
+        button.classList.remove("rotate");
       }
-    });
+    }
   });
 });
-
-// client side submit star rating (!!submit button krijgt ook atribuut disabled, gelukt als text en een groene text color als submit succesvol is (not done yet!!)
 
 // clientside voor de post
 // Voeg een event listener toe aan elk formulier
@@ -86,6 +72,7 @@ starForms.forEach((starForm) => {
     }).then();
 
     // Wanneer het item succesvol is verzonden, voert hij het volgende uit
+    let formSubmit = this.querySelector("button[type='submit']");
     formSubmit.classList.add("succes");
     formSubmit.innerText = "Gelukt"; // Change the text of the button to "Gelukt"
     formSubmit.disabled = true; // Disable the button

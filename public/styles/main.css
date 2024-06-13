@@ -1,3 +1,11 @@
+/**************************/
+/*                        */
+/*    algemene styling    */
+/*                        */
+/**************************/
+
+/* ===== fonts ===== */
+
 @font-face {
   font-family: proximaRegular;
   src: url(../fonts/ProximaNova-Regular_2607783814.otf);
@@ -13,6 +21,7 @@
   src: url(../fonts/ProximaNova-Semibold_3872794340.otf);
 }
 
+/* ===== root ===== */
 :root {
   /* ===== Colors ===== */
   --primary-orange: #f7a100;
@@ -22,12 +31,6 @@
   --primary-blue: #0071b3;
   --hover-blue: #0a4669;
   --primary-grey: #e6f2f7;
-
-  /* ====== Transition ====== */
-
-  /* Spacing */
-
-  /* Borders */
 
   /* default font */
   font-family: Arial, Helvetica, sans-serif;
@@ -50,6 +53,7 @@ body {
   overflow: auto;
 }
 
+/* ===== alternitive colors ===== */
 body.alter {
   --primary-orange: #de9000;
   --primary-button: var(--primary-blue);
@@ -78,237 +82,7 @@ h2 {
   color: var(--primary-black);
 }
 
-/* navbar */
-
-header {
-  height: 10%;
-}
-
-.wrapper-nav {
-  height: 100%;
-  display: flex;
-  justify-content: space-evenly;
-  background-color: var(--primary-orange);
-}
-
-/* ======1ste nav ====== */
-
-.js .wrapper-nav nav:nth-child(1) {
-  display: flex;
-  width: 50%;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.wrapper-nav nav:nth-child(1) {
-  display: flex;
-  width: 70%;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.wrapper-nav nav:nth-child(1) img {
-  height: 100%;
-}
-
-.wrapper-nav nav:nth-child(1) a:hover{
-  border-bottom: 2px solid var(--primary-white);
-  transition: 0.2s;
-}
-
-.js .wrapper-nav nav:nth-child(1) .openbtn {
-  width: 50px;
-  height: 50px;
-  border-radius: 5px;
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-  display: block;
-}
-
-.wrapper-nav nav:nth-child(1) .openbtn {
-  display: none;
-}
-
-.wrapper-nav nav:nth-child(1) .openbtn .openbtn-area {
-  transition: all 0.4s;
-}
-
-.wrapper-nav nav:nth-child(1) .openbtn span {
-  position: absolute;
-  background: var(--primary-white);
-  display: inline-block;
-  border-radius: 3px;
-  left: 13px;
-  height: 3px;
-  transition: all 0.4s;
-  width: 50%;
-  &:nth-of-type(1) {
-    top: 16px;
-  }
-  &:nth-of-type(2) {
-    top: 24px;
-  }
-  &:nth-of-type(3) {
-    top: 32px;
-    &::after {
-      content: "menu";
-      position: absolute;
-      left: -8px;
-      color: var(--primary-white);
-    }
-  }
-}
-
-.wrapper-nav nav:nth-child(1) .openbtn.active .openbtn-area {
-  transform: rotatex(360deg);
-}
-
-.wrapper-nav nav:nth-child(1) .openbtn.active span {
-  &:nth-of-type(1) {
-    width: 45%;
-    top: 18px;
-    left: 14px;
-    transform: translateY(6px) rotate(-135deg);
-  }
-  &:nth-of-type(2) {
-    opacity: 0;
-  }
-  &:nth-of-type(3) {
-    width: 45%;
-    top: 30px;
-    left: 14px;
-    transform: translateY(-6px) rotate(135deg);
-    &::after {
-      content: "";
-    }
-  }
-}
-
-/* ======2de nav ====== */
-
-.js .wrapper-nav nav:nth-child(2) {
-  display: flex;
-  flex-direction: row;
-  width: 30%;
-  justify-content: space-around;
-  align-items: center;
-
-  & a {
-    display: flex;
-    align-items: center;
-  }
-  & a:nth-child(2) {
-    padding-left: 0.2em;
-  }
-  & a i {
-    padding-left: 0.2em;
-  }
-}
-
-.wrapper-nav nav:nth-child(2) {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.wrapper-nav nav:nth-child(2) a i {
-  transition: all 1000ms cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s;
-}
-
-.wrapper-nav nav:nth-child(2) a:hover i {
-  transform: rotate(1turn); 
-}
-
-.js .wrapper-nav nav ul {
-  display: flex;
-  /* width: 100%; */
-  position: absolute;
-  background: var(--primary-black);
-  flex-direction: column;
-  top: 30%;
-  height: 20em;
-  width: 30%;
-  justify-content: space-evenly;
-  align-items: center;
-  transform: translateX(-125%);
-  border-radius: 0 20px 20px 0;
-  transition: 0.3s;
-  z-index: 10000;
-}
-
-.wrapper-nav nav ul.moved {
-  transform: translateX(-25%);
-}
-
-.wrapper-nav nav ul {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  /* grid-template-rows: 1fr 1fr; */
-  background: unset;
-  flex-direction: row;
-  height: unset;
-  position: unset;
-  width: 100%;
-  justify-content: space-evenly;
-  transform: translateX(0px);
-  justify-items: start;
-}
-
-@media (width > 55em) {
-  .js .wrapper-nav nav ul {
-    display: flex;
-    background: unset;
-    flex-direction: row;
-    column-gap: 0.5em;
-    height: unset;
-    position: unset;
-    width: 100%;
-    justify-content: space-evenly;
-    transform: translateX(0px);
-  }
-
-  .wrapper-nav nav ul {
-    display: flex;
-    background: unset;
-    flex-direction: row;
-    column-gap: 0.5em;
-    height: unset;
-    position: unset;
-    width: 100%;
-    justify-content: space-evenly;
-    transform: translateX(0px);
-  }
-
-  .wrapper-nav nav a {
-    font-size: 1.2em;
-    display: flex;
-    align-items: center;
-    column-gap: 0.5em;
-  }
-
-  .js .wrapper-nav nav:nth-child(1) {
-    width: 30%;
-  }
-
-  .js .wrapper-nav nav:nth-child(1) .openbtn {
-    display: none;
-  }
-
-  .wrapper-nav nav:nth-child(2) {
-    display: flex;
-    flex-direction: row;
-    width: 25%;
-    align-items: center;
-  }
-
-  .wrapper-nav nav:nth-child(2) a i.bx {
-    font-size: 2em;
-  }
-}
-/* end navbar */
+/* ===== switch button ===== */
 
 main {
   height: 85%;
@@ -385,337 +159,12 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
-/* index */
 
-.wrapper-index {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100%;
-  justify-content: center;
-}
-
-.wrapper-index img {
-  width: 40%;
-  max-width: 360px;
-  height: auto;
-}
-
-/* lijsten.ejs */
-.wrapper-lists {
-  padding: 2em;
-  & h1 {
-    text-align: center;
-    padding: 1em 0;
-  }
-}
-
-.wrapper-lists ul {
-  display: flex;
-  flex-direction: column;
-  gap: 2em;
-}
-
-.wrapper-lists ul li {
-  opacity: 0; 
-  animation: fadeIn 1s forwards; 
-}
-
-.wrapper-lists ul li a {
-  display: flex;
-  flex-direction: column;
-  background-color: var(--primary-grey);
-  border-radius: 20px;
-  align-items: center;
-  padding: 1em;
-  width: 20em;
-  transition: transform 0.2s;
-
-  &:hover {
-    transform: scale(1.2);
-  }
-}
-
-.wrapper-lists ul li p {
-  text-align: center;
-  font-size: 1em;
-  display: block;
-  background-color: transparent;
-  border: none;
-  color: var(--primary-button);
-  position: relative;
-}
-
-@media (width > 44em) {
-  .wrapper-lists ul {
-    flex-direction: row;
-    width: 100%;
-    max-width: unset;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: center;
-  }
-}
-
-/* lijst.ejs */
-
-body:has(.wrapper-house) {
-  height: unset;
-}
-
-.wrapper-house {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100%;
-  justify-content: center;
-
-  & h1 {
-    text-align: center;
-    padding: 1em 0;
-  }
-}
-
-.wrapper-house ul {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 90%;
-  gap: 2em;
-}
-
-.wrapper-house ul .houseDetail {
-  display: flex;
-  flex-direction: column;
-  background-color: var(--primary-grey);
-  border-radius: 20px;
-  width: 20em;
-  min-height: 27em;
-  align-items: flex-start;
-  padding: 1em;
-  position: relative;
-  opacity: 0;
-  animation: fadeIn 1s forwards;
-  overflow: hidden;
-}
-
-.wrapper-house ul .houseDetail img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 20px;
-}
-
-.wrapper-house ul .houseDetail > div {
-  display: grid;
-  justify-items: start;
-  grid-template-rows: 0.8fr 1fr;
-  width: 100%;
-  height: auto;
-  border-radius: 20px;
-  color: var(--hover-blue);
-  padding-bottom: 0.2em;
-}
-
-.js .wrapper-house ul .houseDetail button {
-  font-size: 1em;
-  display: block;
-  background-color: transparent;
-  border: none;
-  color: var(--primary-button);
-  position: relative;
-}
-
-.js .wrapper-house ul .houseDetail button::before {
-  content: "+";
-  padding-right: 0.2em;
-  display: inline-block;
-  transition: transform 0.3s ease;
-}
-
-.js .wrapper-house ul .houseDetail button.rotate::before {
-  transform: rotate(45deg);
-}
-
-.wrapper-house ul .houseDetail button {
-  display: none;
-}
-
-.js .wrapper-house ul .houseDetail form {
-  display: none;
-}
-
-.ShowForm {
-  display: flex !important;
-}
-
-.wrapper-house ul .houseDetail form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 1em auto;
-
-  &::before {
-    width: 80%;
-    border-top: 1px solid var(--primary-button);
-    content: "";
-    margin: 5px auto;
-  }
-}
-
-.wrapper-house ul .houseDetail form .overall {
-  text-align: center;
-  margin-bottom: 1em;
-  border: none;
-}
-
-.wrapper-house ul .houseDetail form ul {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 0.8em;
-  margin-bottom: 1em;
-}
-
-.wrapper-house ul .houseDetail form ul li {
-  width: fit-content;
-  margin: auto;
-  text-align: center;
-}
-
-.wrapper-house ul .houseDetail form ul li .stars {
-  display: flex;
-  column-gap: 0.1em;
-}
-
-.stars label {
-  padding: 0.125em;
-  color: var(--primary-black);
-}
-
-.stars label::after {
-  content: "★";
-}
-.stars input {
-  position: absolute;
-  left: -999em;
-}
-
-input:checked + label,
-.stars:has(input:nth-of-type(5):checked) label:nth-of-type(-n + 5),
-.stars:has(input:nth-of-type(4):checked) label:nth-of-type(-n + 4),
-.stars:has(input:nth-of-type(3):checked) label:nth-of-type(-n + 3),
-.stars:has(input:nth-of-type(2):checked) label:nth-of-type(-n + 2),
-.stars:has(input:nth-of-type(1):checked) label:nth-of-type(-n + 1) {
-  color: var(--primary-button);
-}
-
-.stars:has(label:nth-of-type(5):hover) label:nth-of-type(-n + 5),
-.stars:has(label:nth-of-type(4):hover) label:nth-of-type(-n + 4),
-.stars:has(label:nth-of-type(3):hover) label:nth-of-type(-n + 3),
-.stars:has(label:nth-of-type(2):hover) label:nth-of-type(-n + 2),
-.stars:has(label:nth-of-type(1):hover) label:nth-of-type(-n + 1) {
-  color: var(--primary-button);
-  transform: scale(1.4);
-}
-
-.stars:focus-within {
-  outline: solid 0.1px var(--primary-button);
-  border-radius: 20px;
-}
-
-.wrapper-house ul .houseDetail form textarea[name="notities"] {
-  background-color: #e6f2f7;
-  border: 1px solid var(--primary-orange);
-  border-radius: 20px;
-  resize: vertical;
-  text-indent: 5px;
-  padding-top: 5px;
-
-  &::placeholder{
-  text-indent: 5px;
-  padding-top: 5px;
-  }
-}
-
-.wrapper-house ul .houseDetail form button[type="submit"] {
-  font-size: 1em;
-  margin-top: 1em;
-  display: block;
-  border: none;
-  color: var(--primary-button);
-  &::before {
-    content: "";
-  }
-}
-
-.wrapper-house ul .houseDetail form button[type="submit"].succes {
-  animation-name: gelukt;
-  transition: 1s;
-  color: rgb(3 185 3);
-  position: relative;
-  animation-duration: 1s;
-  transition: all 500ms cubic-bezier(1.000, -0.205, 0.625, 0.975);
-
-  &::after{
-    position: absolute;
-    padding-left: 0.5em;
-    opacity: 0;
-    transform: translateX(136px);
-    content: '✓';
-    animation: checkmark forwards;
-    animation-duration: 0.5s;
-    animation-delay: 1.2s;
-  }
-}
-
-/*
-@media (width > 28em) {
-  .favorites {
-    justify-content: center;
-  }
-  .favorites li a img {
-    object-fit: cover;
-  }
-} */
-
-@media (width > 44em) {
-  body:has(.wrapper-house) {
-    height: 100vh;
-    overflow-x: hidden;
-  }
-  .wrapper-house {
-    padding: 1em;
-    display: block;
-    height: unset;
-    width: 100vw;
-    height: 100%;
-  }
-
-  .wrapper-house ul {
-    flex-direction: row;
-    width: 100%;
-    max-width: unset;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: center;
-  }
-}
-
-/* foot.ejs */
-
-footer {
-  height: 5%;
-}
-
-footer div {
-  display: flex;
-  padding: 1em 2em;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: flex-end;
-}
-
-/* ===== animations ===== */
+/**************************/
+/*                        */
+/*      animations        */
+/*                        */
+/**************************/
 
 @keyframes fadeIn {
   from {
@@ -750,20 +199,20 @@ footer div {
   }
 }
 
-@keyframes gelukt{
+@keyframes gelukt {
   to {
     rotate: 360deg;
   }
 }
 
 @keyframes checkmark {
-  0%{
+  0% {
     transform: translatex(136px);
   }
-  50%{
+  50% {
     transform: translateX(-20px);
   }
-  100%{
+  100% {
     transform: translatex(0px);
     opacity: 1;
   }

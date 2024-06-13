@@ -1,22 +1,28 @@
-<%- include('./partials/head') %>
-
-<section class="wrapper-lists">
-  <h1>selecteer huis</h1>
-  <ul>
-    <% if (lists && lists.length > 0) { %> 
-      <% lists.forEach(list => { %>
-        <li>
-          <a href="/lijsten/<%= list.id %>">
-            <img src="/images/download.svg" alt="" height="200" width="200">
-            <h2><%= list.title %></h2>
-            <p>Bekijk lijst</p>
-          </a>
-        </li>
-      <% }) %> 
-    <% } else { %>
-      <p>No lists available.</p>
-    <% } %>
-  </ul>
-</section>
-
-<%- include('./partials/foot') %>
+<!DOCTYPE html>
+<html lang="nl">
+  <%- include('./partials/head') %>
+  <body>
+    <%- include('./partials/header') %>
+    <main>
+      <%- include('./partials/theme-button') %>
+      <section class="wrapper-lists">
+        <h1>selecteer huis</h1>
+        <ul>
+          <% lists.forEach(list => { %>
+          <li>
+            <a href="/lijsten/<%= list.id %>">
+              <img src="/images/download.svg" alt="afbeelding-huis" height="200" width="200" />
+              <h2><%= list.title %></h2>
+              <p>Bekijk lijst</p>
+            </a>
+          </li>
+          <% }) %>
+          <% if (lists.length === 0) { %>
+          <p>No lists available.</p>
+          <% } %>
+        </ul>
+      </section>
+    </main>
+    <%- include('./partials/foot') %>
+  </body>
+</html>

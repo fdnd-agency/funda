@@ -26,7 +26,7 @@ app.use(express.static('public'));
 
 // 2. routes
 
-app.get("/", async function (request, response) {
+app.get(["/", "/index"], async function (request, response) {
   try {
     const apiUsersData = await fetchJson(apiUsers);
     response.render("index", {
@@ -40,27 +40,41 @@ app.get("/", async function (request, response) {
 
 
 app.get("/lijsten", async function (request, response) {
-  const housesPromise = fetchJson(apiHouse);
-  const listPromise = fetchJson(apiList);
-  console.log(listPromise)
+  try {
+    const housesPromise = fetchJson(apiHouse);
+    const listPromise = fetchJson(apiList);
 
-  const [houses, lists] = await Promise.all([housesPromise, listPromise]);
-  console.log("houses:", houses);
+    const [houses, lists] = await Promise.all([housesPromise, listPromise]);
 
+    console.log("houses:", houses);
 
-  response.render("lijsten", {
-    houses: houses.data,
-    lists: lists.data
-  });
+    response.render("lijsten", {
+      houses: houses.data,
+      lists: lists.data
+    });
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    response.status(500).send("Internal Server Error");
+  }
 });
 
 
+
 app.get('/lijsten/:id', function (request, response) {
-    fetchJson(apiList + request.params.id + '?fields=*.*.*,houses.f_houses_id.poster_image.id,houses.f_houses_id.poster_image.width,houses.f_houses_id.poster_image.height').then((apiData) => {
-        response.render('lijst.ejs', {list: apiData.data})  
-        // console.log(apiData.data.houses) 
+  fetchJson(apiList + request.params.id + '?fields=*.*.*,houses.f_houses_id.poster_image.id,houses.f_houses_id.poster_image.width,houses.f_houses_id.poster_image.height')
+    .then((apiData) => {
+      if (apiData.data.houses && apiData.data.houses.length > 0) {
+        response.render('lijst.ejs', { list: apiData.data });
+      } else {
+        response.render('lijst_empty.ejs');
+      }
     })
-  })
+    .catch((error) => {
+      console.error('Error fetching data:', error);
+      response.status(500).send('Internal Server Error');
+    });
+});
+
 
 
   app.post('/lijsten/:id', function(request, response) {
@@ -90,6 +104,18 @@ app.get('/lijsten/:id', function (request, response) {
       console.error('Fetch error:', error);
       response.status(500).send('Internal Server Error');
     });
+  });
+
+  app.get("/succes", async function (request, response) {
+    try {
+      const apiUsersData = await fetchJson(apiUsers);
+      response.render("succes", {
+        apiUsers: apiUsersData.data
+      });
+    } catch (error) {
+      console.error("Error fetching data:", error);
+      response.status(500).send("Internal Server Error");
+    }
   });
 
 
