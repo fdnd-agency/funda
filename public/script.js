@@ -11,7 +11,7 @@ const hero = document.querySelector("nav:nth-child(1) a img"); // nav logo
 const openBtn = document.querySelector(".openbtn"); // burgermenu button
 const mobilenav = document.querySelector(".wrapper-nav nav ul"); // open/close menu (for mobile)
 
-const houseButtons = document.querySelectorAll(".houseDetail button[id^='house']"); // rate button
+const houseButtons = document.querySelectorAll(".houseDetail details[id^='house']"); // rate button
 let starForms = document.querySelectorAll(".houseDetail form[id^='houseForm']"); // form section inside the li
 const formSubmit = document.querySelector(".wrapper-house ul .houseDetail form button[id^='houseSubmit']"); // submit rate button
 
@@ -35,23 +35,20 @@ const formSubmit = document.querySelector(".wrapper-house ul .houseDetail form b
 
 
 // show form
-houseButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    const houseId = button.id.replace("house", "houseForm");
-    const starFormElement = document.getElementById(houseId);
-    if (starFormElement) {
-      starFormElement.classList.toggle("ShowForm");
+houseButtons.forEach((detailsElement) => {
+  const summaryElement = detailsElement.querySelector('summary');
 
-      if (starFormElement.classList.contains("ShowForm")) {
-        button.textContent = "Close";
-        button.classList.add("rotate");
-      } else {
-        button.textContent = "Rate";
-        button.classList.remove("rotate");
-      }
+  detailsElement.addEventListener('toggle', () => {
+    if (detailsElement.open) {
+      summaryElement.textContent = "Close";
+      summaryElement.classList.add("rotate");
+    } else {
+      summaryElement.textContent = "Rate";
+      summaryElement.classList.remove("rotate");
     }
   });
 });
+
 
 // clientside voor de post
 // Voeg een event listener toe aan elk formulier

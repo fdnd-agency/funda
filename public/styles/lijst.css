@@ -62,7 +62,7 @@ body:has(.wrapper-house) {
     padding-bottom: 0.2em;
   }
   
-  .js .wrapper-house ul .houseDetail button {
+  .js .wrapper-house ul .houseDetail summary {
     font-size: 1em;
     display: block;
     background-color: transparent;
@@ -71,23 +71,15 @@ body:has(.wrapper-house) {
     position: relative;
   }
   
-  .js .wrapper-house ul .houseDetail button::before {
+  .js .wrapper-house ul .houseDetail summary::before {
     content: "+";
     padding-right: 0.2em;
     display: inline-block;
     transition: transform 0.3s ease;
   }
   
-  .js .wrapper-house ul .houseDetail button.rotate::before {
+  .js .wrapper-house ul .houseDetail summary.rotate::before {
     transform: rotate(45deg);
-  }
-  
-  .wrapper-house ul .houseDetail button {
-    display: none;
-  }
-  
-  .js .wrapper-house ul .houseDetail form {
-    display: none;
   }
   
   .ShowForm {

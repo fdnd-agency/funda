@@ -6,7 +6,7 @@
   <main>
     <%- include('./partials/theme-button') %>
     <section class="wrapper-house">
-      <h1>jouw favoriete huizen</h1>
+      <h1><%= list.title %></h1>
       <ul>
         <% list.houses.forEach(house => { %>
           <li class="houseDetail">
@@ -26,7 +26,9 @@
                 <p><%= house.f_houses_id.agent %></p>
               </div>
             </div>
-            <button id='house<%= house.id %>'>Rate</button>
+            
+            <details id='house<%= house.id %>'>
+              <summary>Rate</summary>
             <form action="/lijsten/:id" method="post" id='houseForm<%= house.id %>'>
               <input type="hidden" name="house_id" value="<%= house.f_houses_id.id %>">
               <input type="hidden" name="list_id" value="<%= house.f_list_id.id %>">
@@ -47,6 +49,7 @@
               <textarea name="notities" placeholder="schrijf hier je notitie"></textarea>
               <button type="submit" id="houseSubmit<%= house.id %>">submit</button>
             </form>
+          </details>
           </li>
         <% }) %> 
       </ul>
