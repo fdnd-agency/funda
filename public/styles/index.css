@@ -17,3 +17,7 @@
   max-width: 360px;
   height: auto;
 }
+
+.wrapper-index a{
+  color: var(--primary-button);
+}

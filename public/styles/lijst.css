@@ -69,6 +69,7 @@ body:has(.wrapper-house) {
     border: none;
     color: var(--primary-button);
     position: relative;
+    cursor: pointer;
   }
   
   .js .wrapper-house ul .houseDetail summary::before {
@@ -127,6 +128,7 @@ body:has(.wrapper-house) {
   .stars label {
     padding: 0.125em;
     color: var(--primary-black);
+    cursor: pointer;
   }
   
   .stars label::after {
@@ -180,6 +182,7 @@ body:has(.wrapper-house) {
     display: block;
     border: none;
     color: var(--primary-button);
+    background-color: transparent;
     &::before {
       content: "";
     }
@@ -209,14 +212,14 @@ body:has(.wrapper-house) {
   
   .zero-state {
     display: grid;
-    grid-template-rows: 1fr 0fr 1fr;
-    flex-direction: column;
     height: 84vh;
     justify-items: center;
     align-items: end;
     & img{
       height: auto;
       min-width: 360px;
+      background-color: var(--primary-grey);
+      border-radius: 50%;
     }
     & a{
       color: var(--primary-button);

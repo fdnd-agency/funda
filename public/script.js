@@ -40,10 +40,10 @@ houseButtons.forEach((detailsElement) => {
 
   detailsElement.addEventListener('toggle', () => {
     if (detailsElement.open) {
-      summaryElement.textContent = "Close";
+      summaryElement.textContent = "Sluiten";
       summaryElement.classList.add("rotate");
     } else {
-      summaryElement.textContent = "Rate";
+      summaryElement.textContent = "Beoordeel huis";
       summaryElement.classList.remove("rotate");
     }
   });

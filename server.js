@@ -46,8 +46,6 @@ app.get("/lijsten", async function (request, response) {
 
     const [houses, lists] = await Promise.all([housesPromise, listPromise]);
 
-    console.log("houses:", houses);
-
     response.render("lijsten", {
       houses: houses.data,
       lists: lists.data
@@ -58,8 +56,6 @@ app.get("/lijsten", async function (request, response) {
   }
 });
 
-
-
 app.get('/lijsten/:id', function (request, response) {
   fetchJson(apiList + request.params.id + '?fields=*.*.*,houses.f_houses_id.poster_image.id,houses.f_houses_id.poster_image.width,houses.f_houses_id.poster_image.height')
     .then((apiData) => {
@@ -68,59 +64,52 @@ app.get('/lijsten/:id', function (request, response) {
       } else {
         response.render('lijst_empty.ejs');
       }
-    })
-    .catch((error) => {
+    }).catch((error) => {
       console.error('Error fetching data:', error);
       response.status(500).send('Internal Server Error');
     });
 });
 
-
-
-  app.post('/lijsten/:id', function(request, response) {
-    let body = JSON.stringify({
-      house: Number(request.body.house_id),
-      list: Number(request.body.list_id),
-      user: 11,
-      rating: JSON.stringify(request.body.rating),
-      note: request.body.notities
-    });
-  
-    console.log(body);
-  
-    fetchJson(`https://fdnd-agency.directus.app/items/f_feedback/?limit=8000&filter[house][_eq]=${request.body.house_id}`, {
-      method: 'POST',
-      body: body,
-      headers: {
-        'Content-Type': 'application/json; charset=UTF-8',
-      },
-    }).then((postResponse) => {
-      if (request.body.clientside) {
-        response.render('lijst', { added: true });
-      } else {
-        response.redirect(303, '/succes/');
-      }
-    }).catch(error => {
-      console.error('Fetch error:', error);
-      response.status(500).send('Internal Server Error');
-    });
+app.post('/lijsten/:id', function(request, response) {
+  let body = JSON.stringify({
+    house: Number(request.body.house_id),
+    list: Number(request.body.list_id),
+    user: 11,
+    rating: JSON.stringify(request.body.rating),
+    note: request.body.notities
   });
 
-  app.get("/succes", async function (request, response) {
-    try {
-      const apiUsersData = await fetchJson(apiUsers);
-      response.render("succes", {
-        apiUsers: apiUsersData.data
-      });
-    } catch (error) {
-      console.error("Error fetching data:", error);
-      response.status(500).send("Internal Server Error");
+  fetchJson(`https://fdnd-agency.directus.app/items/f_feedback/?limit=8000&filter[house][_eq]=${request.body.house_id}`, {
+    method: 'POST',
+    body: body,
+    headers: {
+      'Content-Type': 'application/json; charset=UTF-8',
+    },
+  }).then((postResponse) => {
+    if (request.body.clientside) {
+      response.render('lijst', { added: true });
+    } else {
+      response.redirect(303, '/succes/');
     }
+  }).catch(error => {
+    console.error('Fetch error:', error);
+    response.status(500).send('Internal Server Error');
   });
+});
 
+app.get("/succes", async function (request, response) {
+  try {
+    const apiUsersData = await fetchJson(apiUsers);
+    response.render("succes", {
+      apiUsers: apiUsersData.data
+    });
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    response.status(500).send("Internal Server Error");
+  }
+});
 
 // 3. Start the web server
-
 // Set the port number for express to listen on
 app.set('port', process.env.PORT || 8000);
 

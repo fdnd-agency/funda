@@ -27,11 +27,11 @@ Voor funda heb ik meerder pagina's gemaakt waarbij je als user je ge creeerde li
 
 2e user story: in zo'n lijst zie ik de huizen die ik heb toegevoegd en kan ik een star rating bij ze achterlaten
 
-##🔎 Kenmerken
+## 🔎 Kenmerken
 <!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met JS gedaan en hoe? Misschien heb je iets met NodeJS gedaan, of heb je een framwork of library gebruikt? -->
 In elke fase van de DLC heb ik meerdere technieken gebruikt om mijn werk zo goed mogelijk te maken
 
-**analyse**
+**__analyse__**
 
 In de analyse fase was ik op de eerste dag bezig geweest met mijn team met het maken van een (de)briefing. In zo'n (de)briefing vind je dingen zoals informatie over het bedrijf en de opdrachtgever, opdrachts omschrijving en bepaalde afspraken over de opdracht.
 
@@ -39,7 +39,7 @@ Bij het bedrijfs bezoek stelde ik wat vragen over de opdracht waarbij ik met ver
 
 als laatst heb ik voor mezelf opgeschreven de structuur van mijn opdracht er uit komt te zien zodat ik alvast een beetje een idee heb met wat ik moet schetsen en bouwen
 
-**ontwerp**
+**__ontwerp__**
 
 Bij het ontwerpen heb ik verschillende soorten schetsen gemaakt zowel op pen en papier als in figma om mij een duidelijker beeld tegeven van hoe mijn website eruit komt te zien.
 
@@ -49,21 +49,28 @@ Daarna heb ik in figma https://www.figma.com/design/TPpMxivU4jLHzIJUg49wrq/Funda
 
 De laatste schets is een zero state schets. Deze schets geeft mij beeld hoe de `lijst.ejs` eruit komt te zien wanneer je een lijst hebt aangemaakt. In zo'n zero state staat een welkoms boodschap met daarbij een korte instructie voor de gebruiker met wat hij precies moet doen.
 
-**bouwen**
+**__bouwen__**
 
-**integreren**
+Heb gewerkt met verschillende soorten code (ejs, css, serverside-js en clientside-js)
+
+* ejs: Deze sprint heb ik vergeleken met de andere sprints meer met partials gewerkt. Partials zijn bepaalde onderdelen die je in een ejs file maakt en vervolgens in een andere ejs kan stoppen met `<%- include('nav.ejs') %>`.
+* css: hier is niet veel bijzonders. Wat hier anders is is dat de pagina's nu hun eigen css file hebben om de code meer leesbaar te maken.
+* serverside-JS: met de server js zorg ik ervoor dat elke pagina de juist data krijgt. Naast dat heb ik met de server ook een functie kunnen maken dat je je star rating op een bepaald his kan sturen naar de directus api met een post method
+* clientside-JS: zelfde als de server maar dit zorgt ervoor dat de pagina niet refresehd en die vervolgens ook bepaalde styling geeft aan elementen die vervolgens laten zien dat zo'n post gelukt is
+
+**__integreren__**
 
 In deze fase is dat ik mijn werk push naar mijn git repo en vervolgens om de tijd er een pull request er van maak. Deze pull request is nodig, omdat ik met de opdracht gever heb afgesproken dat hij af en toe naar mijn code kan kijken en vervolgens er feedback op kan geven.
 
-In deze integratie fase zie je dus hoe ik een pull request maake n wat ik daar allemaal inzet
+In deze integratie fase zie je dus hoe ik een pull request maak en wat ik daar allemaal inzet
 
-**testen**
+**__testen__**
 
 In deze fase voer ik verschillende tests uit om er zeker van te zijn dat het werk dat ik maak ook goed is.
 
 De eerste test die ik heb gedaan is een performance test waarbij ik kijk hoe goed alles op mijn website runt.
 
-De 2de test is een user test
+De 2de test is een user test. Waarbij een user gaat kijken of de scenarios die ik heb geschreven ook duidelijk zijn op mijn website en geeft eventueel feedback.
 
 De 3de test is een korte pe (progressive enhanccement test). Bij zo'n Pe test kijk ik of alles werkend is wanneer javascript uit staat en ook css. Als iets ontbreekt of iets niet werkend is laat ik vervolgens zien hoe ik dat heb opgelost
 
@@ -71,9 +78,13 @@ De 3de test is een korte pe (progressive enhanccement test). Bij zo'n Pe test ki
 <!-- Bij Instalatie staat hoe een andere developer aan jouw repo kan werken -->
 1. clone de code. klik op de groene knop code en clone het of download zip.
 2. als je node hebt open je de terminal. Boven aan vind je de terminal button of klik ctrl +  `
-3. dan type npm start of npm run dev om de server te starten
-4. wil je de server sluiten doe dan dit in de terminal ctrl + c
+3. type `npm install` om alle packages te downloaden om de server te kunnen starten. 
+4. dan type npm start of npm run dev om de server te starten.
+5. wil je de server sluiten doe dan dit in de terminal ctrl + c.
+
 ## 📗Bronnen
+
+link van mijn site: https://proof-of-concept-tw2p.onrender.com/
 
 ## 🖋️Licentie
 

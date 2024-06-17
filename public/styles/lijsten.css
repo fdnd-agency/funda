@@ -16,6 +16,7 @@
 .wrapper-lists ul {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 2em;
 }
 
@@ -36,7 +37,7 @@
 }
 
 .wrapper-lists ul li a:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 .wrapper-lists ul li p {
