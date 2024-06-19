@@ -66,13 +66,18 @@ starForms.forEach((starForm) => {
     fetch(this.action, {
       method: this.method,
       body: new URLSearchParams(starItem),
-    }).then();
-
-    // Wanneer het item succesvol is verzonden, voert hij het volgende uit
-    let formSubmit = this.querySelector("button[type='submit']");
-    formSubmit.classList.add("succes");
-    formSubmit.innerText = "Gelukt"; // Change the text of the button to "Gelukt"
-    formSubmit.disabled = true; // Disable the button
+    }).then(() => {
+      // Wanneer het item succesvol is verzonden, voert hij het volgende uit
+      let formSubmit = this.querySelector("button[type='submit']");
+      formSubmit.classList.add("succes");
+      formSubmit.innerText = "Gelukt"; // Verander de tekst van de knop naar "Gelukt"
+      formSubmit.disabled = true; // Schakel de knop uit
+    })
+    .catch(() => {
+      let formSubmit = this.querySelector("button[type='submit']");
+      formSubmit.innerText = "Mislukt"; 
+      formSubmit.disabled = false; 
+    });
 
     // Voorkom standaardgedrag van het formulier
     event.preventDefault();

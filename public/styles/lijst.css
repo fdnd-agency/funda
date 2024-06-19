@@ -5,255 +5,250 @@
 /**************************/
 
 body:has(.wrapper-house) {
-    height: unset;
-  }
-  
-  .wrapper-house {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100%;
-    justify-content: center;
-  
-    & h1 {
-      text-align: center;
-      padding: 1em 0;
-    }
-  }
-  
-  .wrapper-house ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 90%;
-    gap: 2em;
-  }
-  
-  .wrapper-house ul .houseDetail {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--primary-grey);
-    border-radius: 20px;
-    width: 20em;
-    min-height: 27em;
-    align-items: flex-start;
-    padding: 1em;
-    position: relative;
-    opacity: 0;
-    animation: fadeIn 1s forwards;
-    overflow: hidden;
-  }
-  
-  .wrapper-house ul .houseDetail img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 20px;
-  }
-  
-  .wrapper-house ul .houseDetail > div {
-    display: grid;
-    justify-items: start;
-    grid-template-rows: 0.8fr 1fr;
-    width: 100%;
-    height: auto;
-    border-radius: 20px;
-    color: var(--hover-blue);
-    padding-bottom: 0.2em;
-  }
-  
-  .js .wrapper-house ul .houseDetail summary {
-    font-size: 1em;
-    display: block;
-    background-color: transparent;
-    border: none;
-    color: var(--primary-button);
-    position: relative;
-    cursor: pointer;
-  }
-  
-  .js .wrapper-house ul .houseDetail summary::before {
-    content: "+";
-    padding-right: 0.2em;
-    display: inline-block;
-    transition: transform 0.3s ease;
-  }
-  
-  .js .wrapper-house ul .houseDetail summary.rotate::before {
-    transform: rotate(45deg);
-  }
-  
-  .ShowForm {
-    display: flex !important;
-  }
-  
-  .wrapper-house ul .houseDetail form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 1em auto;
-  
-    &::before {
-      width: 80%;
-      border-top: 1px solid var(--primary-button);
-      content: "";
-      margin: 5px auto;
-    }
-  }
-  
-  .wrapper-house ul .houseDetail form .overall {
+  height: unset;
+}
+
+.wrapper-house {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+
+  & h1 {
     text-align: center;
-    margin-bottom: 1em;
-    border: none;
+    padding: 1em 0;
   }
-  
-  .wrapper-house ul .houseDetail form ul {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 0.8em;
-    margin-bottom: 1em;
+}
+
+.wrapper-house ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 90%;
+  gap: 2em;
+}
+
+.wrapper-house ul .houseDetail {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--primary-grey);
+  border-radius: 20px;
+  width: 20em;
+  min-height: 27em;
+  align-items: flex-start;
+  padding: 1em;
+  position: relative;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  overflow: hidden;
+}
+
+.wrapper-house ul .houseDetail img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.wrapper-house ul .houseDetail > div {
+  display: grid;
+  justify-items: start;
+  grid-template-rows: 0.8fr 1fr;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  color: var(--hover-blue);
+  padding-bottom: 0.2em;
+}
+
+.wrapper-house ul .houseDetail summary {
+  font-size: 1em;
+  display: block;
+  background-color: transparent;
+  border: none;
+  color: var(--primary-button);
+  position: relative;
+  cursor: pointer;
+}
+
+.wrapper-house ul .houseDetail summary::before {
+  content: "+";
+  padding-right: 0.2em;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.wrapper-house ul .houseDetail summary.rotate::before {
+  transform: rotate(45deg);
+}
+
+.wrapper-house ul .houseDetail form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1em auto;
+
+  &::before {
+    width: 80%;
+    border-top: 1px solid var(--primary-button);
+    content: "";
+    margin: 5px auto;
   }
-  
-  .wrapper-house ul .houseDetail form ul li {
-    width: fit-content;
-    margin: auto;
-    text-align: center;
-  }
-  
-  .wrapper-house ul .houseDetail form ul li .stars {
-    display: flex;
-    column-gap: 0.1em;
-  }
-  
-  .stars label {
-    padding: 0.125em;
-    color: var(--primary-black);
-    cursor: pointer;
-  }
-  
-  .stars label::after {
-    content: "★";
-  }
-  .stars input {
-    position: absolute;
-    left: -999em;
-  }
-  
-  input:checked + label,
-  .stars:has(input:nth-of-type(5):checked) label:nth-of-type(-n + 5),
-  .stars:has(input:nth-of-type(4):checked) label:nth-of-type(-n + 4),
-  .stars:has(input:nth-of-type(3):checked) label:nth-of-type(-n + 3),
-  .stars:has(input:nth-of-type(2):checked) label:nth-of-type(-n + 2),
-  .stars:has(input:nth-of-type(1):checked) label:nth-of-type(-n + 1) {
-    color: var(--primary-button);
-  }
-  
-  .stars:has(label:nth-of-type(5):hover) label:nth-of-type(-n + 5),
-  .stars:has(label:nth-of-type(4):hover) label:nth-of-type(-n + 4),
-  .stars:has(label:nth-of-type(3):hover) label:nth-of-type(-n + 3),
-  .stars:has(label:nth-of-type(2):hover) label:nth-of-type(-n + 2),
-  .stars:has(label:nth-of-type(1):hover) label:nth-of-type(-n + 1) {
-    color: var(--primary-button);
-    transform: scale(1.4);
-  }
-  
-  .stars:focus-within {
-    outline: solid 0.1px var(--primary-button);
-    border-radius: 20px;
-  }
-  
-  .wrapper-house ul .houseDetail form textarea[name="notities"] {
-    background-color: #e6f2f7;
-    border: 1px solid var(--primary-orange);
-    border-radius: 20px;
-    resize: vertical;
+}
+
+.wrapper-house ul .houseDetail form .overall {
+  text-align: center;
+  margin-bottom: 1em;
+  border: none;
+}
+
+.wrapper-house ul .houseDetail form ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.8em;
+  margin-bottom: 1em;
+}
+
+.wrapper-house ul .houseDetail form ul li {
+  width: fit-content;
+  margin: auto;
+  text-align: center;
+}
+
+.wrapper-house ul .houseDetail form ul li .stars {
+  display: flex;
+  column-gap: 0.1em;
+}
+
+.stars label {
+  padding: 0.125em;
+  color: var(--primary-black);
+  cursor: pointer;
+}
+
+.stars label::after {
+  content: "★";
+}
+.stars input {
+  position: absolute;
+  left: -999em;
+}
+
+input:checked + label,
+.stars:has(input:nth-of-type(5):checked) label:nth-of-type(-n + 5),
+.stars:has(input:nth-of-type(4):checked) label:nth-of-type(-n + 4),
+.stars:has(input:nth-of-type(3):checked) label:nth-of-type(-n + 3),
+.stars:has(input:nth-of-type(2):checked) label:nth-of-type(-n + 2),
+.stars:has(input:nth-of-type(1):checked) label:nth-of-type(-n + 1) {
+  color: var(--primary-button);
+}
+
+.stars:has(label:nth-of-type(5):hover) label:nth-of-type(-n + 5),
+.stars:has(label:nth-of-type(4):hover) label:nth-of-type(-n + 4),
+.stars:has(label:nth-of-type(3):hover) label:nth-of-type(-n + 3),
+.stars:has(label:nth-of-type(2):hover) label:nth-of-type(-n + 2),
+.stars:has(label:nth-of-type(1):hover) label:nth-of-type(-n + 1) {
+  color: var(--primary-button);
+  transform: scale(1.4);
+}
+
+.stars:focus-within {
+  outline: solid 0.1px var(--primary-button);
+  border-radius: 20px;
+}
+
+.wrapper-house ul .houseDetail form textarea[name="notities"] {
+  background-color: #e6f2f7;
+  border: 1px solid var(--primary-orange);
+  border-radius: 20px;
+  resize: vertical;
+  text-indent: 5px;
+  padding-top: 5px;
+
+  &::placeholder {
     text-indent: 5px;
     padding-top: 5px;
-  
-    &::placeholder {
-      text-indent: 5px;
-      padding-top: 5px;
-    }
   }
-  
-  .wrapper-house ul .houseDetail form button[type="submit"] {
-    font-size: 1em;
-    margin-top: 1em;
-    display: block;
-    border: none;
+}
+
+.wrapper-house ul .houseDetail form button[type="submit"] {
+  font-size: 1em;
+  margin-top: 1em;
+  display: block;
+  border: none;
+  color: var(--primary-button);
+  background-color: transparent;
+  &::before {
+    content: "";
+  }
+}
+
+.wrapper-house ul .houseDetail form button[type="submit"].succes {
+  animation-name: gelukt;
+  transition: 1s;
+  color: rgb(3 185 3);
+  position: relative;
+  animation-duration: 1s;
+  transition: all 500ms cubic-bezier(1, -0.205, 0.625, 0.975);
+
+  &::after {
+    position: absolute;
+    padding-left: 0.5em;
+    opacity: 0;
+    transform: translateX(136px);
+    content: "✓";
+    animation: checkmark forwards;
+    animation-duration: 0.5s;
+    animation-delay: 1.2s;
+  }
+}
+
+/* ==== zero-state ===== */
+
+.zero-state {
+  display: grid;
+  height: 84vh;
+  justify-items: center;
+  align-items: end;
+  & img {
+    height: auto;
+    min-width: 360px;
+    background-color: var(--primary-grey);
+    border-radius: 50%;
+  }
+  & a {
     color: var(--primary-button);
-    background-color: transparent;
-    &::before {
-      content: "";
-    }
   }
-  
-  .wrapper-house ul .houseDetail form button[type="submit"].succes {
-    animation-name: gelukt;
-    transition: 1s;
-    color: rgb(3 185 3);
-    position: relative;
-    animation-duration: 1s;
-    transition: all 500ms cubic-bezier(1, -0.205, 0.625, 0.975);
-  
-    &::after {
-      position: absolute;
-      padding-left: 0.5em;
-      opacity: 0;
-      transform: translateX(136px);
-      content: "✓";
-      animation: checkmark forwards;
-      animation-duration: 0.5s;
-      animation-delay: 1.2s;
-    }
+}
+
+.zero-state p {
+  text-align: center;
+}
+
+.zero-state p:nth-child(3) {
+  margin-left: auto;
+}
+
+@media (width > 44em) {
+  body:has(.wrapper-house) {
+    height: 100vh;
+    overflow-x: hidden;
   }
-  
-  /* ==== zero-state ===== */
-  
-  .zero-state {
-    display: grid;
-    height: 84vh;
-    justify-items: center;
-    align-items: end;
-    & img{
-      height: auto;
-      min-width: 360px;
-      background-color: var(--primary-grey);
-      border-radius: 50%;
-    }
-    & a{
-      color: var(--primary-button);
-    }
+  .wrapper-house {
+    padding: 1em;
+    display: block;
+    height: unset;
+    width: 100vw;
+    height: 100%;
   }
-  
-  .zero-state p{
-    text-align: center;
+
+  .wrapper-house ul {
+    flex-direction: row;
+    width: 100%;
+    max-width: unset;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
   }
-  
-  .zero-state p:nth-child(3){
-    margin-left: auto;
-  }
-  
-  @media (width > 44em) {
-    body:has(.wrapper-house) {
-      height: 100vh;
-      overflow-x: hidden;
-    }
-    .wrapper-house {
-      padding: 1em;
-      display: block;
-      height: unset;
-      width: 100vw;
-      height: 100%;
-    }
-  
-    .wrapper-house ul {
-      flex-direction: row;
-      width: 100%;
-      max-width: unset;
-      flex-wrap: wrap;
-      align-items: flex-start;
-      justify-content: center;
-    }
-  }
-  
+}
