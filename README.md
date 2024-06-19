@@ -33,6 +33,10 @@ In elke fase van de DLC heb ik meerdere technieken gebruikt om mijn werk zo goed
 
 **__analyse__**
 
+* node: dit project werkt met node.js
+* de package die erbij hoort is express: die gebruik ik voor server.js
+* nodemon: dit is optional, maar wel een handige toel om te gebruiken
+
 In de analyse fase was ik op de eerste dag bezig geweest met mijn team met het maken van een (de)briefing. In zo'n (de)briefing vind je dingen zoals informatie over het bedrijf en de opdrachtgever, opdrachts omschrijving en bepaalde afspraken over de opdracht.
 
 Bij het bedrijfs bezoek stelde ik wat vragen over de opdracht waarbij ik met verduidelijking en voorstellen kwam. Daarbij documenteerde ik ook hun antwoord op mijn vraag met daarbij een link met hoe ik dat heb aangepakt.
