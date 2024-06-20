@@ -1,0 +1,62 @@
+/**************************/
+/*                        */
+/*      LIJSTEN.EJS       */
+/*                        */
+/**************************/
+
+.wrapper-lists {
+  padding: 2em;
+}
+
+.wrapper-lists h1 {
+  text-align: center;
+  padding: 1em 0;
+}
+
+.wrapper-lists ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+}
+
+.wrapper-lists ul li {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+.wrapper-lists ul li a {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--primary-grey);
+  border-radius: 20px;
+  align-items: center;
+  padding: 1em;
+  width: 20em;
+  transition: transform 0.2s;
+}
+
+.wrapper-lists ul li a:hover {
+  transform: scale(1.1);
+}
+
+.wrapper-lists ul li p {
+  text-align: center;
+  font-size: 1em;
+  display: block;
+  background-color: transparent;
+  border: none;
+  color: var(--primary-button);
+  position: relative;
+}
+
+@media (width > 44em) {
+  .wrapper-lists ul {
+    flex-direction: row;
+    width: 100%;
+    max-width: unset;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,23 @@
+/**************************/
+/*                        */
+/*      INDEX & SUCCES    */
+/*                        */
+/**************************/
+
+.wrapper-index {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.wrapper-index img {
+  width: 40%;
+  max-width: 360px;
+  height: auto;
+}
+
+.wrapper-index a{
+  color: var(--primary-button);
+}
