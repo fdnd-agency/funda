@@ -40,7 +40,7 @@ There is no need to get the data from any external source, you can just hard-cod
 
 ## Resources
 
- * [Figma](https://www.figma.com/file/QJ6dtYVGW3l2DtFRx7eGdp/Object-(Externally-Shared)?node-id=0%3A1&t=1j0KhuCJpU7vqNuy-1).
+ * [Figma](https://www.figma.com/design/U8ntWPwQTEKsKKg8IDWKWp/FDND---Media-viewer?node-id=0-1&t=5C3GLSMgZC59gQNg-1).
  * [Assets](https://brand.funda.nl)
 
 ## Submitting the project
