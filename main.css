@@ -4,36 +4,6 @@
     box-sizing: border-box;
 }
 
-@font-face {
-    font-family: 'ProximaNovaRegular';
-    src: url('assets/fonts/ProximaNova-Regular_2607783814.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-}
-  
-body {
-    font-family: 'ProximaNovaRegular', sans-serif;
-}
-  
-
-body{
-    /* kleuren */
-    --oranje: #FF9B21;
-    --bruin: #6A281C;
-    --wit: #FFFFFF;
-    --gebrokenwit: #F8F0E6;
-    --lichtblauw: #E5F6FF;
-    --blauw: #2A8FD8;
-
-    /* lettertype */
-    --proxima-nova: 'ProximaNovaRegular', sans-serif;
-
-    /* letterdikte */
-    --dik: 600;
-    --dun: 400;
-}
-
-
 header{
     background-color: var(--oranje);
     width: 100%;
