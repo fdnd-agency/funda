@@ -18,10 +18,14 @@ header{
     margin-left: 1em;
     margin-right: 1em;
     list-style: none;
-}
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1em;
+    flex-wrap: nowrap;
+} 
 
 .foto-nav > * {
-    /* white-space: nowrap; */
     margin-top: 0.5em;
 }
 
@@ -53,15 +57,12 @@ span{
     line-height: 35px;
 }
 
-.foto-nav ul{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    gap: 1em
-
+.foto-nav li div {
+    width: 8em;
+    height: 5em; 
 }
 
-.foto-nav li div {
-    width: 100%;
-    height: 75px; 
+.foto-nav{
+    overflow-x: scroll;
+    scroll-snap-type: mandatory;
 }
