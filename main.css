@@ -23,7 +23,13 @@ header{
     justify-content: space-between;
     gap: 1em;
     flex-wrap: nowrap;
+    overflow-x: scroll;
+    scroll-snap-type: mandatory;
 } 
+
+.foto-nav ul::-webkit-scrollbar{
+    display: none;
+}
 
 .foto-nav > * {
     margin-top: 0.5em;
@@ -62,7 +68,7 @@ span{
     height: 5em; 
 }
 
-.foto-nav{
-    overflow-x: scroll;
-    scroll-snap-type: mandatory;
-}
+/* .foto-nav{
+   overflow: hidden;
+
+} */
