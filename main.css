@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'ProximaNovaRegular';
+    src: url('assets/fonts/ProximaNova-Regular_2607783814.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+  
+body {
+    font-family: 'ProximaNovaRegular', sans-serif;
+}
+  
+
+body{
+    /* kleuren */
+    --oranje: #FF9B21;
+    --bruin: #6A281C;
+    --wit: #FFFFFF;
+    --gebrokenwit: #F8F0E6;
+    --lichtblauw: #E5F6FF;
+    --blauw: #2A8FD8;
+
+    /* lettertype */
+    --proxima-nova: 'ProximaNovaRegular', sans-serif;
+
+    /* letterdikte */
+    --dik: 600;
+    --dun: 400;
+}
+
+
+header{
+    background-color: var(--oranje);
+    width: 100%;
+    height: 75px;
+}
+
+.foto1{ 
+    width: 100%;
+}
+
+.foto-nav > ul{
+    margin-left: 1em;
+    margin-right: 1em;
+    list-style: none;
+}
+
+.foto-nav > * {
+    /* white-space: nowrap; */
+    margin-top: 0.5em;
+}
+
+.foto-nav > ul > li > a > div > img{
+    width: 100%;
+    height: 100%;
+    border-radius: 4px; 
+    object-fit: cover;
+}
+
+.foto-nav li:first-child img{
+    border: solid #E6E6E6 1px;
+}
+
+.foto-nav > ul > li > a > span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.foto-nav > ul > li > a{
+    text-decoration: none;
+}
+
+span{
+    font-weight: 400;
+    font-size: 14px;
+    color: #0071B3;
+    line-height: 35px;
+}
+
+.foto-nav ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 1em
+
+}
+
+.foto-nav li div {
+    width: 100%;
+    height: 75px; 
+}
