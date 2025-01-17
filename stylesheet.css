@@ -17,6 +17,7 @@ body{
     --gebrokenwit: #F8F0E6;
     --lichtblauw: #E5F6FF;
     --blauw: #2A8FD8;
+    --donkerblauw: rgba(0, 113, 179, 1);
 
     /* lettertype */
     --proxima-nova: 'ProximaNovaRegular', sans-serif;
