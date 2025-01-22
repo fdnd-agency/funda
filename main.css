@@ -127,8 +127,8 @@ nav{
 
 .svg-container{
     position: absolute;
-    bottom: 45px;
-    left: 50px;
+    top: 24px;
+    left: 48px;
 }
 
 .foto-nav > ul > li > a > div > img{
@@ -151,6 +151,7 @@ nav{
 
 .foto-nav > ul > li > a{
     text-decoration: none;
+    display: block;
 }
 
 .img-container{
