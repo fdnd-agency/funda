@@ -183,7 +183,6 @@ nav{
     display: flex;
     align-items: center;
     gap: 0.5em;
-    justify-content: flex-end;
 }
 
 .heart-container span{
@@ -362,6 +361,9 @@ section{
         margin-left: auto;
     }
 
+    .alle-media-listelement a{
+        display: flex;
+    }
     .main-img-container{
         display: grid;
         grid-template-columns: 1fr 0.5fr 0.5fr;
@@ -437,4 +439,7 @@ section{
         right: 75px;
     }
 
+    .foto-nav > ul > li > a{
+        display: flex;
+    }
 }
