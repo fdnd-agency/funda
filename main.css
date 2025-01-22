@@ -4,40 +4,108 @@
     box-sizing: border-box;
 }
 
+main{
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 header{
     background-color: var(--oranje);
     width: 100%;
-    display: flex;
-    justify-content: space-around;
     padding-left: 1em;
     padding-right: 1em;
 }
 
-header > a {
-    margin-top: 0.5em;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    text-decoration: none;
+header > nav{
+    padding-top: 0.3em;
+    line-height: 30px;
 }
 
-header > a > span{
+h1{
+    font-size: var(--h1-mobile);
+}
+
+h2{
+    font-size: var(--h2-mobile);
+}
+
+a{
+    text-decoration: none;
+    font-weight: var(--dun);
+    font-size: var(--s);
+}
+
+span{
+    text-decoration: none;
+    color: #0071B3;
+    font-weight: var(--dun);
+    font-size: var(--s);
+}
+
+nav span{ 
     color: var(--wit);
+    /* line-height: 30px; */
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.desktop-header-list-container{
+    display: none;
+    gap: 0.5em;
+    margin-right: auto;
+}
+
+.desktop-header-list > a{
+    color: var(--wit);
+}
+
+.header-list-container{
+    display: flex;
+    gap: 0.5em;
+}
+
+.header-list-element, .menu{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .funda-logo{ 
     margin-top: auto;
     margin-bottom: auto;
+    width: 100px;
+    height: 100%;
+}
+
+.homepage-selector a{
+    text-decoration: none;
+    color: var(--donkerblauw);
+}
+
+.homepage-selector{
+    display: none;
+    margin: 1em 0 1em 0;
 }
 
 .foto1{ 
     width: 100%;
 }
 
-.foto-nav > ul{
-    margin-left: 1em;
-    margin-right: 1em;
+.foto-nav{
+    border-bottom: solid rgba(230, 230, 230, 1);
+    margin-bottom: 1em;
+}
+
+.foto-nav ul{
+    margin: 1em;
     list-style: none;
     display: flex;
     flex-direction: row;
@@ -46,14 +114,21 @@ header > a > span{
     flex-wrap: nowrap;
     overflow-x: scroll;
     scroll-snap-type: mandatory;
+    width: 100%;
 } 
 
 .foto-nav ul::-webkit-scrollbar{
     display: none;
 }
 
-.foto-nav > * {
-    margin-top: 0.5em;
+.foto-nav a{
+    position: relative;
+}
+
+.svg-container{
+    position: absolute;
+    bottom: 45px;
+    left: 50px;
 }
 
 .foto-nav > ul > li > a > div > img{
@@ -71,22 +146,47 @@ header > a > span{
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--donkerblauw);
 }
 
 .foto-nav > ul > li > a{
     text-decoration: none;
 }
 
-span{
-    font-weight: 400;
-    font-size: 14px;
-    color: #0071B3;
-    line-height: 35px;
+.img-container{
+    width: 128px;
+    height: 80px; 
 }
 
-.foto-nav li div {
-    width: 8em;
-    height: 5em; 
+.titel-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    margin-top: 8px;
+}
+
+.titel-container span{
+    color: var(--donkerblauw);
+}
+
+.titel-container svg{
+    display: none;
+}
+
+.alle-media-listelement{
+    display: none;
+}
+
+.alle-media-listelement a{
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    justify-content: flex-end;
+}
+
+.heart-container span{
+    display: none;
 }
 
 .heart-container, .share-container{
@@ -130,7 +230,6 @@ span{
     margin-bottom: 1em;
 }
 
-/* standaard niet laten zien */
 #full-heart {
     display: none; 
 }
@@ -144,16 +243,15 @@ span{
     background-color: var(--wit);
 }  
 
-
 #favoriet {
     position: relative;
 }
 
-.counter {
+.counter{
     line-height: 1em;
     position: absolute;
     top: -5px;
-    right: 13px;
+    right: 10px;
     background-color: var(--donkerblauw);
     color: var(--wit);
     border-radius: 50%;
@@ -166,5 +264,176 @@ span{
     display: none;
 }
 
+.foto2, .foto3, .foto4, .foto5{
+    display: none;
+}
 
+.nieuw-label{
+    background-color: var(--oranje);
+    width: 70px;
+    height: 25px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.nieuw-label span{
+    color: var(--wit);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+section{
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+@media only screen and (min-width: 400px) {
+    h1{
+        font-size: var(--h1-tablet);
+    }
+    a, span{
+        font-size: var(--m);
+    }
+    .counter{
+        top: -5px;
+        right: 20px;
+    }
+}
+
+@media only screen and (min-width: 750px) {
+    .header-list-container{
+        gap: 2em;
+    }
+    .desktop-header-list-container{
+        gap: 2em;
+    }
+}
+
+@media only screen and (min-width: 650px) {
+    h1{
+        font-size: var(--h1-desktop);
+    }
+
+    h2{
+        font-size: var(--h2-desktop);
+    }
+
+    .header-list-element{
+        flex-direction: row;
+        gap: 0.5em;
+    }
+
+    .desktop-header-list-container{
+        display: flex;
+    }
+
+    .menu-list-container{
+        display: none;
+    }
+
+    .funda-logo{
+        margin-right: 2em;
+    }
+
+    .img-container, .svg-container{
+        display: none;
+    }
+
+    .titel-container{
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+
+    .titel-container svg{
+        display: flex;
+    }
+
+    .alle-media-listelement{
+        display: flex;
+        margin-left: auto;
+    }
+
+    .main-img-container{
+        display: grid;
+        grid-template-columns: 1fr 0.5fr 0.5fr;
+        grid-template-rows: 0.5fr 0.5fr;
+        border-radius: 50px;
+        gap: 5px;
+    }
+
+    .foto1{
+        grid-column: 1/2;
+        grid-row: 1/3;
+        border-radius: 10px 0 0 10px;
+        height: 100%;
+    }
+
+    .foto2{
+        display: grid;
+        grid-column: 2/3;
+        grid-row: 1/2;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .foto3{
+        display: grid;
+        width: 100%;
+        height: 100%;
+        grid-row: 1/2;
+        grid-column: 3/4;
+        object-fit: cover;
+        border-radius: 0 10px 0 0;
+    }
+
+    .foto4{
+        display: grid;
+        width: 100%;
+        height: 100%;
+        grid-column: 2/3;
+        grid-row: 2/3;
+        object-fit: cover;
+    }
+
+    .foto5{
+        display: grid;
+        width: 100%;
+        height: 100%;
+        grid-column: 3/4;
+        grid-row: 2/3;
+        object-fit: cover;
+        border-radius: 0 0 10px 0;
+    }
+    
+    .heart-container{
+        gap: 0.5em;
+        width: fit-content;
+        padding: 0 1em 0 1em;
+    }
+    .heart-container span{
+        display: flex;
+    }
+
+    .homepage-selector{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 450px;
+        margin-left: 1em;
+    }
+
+    .counter{
+        top: -1px;
+        right: 75px;
+    }
+
+}

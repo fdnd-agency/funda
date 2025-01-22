@@ -25,4 +25,24 @@ body{
     /* letterdikte */
     --dik: 600;
     --dun: 400;
+
+    /* lettergroote */
+    --s: 12px;
+    --m: 16px;
+    --l: 24px;
+    --xl: 28px;
+    --xxl: 36px;
+
+    /* h2 */
+    --h2-mobile: 20px;
+    --h2-desktop: 28px;
+
+    /* h1 */
+    --h1-mobile: 24px;
+    --h1-tablet: 28px;
+    --h1-desktop: 36px;
+}
+
+li{
+    list-style: none;
 }
