@@ -1,3 +1,14 @@
+
+<img width="310" alt="funda mobile" src="https://github.com/user-attachments/assets/a4d4a62d-6a5f-4e17-a980-bdf2105e833b" />
+<br>
+<img width="603" alt="funda ipad" src="https://github.com/user-attachments/assets/bc3ad10f-b265-419c-abba-5ea776131357" />
+<br>
+<img width="467" alt="funda desktop" src="https://github.com/user-attachments/assets/2b095888-d4ba-4800-b6f7-8144072964e1" />
+
+
+
+
+
 Readme schrijven
 Als opdrachtgevers jouw werk bekijken, wordt eerst de Readme gelezen, om te begrijpen wat je gedaan hebt. Het is belangrijk om dit bestand heel duidelijk te schrijven.
 
