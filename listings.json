@@ -1,0 +1,72 @@
+{
+  "listings": {
+  "id": 4003202,
+  "tiny_id": "40458665",
+  "price": {
+    "amount": 200000,
+    "display": "\u20ac 200.000 k.k.",
+    "is_auction": false,
+    "price_per_m2": "\u20ac 6.667"
+  },
+  "status": "Beschikbaar",
+  "offered_since": "6+ maanden",
+  "acceptance": "In overleg",
+  "property": {
+    "type": "Bungalow, hoekwoning",
+    "construction": "Bestaande bouw",
+    "year_built": 2024,
+    "living_area_m2": 30,
+    "plot_size_m2": 40,
+    "volume_m3": 100,
+    "rooms": 1,
+    "bedrooms": 1,
+    "stories": 1,
+    "energy_label": "Niet beschikbaar"
+  },
+  "address": {
+    "street": "Ruusbroecstraat",
+    "number": 63,
+    "postcode": "8022EB",
+    "city": "Zwolle",
+    "province": "Overijssel",
+    "country": "Nederland",
+    "neighborhood": "Hogenkamp",
+    "coordinates": {
+      "lat": 52.52295,
+      "lng": 6.100328
+    }
+  },
+  "url": "https://www.int.dev.funda.nl/detail/koop/zwolle/huis-ruusbroecstraat-63/40458665/",
+  "media": {
+    "photos": [
+      {
+        "url": "https://cloud.funda.nl/valentina_media/209/514/130_1440.jpg"
+      },
+      {
+        "url": "https://cloud.funda.nl/valentina_media/209/514/133_1440.jpg"
+      },
+      {
+        "url": "https://cloud.funda.nl/valentina_media/209/514/137_1440.jpg"
+      },
+            {
+        "url": "https://cloud.funda.nl/valentina_media/209/514/140_1440.jpg"
+      },
+      {
+        "url": "https://cloud.funda.nl/valentina_media/209/514/142_1440.jpg"
+      },
+      {
+        "url": "https://cloud.funda.nl/valentina_media/209/514/164_1440.jpg"
+      }
+    ]
+  },
+  "agent": {
+    "id": 12,
+    "association": "nvm"
+  },
+  "publication_date": "2024-02-15",
+  "is_sold_or_rented": false,
+  "object_type": "House",
+  "offering_type": "Sale",
+  "maps_url": "https://www.google.nl/maps/place/Ruusbroecstraat+63+8022EB+Zwolle"
+  }
+}

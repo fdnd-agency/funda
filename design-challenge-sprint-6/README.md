@@ -9,6 +9,7 @@
   - [About funda](#about-funda)
   - [Requirements](#requirements)
   - [Resources](#resources)
+  - [Run mock API](#run-mock-api)
   - [Submitting the project](#submitting-the-project)
 
 ## About funda
@@ -42,6 +43,12 @@ There is no need to get the data from any external source, you can just hard-cod
 
  * [Figma](https://www.figma.com/design/U8ntWPwQTEKsKKg8IDWKWp/FDND---Media-viewer?node-id=0-1&t=5C3GLSMgZC59gQNg-1).
  * [Assets](https://brand.funda.nl)
+
+## Run mock API
+```bash
+npm install -g json-server
+json-server --watch listings.json --port 3000
+```
 
 ## Submitting the project
 
