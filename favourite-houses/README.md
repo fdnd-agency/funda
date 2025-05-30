@@ -1,11 +1,5 @@
 # Favourite Houses at funda
 
-## About Funda
-
-Funda (derived from "fundum," the Latin word for estate) is a Dutch organization based in Amsterdam that presents Dutch real estate on the internet. The main website of funda is funda.nl. With approximately 68 million visits per month (4 million unique). funda.nl is one of the most heavily visited housing websites in the Netherlands. The website features the entire Dutch housing market for sale, which is offered through real estate agents.
-
-Funda helps individuals during one of the most significant decisions in life: finding or selling a home. It's an exciting and challenging process, so Funda is committed to providing as much support as possible throughout this journey.
-
 ## Design challenge
 
 Currently funda has a feature that is under utilized with great potential for better UX. The [saved houses section](https://www.funda.nl/en/mijn/bewaard/)(needs login) could be improved into a more collaborative and data enriched experience. Currently it's possible to save a house as favorite and rated it based on a few points but it can be improved.
@@ -31,7 +25,17 @@ Redesign the favorite houses page of a user.
 
 There is a database in Directus you can use.
 
+## Requirements
+
+ * You implement the design according to the [Figma file](https://www.figma.com/file/QJ6dtYVGW3l2DtFRx7eGdp/Object-(Externally-Shared)?node-id=0%3A1&t=1j0KhuCJpU7vqNuy-1). While not required, you have some room for creativity here if you want to improve on this design.
+ * The page must be responsive. There should be a minimum of 3 breakpoints; mobile, tablet and desktop. (See design)
+ * To ensure accessibility, use the appropriate semantic HTML tags and accessible attributes for your elements.
+ * The elements on this page do not need to be interactive. The goal of this assignment is to build a layout.
+ * Do not use any frameworks. Pure HTML and CSS only! While you probably won't need it, you can use javascript if necessary.
+
 ## Resources
+
+### [Figma](https://www.figma.com/file/QJ6dtYVGW3l2DtFRx7eGdp/Object-(Externally-Shared)?node-id=0%3A1&t=1j0KhuCJpU7vqNuy-1).
 
 ### [Backlog](https://github.com/orgs/fdnd-agency/projects/21/views/2)
 
