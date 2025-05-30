@@ -12,12 +12,12 @@
 
 ## Design challenge
 
-In the first semester, you have learned a lot about layout, responsive design, accessibility, interaction and branding. In this 3 week sprint you will apply everything you have learned to rebuild the Listing Detail Page (LDP).
+In the first semester, you have learned a lot about layout, responsive design, accessibility, interaction and branding. In this 3 week sprint you will apply everything you have learned to build the new Listing Detail Page (LDP). Funda made the move to rebrand and make small changes in its current design to become a more modern Funda on the product side.
 
  * Go to https://www.funda.nl/koop/heel-nederland/
  * Click on any listing.
 
-This is the Listing Detail Page. Your assignment is to rebuild this from scratch with HTML and CSS. You can use a bit of javascript, but it's not a necessity.
+This is the Listing Detail Page. Your assignment is to build this from scratch with HTML and CSS. You can use a bit of javascript, but it's not a necessity.
 
 There is no need to get the data from any external source, you can just hard-code the data in your HTML. If interested you can use our Mock API described below.
 
@@ -31,7 +31,7 @@ There is no need to get the data from any external source, you can just hard-cod
 
 ## Resources
 
- * [Figma](https://www.figma.com/design/ZV3q9GITY3nRVlvbRPhRtd/Listing-Detail-Page?node-id=0-1&t=5GAA3i0ibGIpv6VQ-1)
+ * [Figma](https://www.figma.com/design/ZV3q9GITY3nRVlvbRPhRtd/Listing-Detail-Page?node-id=0-1&t=5iAdwvexTyLnu5tm-1)
  * You can find our complete brand guide and download the necessary assets (logo, font, icons, photos etc.) [here](https://brand.funda.nl/).
 
 ## Run mock API
