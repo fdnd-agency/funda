@@ -6,11 +6,9 @@
 
 - [Design challenge: the funda listing page](#design-challenge-the-funda-listing-page)
   - [Table of Contents](#table-of-contents)
-  - [About funda](#about-funda)
   - [Requirements](#requirements)
   - [Resources](#resources)
   - [Run mock API](#run-mock-api)
-  - [Submitting the project](#submitting-the-project)
 
 ## Design challenge
 
@@ -34,7 +32,7 @@ There is no need to get the data from any external source, you can just hard-cod
 ## Resources
 
  * [Figma](https://www.figma.com/design/ZV3q9GITY3nRVlvbRPhRtd/Listing-Detail-Page?node-id=0-1&t=5GAA3i0ibGIpv6VQ-1)
- * [Assets](https://brand.funda.nl)
+ * You can find our complete brand guide and download the necessary assets (logo, font, icons, photos etc.) [here](https://brand.funda.nl/).
 
 ## Run mock API
 ```bash

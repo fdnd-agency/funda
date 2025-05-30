@@ -35,12 +35,9 @@ There is a database in Directus you can use.
 
 ## Resources
 
-### [Figma](https://www.figma.com/file/QJ6dtYVGW3l2DtFRx7eGdp/Object-(Externally-Shared)?node-id=0%3A1&t=1j0KhuCJpU7vqNuy-1)
-
-### [Backlog](https://github.com/orgs/fdnd-agency/projects/21/views/2)
-
-### [Huisstijl](https://brand.funda.nl/)  
-You can find our complete brand guide and download the necessary assets (logo, font, icons, photos etc.) [here](https://brand.funda.nl/).
+ * [Figma](https://www.figma.com/file/QJ6dtYVGW3l2DtFRx7eGdp/Object-(Externally-Shared)?node-id=0%3A1&t=1j0KhuCJpU7vqNuy-1)
+ * [Backlog](https://github.com/orgs/fdnd-agency/projects/21/views/2)
+ * You can find our complete brand guide and download the necessary assets (logo, font, icons, photos etc.) [here](https://brand.funda.nl/).
 
 ### Content
 The data can be found in Directus.
