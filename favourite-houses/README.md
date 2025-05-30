@@ -35,7 +35,7 @@ There is a database in Directus you can use.
 
 ## Resources
 
-### [Figma](https://www.figma.com/file/QJ6dtYVGW3l2DtFRx7eGdp/Object-(Externally-Shared)?node-id=0%3A1&t=1j0KhuCJpU7vqNuy-1).
+### [Figma](https://www.figma.com/file/QJ6dtYVGW3l2DtFRx7eGdp/Object-(Externally-Shared)?node-id=0%3A1&t=1j0KhuCJpU7vqNuy-1)
 
 ### [Backlog](https://github.com/orgs/fdnd-agency/projects/21/views/2)
 
