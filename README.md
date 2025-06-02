@@ -13,6 +13,6 @@ To submit your project:
  * Create a new pull request (PR) with your project. 
  * You can now request a code review from funda. Be sure to request a review from @larsdouweschuitema, @ranjbarreza or @TolgaFunda.
 
-If you have any questions, please send an email to larsschuitema@funda.nl, reza@funda.nl or tolga@funda.nl.
+If you have any questions, please send an email to partners-frontend@funda.nl.
 
 Good luck!
