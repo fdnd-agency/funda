@@ -31,7 +31,7 @@ There is no need to get the data from any external source, you can just hard-cod
 
 ## Resources
 
- * [Figma](https://www.figma.com/design/ZV3q9GITY3nRVlvbRPhRtd/Listing-Detail-Page?node-id=0-1&t=5iAdwvexTyLnu5tm-1)
+ * [Figma]([https://www.figma.com/design/ZV3q9GITY3nRVlvbRPhRtd/Listing-Detail-Page?node-id=0-1&t=5iAdwvexTyLnu5tm-1](https://www.figma.com/design/txHXq9u8hZ44xLBhYWyNSN/LDP?node-id=0-1&t=CdyOkbo4CfJt0oVS-1))
  * You can find our complete brand guide and download the necessary assets (logo, font, icons, photos etc.) [here](https://brand.funda.nl/).
 
 ## Run mock API
