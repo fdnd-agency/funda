@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/nieuwefundastyle.css">
+    <script src="fundascript.js" defer></script>
+</head>
+
+<header>
+    <nav>
+        <div class="navbar-left"> 
+            <button class="button-menu"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" role="presentation" viewBox="0 0 48 48" class="flex mr-1 -mt-1 md:inline"><path d="M7.5 12.5h30a1.5 1.5 0 010 3h-30a1.5 1.5 0 010-3zm0 10h33a1.5 1.5 0 010 3h-33a1.5 1.5 0 010-3zm0 10h22a1.5 1.5 0 010 3h-22a1.5 1.5 0 010-3z"></path></svg>
+                 Menu</button>
+            <img class="logo" src="plaatjess\02-funda-Blue.png" alt="funda-logo">
+        </div>
+        <div class="my-house"> 
+            <a href="https://www.funda.nl/mijn-huis-toevoegen/" class="button-house">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" role="presentation" viewBox="0 0 48 48" class="flex mr-1 -mt-1 md:inline"><path d="M34.718 23.938l3 3.332v15.326a1.5 1.5 0 01-1.497 1.5H11.218a1.5 1.5 0 01-1.5-1.5V27.271l3-3.332v17.157h22V23.938zM23.735 4.998c.082.002.163.02.244.035.1.018.2.036.296.074.099.04.19.103.28.166.069.047.14.09.2.15.026.023.06.033.084.06L42.05 24.6a1.5 1.5 0 01-2.229 2.008l-2.106-2.339-3-3.332-11-12.216-11 12.217-3 3.332-2.101 2.333a1.5 1.5 0 01-2.23-2.007L22.598 5.48c.028-.032.068-.045.098-.073.039-.036.083-.06.125-.093.116-.089.237-.167.368-.217.06-.023.122-.032.184-.046.12-.029.24-.052.362-.052z"></path>
+                </svg>   Mijn Huis</a>
+
+            <a class="alog" href="https://login.funda.nl/account/login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Dfunda.website%26redirect_uri%3Dhttps%253A%252F%252Fwww.funda.nl%252Fauth%252Fsignin-oidc%252F%26response_type%3Dcode%2520id_token%26scope%3Dopenid%2520profile%2520funda_basic%2520funda_login_metadata%26state%3DOpenIdConnect.AuthenticationProperties%253DZDC4vpi4rrahZN3bF6TK9z8O-fQ2tpjvCVStt_15IJk4_HHI9RDJkfnh3oBrW8O0JnH4VGQL0mclHpsePDTIQ9PI0dc2Iuzc8Wz9cmHslVDqqdvMyOf-3nmQnKSNoKmtTYG5enVoU8BkqTDSQJDEMw23Ut9x3i3TlgbW-NZl18HhUgBRRvwZYBtAKZOHQwxN6i4EuRWLOE2XSeng41SWDGBgeZrYUjF0MdOI7tkmtyJWHJpsV73CCQcoLIoTVTAnJKY-Ukv1sjkIkpOBw9n5LrRqfmQFkWXAYY-8Mt4q7pdK9h89%26response_mode%3Dform_post%26nonce%3D638417252361122283.ZGNjM2RlOTQtMDBjYy00NTE5LWEzMGItMDY0ZTQzYmQ1Y2MwY2EyMDI4NzEtNjMyNi00ZWY0LTkwNzQtYjYwOWVjOTFkMDEw%26x-client-SKU%3DID_NET461%26x-client-ver%3D6.7.1.0">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" role="presentation" viewBox="0 0 24 24" class="flex mr-1 -mt-1 md:inline"><path d="M2 12C2 6.20101 6.70101 1.5 12.5 1.5C15.2848 1.5 17.9555 2.60625 19.9246 4.57538C21.8938 6.54451 23 9.21523 23 12C23 12.4258 22.9747 12.8457 22.9254 13.2583C22.5136 12.7806 22.0335 12.3634 21.5003 12.022C21.5054 10.9315 21.3122 9.82972 20.9076 8.7704C19.5761 5.28449 16.2315 2.9818 12.5 2.9818C8.76846 2.9818 5.42395 5.28449 4.09245 8.7704C2.76095 12.2563 3.71867 16.2023 6.5 18.69V17.25C6.5008 17.1823 6.51089 17.115 6.53 17.05C6.78 15.055 8.685 13.5 11 13.5H12.8762C12.5203 13.9552 12.2237 14.4591 11.9982 15H11C10.8175 15.0011 10.6353 15.0161 10.455 15.045C9.06 15.26 8 16.275 8 17.5V19.78C9.39622 20.5952 10.9586 21.001 12.5202 20.9975C12.862 21.5318 13.2797 22.0129 13.7583 22.4254C13.3457 22.4747 12.9258 22.5 12.5 22.5C6.70101 22.5 2 17.799 2 12Z"></path><path fill-rule="evenodd" d="M8.5 8.5C8.5 6.29086 10.2909 4.5 12.5 4.5C13.5609 4.5 14.5783 4.92143 15.3284 5.67157C16.0786 6.42172 16.5 7.43913 16.5 8.5C16.5 10.7091 14.7091 12.5 12.5 12.5C10.2909 12.5 8.5 10.7091 8.5 8.5ZM10 8.5C10 9.88071 11.1193 11 12.5 11C13.8807 11 15 9.88071 15 8.5C15 7.11929 13.8807 6 12.5 6C11.1193 6 10 7.11929 10 8.5Z" clip-rule="evenodd"></path><path fill-rule="evenodd" d="M18.0044 22.5044C20.7658 22.5044 23.0044 20.2658 23.0044 17.5044C23.0044 14.743 20.7658 12.5044 18.0044 12.5044C15.243 12.5044 13.0044 14.743 13.0044 17.5044C13.0044 20.2658 15.243 22.5044 18.0044 22.5044ZM20.0347 15.4741C20.3276 15.767 20.3276 16.2418 20.0347 16.5347L19.0651 17.5044L20.0347 18.4741C20.3276 18.767 20.3276 19.2418 20.0347 19.5347C19.7418 19.8276 19.267 19.8276 18.9741 19.5347L18.0044 18.5651L17.0347 19.5347C16.7418 19.8276 16.267 19.8276 15.9741 19.5347C15.6812 19.2418 15.6812 18.767 15.9741 18.4741L16.9437 17.5044L15.9741 16.5347C15.6812 16.2418 15.6812 15.767 15.9741 15.4741C16.267 15.1812 16.7418 15.1812 17.0347 15.4741L18.0044 16.4437L18.9741 15.4741C19.267 15.1812 19.7418 15.1812 20.0347 15.4741Z" clip-rule="evenodd"></path>
+                </svg>    Inloggen</a>
+        </div>
+    </nav>
+</header>
+
+<!-- SLIDER SECTION -->
+
+<body>
+    <section class="startscherm">
+      <div class="container">
+            <div class="slider-wrapper">
+                <button id="prev-slide" class="slide-button material-symbol-rounded">&#8592;</button>
+                <div id="oude"class="image-list">
+                    <img class="modern-home" src="plaatjess/foto-s-van-een-modern-huizen-door-bas-suurmond-fotografie.webp" alt="img-1" class="image-item">
+                    <img src="plaatjess/OIP.jpeg" alt="img-2" class="image-item">
+                    <img src="plaatjess/husije.jpg" alt="img-3" class="image-item">
+                    <img src="plaatjess/doz.jpg" alt="img-4" class="image-item">
+                    <img src="plaatjess/nieuwtuinjtej.jpeg" alt="img-5" class="image-item">
+                    <img src="plaatjess/Vrijstaand-plattegrond-1-h1200.webp" alt="img-6" class="image-item">
+                    <img src="plaatjess/tuinnnne.jpeg" alt="img-7" class="image-item">
+                    <img src="plaatjess/keukjete.jpg" alt="img-8" class="image-item">
+                    <img src="plaatjess/kukejjtje.png" alt="img-9" class="image-item">
+                    <img src="plaatjess/baddder.jpg" alt="img-10" class="image-item">
+                    <img src="plaatjess/badkamer-ideeen-grijs-wit-6.jpg" alt="img-11" class="image-item">
+                    <img src="plaatjess/badkamer.jpg" alt="img-12" class="image-item">
+                    <img src="plaatjess/kammer.jpeg" alt="img-13" class="image-item">
+                    <img src="plaatjess/kammmmmer.jpeg" alt="img-14" class="image-item">
+                    <img src="plaatjess/husije.jpg" alt="img-15" class="image-item">
+                    <img src="plaatjess/husikamer.jpeg" alt="img-16" class="image-item">
+                    <img src="plaatjess/husisskamer.jpg" alt="img-17" class="image-item">
+                    <img src="plaatjess/sea-you-hotel-kamer-comfort1.jpg" alt="img-18" class="image-item">
+                </div> 
+                <div id="nieuwe" class="image-listo">
+                    <img src="plattegrond-img/juppie.jpeg" alt="plat-1" class="image-item">
+                    <img src="plattegrond-img/nogeen.jpeg" alt="plat-2" class="image-item">
+                    <img src="plattegrond-img/OIP.jpeg" alt="plat-3" class="image-item">
+                    <img src="plattegrond-img/plaate.jpeg" alt="plat-4" class="image-item">
+                </div>
+                <button id="next-slide" class="slide-button material-symbol-rounded">&#8594;</button>
+            </div>
+            <div class="slider-scrollbar">
+                <div class="scrollbar-track">
+                    <div class="scrollbar-thumb"></div>
+                </div>
+            </div> 
+     </div>
+        <Button class="plattegrond-button">
+        <img class="free-map" src="plaatjess/Vrijstaand-plattegrond-1-h1200.webp" alt="plattegrond" width="50px">
+        Plattegrond</Button>
+    </section>
+
+<!-- NEW SECTION "PRICE SECTION" -->
+
+<div class="price">
+    <section class="prijs-section">
+        <h1>Nieuwehaven 239</h1>
+        <p>1751 DA Schagerbrug</p>
+        <a href="https://www.funda.nl/informatie/schagerbrug/t-buurtje-en-buitengebied/">'t Buurtje en Buitengebied</a>
+        <p id="cijfertjes"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" role="presentation" viewBox="0 0 48 48"><path d="M38.5 32.25v-16.5a5 5 0 10-6.25-6.25h-16.5a5 5 0 10-6.25 6.25v16.5a5 5 0 106.25 6.25h16.5a5 5 0 106.25-6.25zm-6.25 3.25h-16.5a5 5 0 00-3.25-3.25v-16.5a5 5 0 003.25-3.25h16.5a5 5 0 003.25 3.25v16.5a5 5 0 00-3.25 3.25zM37 9a2 2 0 11-2 2 2 2 0 012-2zM11 9a2 2 0 11-2 2 2 2 0 012-2zm0 30a2 2 0 112-2 2 2 0 01-2 2zm26 0a2 2 0 112-2 2 2 0 01-2 2z"></path></svg>452m²
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" role="presentation" viewBox="0 0 48 48"><path d="M43 5.5A1.5 1.5 0 0041.5 4h-35A1.5 1.5 0 005 5.5v37A1.5 1.5 0 006.5 44h35a1.5 1.5 0 001.5-1.5zm-35 9h13v5a1.5 1.5 0 001.5 1.5H30v20H8zm25 5a1.5 1.5 0 00-1.5-1.5H24v-5a1.5 1.5 0 00-1.5-1.5H8V7h32v34h-7z"></path></svg>976m²
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" role="presentation" viewBox="0 0 48 48"><path d="M11 20l-3.999 5.999h33.998L37 20h3l3.999 5.999L44 26v9.5a1.5 1.5 0 01-1.5 1.5H39v1.5a1.5 1.5 0 01-3 0V37H12v1.5a1.5 1.5 0 01-3 0V37H5.5A1.5 1.5 0 014 35.5V26l.001-.001L8 20h3zm30 9H7v5h34v-5zM38.5 8A1.5 1.5 0 0140 9.5V20l-9-.001V21.5a1.5 1.5 0 01-1.5 1.5h-11a1.5 1.5 0 01-1.5-1.5v-1.501L8 20V9.5A1.5 1.5 0 019.5 8h29zM28 17h-8v3h8v-3zm9-6H11v5.999h6V15.5a1.5 1.5 0 011.5-1.5h11a1.5 1.5 0 011.5 1.5v1.499h6V11z"></path></svg>9</p>
+            <h2>895.000 k.k.</h2>
+            <div class="maandlasten">
+            <a href="https://www.funda.nl/hypotheek/maandlasten/ing/?id=42235250"><?xml version="1.0" encoding="UTF-8"?>
+                <svg width="30px" height="30px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <title>Calculator</title>
+                    <g id="Calculator" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <path d="M38.5,4 C39.3284271,4 40,4.67157288 40,5.5 L40,5.5 L40,42.5 C40,43.3284271 39.3284271,44 38.5,44 L38.5,44 L9.5,44 C8.67157288,44 8,43.3284271 8,42.5 L8,42.5 L8,5.5 L8.00686658,5.35553999 C8.07955132,4.59488808 8.72030388,4 9.5,4 L9.5,4 Z M37,7 L11,7 L11,41 L37,41 L37,7 Z M16,34 C17.1045695,34 18,34.8954305 18,36 C18,37.1045695 17.1045695,38 16,38 C14.8954305,38 14,37.1045695 14,36 C14,34.8954305 14.8954305,34 16,34 Z M24,34 C25.1045695,34 26,34.8954305 26,36 C26,37.1045695 25.1045695,38 24,38 C22.8954305,38 22,37.1045695 22,36 C22,34.8954305 22.8954305,34 24,34 Z M32,34 C33.1045695,34 34,34.8954305 34,36 C34,37.1045695 33.1045695,38 32,38 C30.8954305,38 30,37.1045695 30,36 C30,34.8954305 30.8954305,34 32,34 Z M16,27 C17.1045695,27 18,27.8954305 18,29 C18,30.1045695 17.1045695,31 16,31 C14.8954305,31 14,30.1045695 14,29 C14,27.8954305 14.8954305,27 16,27 Z M24,27 C25.1045695,27 26,27.8954305 26,29 C26,30.1045695 25.1045695,31 24,31 C22.8954305,31 22,30.1045695 22,29 C22,27.8954305 22.8954305,27 24,27 Z M32,27 C33.1045695,27 34,27.8954305 34,29 C34,30.1045695 33.1045695,31 32,31 C30.8954305,31 30,30.1045695 30,29 C30,27.8954305 30.8954305,27 32,27 Z M16,20 C17.1045695,20 18,20.8954305 18,22 C18,23.1045695 17.1045695,24 16,24 C14.8954305,24 14,23.1045695 14,22 C14,20.8954305 14.8954305,20 16,20 Z M24,20 C25.1045695,20 26,20.8954305 26,22 C26,23.1045695 25.1045695,24 24,24 C22.8954305,24 22,23.1045695 22,22 C22,20.8954305 22.8954305,20 24,20 Z M32,20 C33.1045695,20 34,20.8954305 34,22 C34,23.1045695 33.1045695,24 32,24 C30.8954305,24 30,23.1045695 30,22 C30,20.8954305 30.8954305,20 32,20 Z M32.5,10 C33.3284271,10 34,10.6715729 34,11.5 L34,14.5 C34,15.3284271 33.3284271,16 32.5,16 L15.5,16 C14.6715729,16 14,15.3284271 14,14.5 L14,11.5 C14,10.6715729 14.6715729,10 15.5,10 L32.5,10 Z" id="calculator" fill="#0071B3"></path>
+                    </g>
+                </svg> Wat worden mijn maandlasten?</a>
+            </div>
+    </section>
+</div>
+
+<!-- NEW SECTION "DISCRIPTION" -->
+
+    <section class="omschrijving">
+        <article class="begin">
+        <h1>Omschrijving</h1>
+        <p>Deze prachtige woning, welke vroeger diende als traditionele boerderij, is volledig getransformeerd <p id="ontsz">tot een moderne en comfortabele woonboerderij.</p> <p id="niethelder">De verbouwing met een prachtige uitzicht die je,</p> <p id="onzichtbaar">die drie jaar heeft geduurd (van 2018 tot 2021), heeft van het huis een ware parel gemaakt. </p>
+        </article>
+
+        <div id="vergroten">
+        <p>Bij de verbouwing zijn veel van de authentieke details behouden gebleven, zoals de oude houtenbalken, de originele ramen en deuren. Binnenin wacht een zee van ruimte, met momenteel maar liefst vijf slaapkamers. Daarbij biedt het voorhuis ruimte aan een Bed & Breakfast voor vijf personen. Daarnaast zit er in de woning nog een B&B (appartement) met eigen ingang. Hier kunnen uw gasten genieten van hun eigen ruimte met privacy en comfort. Dit alles bevindt zich op een locatie die het beste van beide werelden biedt. U bent nabij het centrum van het dorp en tegelijkertijd omringd door de pracht van de natuur, terwijl de levendigheid van Schagen ook binnen handbereik is.
+
+            Kom binnen
+            Zodra u via de voordeur de hal betreedt wordt uw aandacht direct getrokken naar de karaktervolle tegeltjes, die u ook terug ziet bij de gezellige openhaard. De hal leidt u verder naar de sfeervolle U-vormige woonkamer. In het hart van deze woonruimte bevindt zich een prachtige ruime keuken. Een uniek en opvallend detail is de oude werkbank die dient als kookeiland. De keuken straalt mede hierdoor een warme sfeer uit. Met een grote eettafel naast de keuken, is deze ruimte ideaal voor gezellige diners met vrienden en familie.
+            In de woonkamer zijn talloze leuke details te ontdekken, waaronder een verlicht nisje, originele deuren en een luik die geopend kan worden naar de eerste verdieping. Voor de kinderen is er een speelkamer, afgescheiden met stalen taatsdeuren. De originele ramen in het woongedeelte zijn bewaard gebleven, waardoor de klassieke uitstraling behouden is. De houtkachel zorgt voor een extra warmte en sfeer tijdens de koelere dagen. Op de begane grond vindt u ook een royale bijkeuken met een wasruimte en extra badkamer. De overige ruimte is benut als kantoor.
+            
+            De bovenverdieping is werkelijk een droom die uitkomt, hier voelt u de zorg en vakmanschap waarmee deze woning is verbouwd. Hier vindt u een stijlvolle master bedroom met recht tegenover op de gang een ruime inloopkast (welke tevens omgebouwd kan worden tot slaapkamer). Voor de kinderen zijn er twee fantastische kinderkamers gecreëerd, elk met een eigen thema. De zeer ruime badkamer heeft een dubbele wastafel, een ligbad, een douche, een toilet en bidet. Op de tweede verdieping bevinden zich nog twee ruime slaapkamers, ideaal voor gasten, grote gezinnen of als hobbyruimte.
+            
+            B&B (voorhuis)
+            De B&B heeft een eigen privé-ingang en oprit, zodat u en de gasten ongestoord van elkaar kunnen leven. Een zitplek in de eigen tuin van het voorhuis biedt de perfecte plek voor gasten om te ontspannen en te genieten van hun vakantie. Het voorhuis is voorzien van zowel een eigen keuken als eigen badkamer. Op de eerste verdieping vindt u twee slaapkamers. Deze plek is perfect voor diegene die opzoek zijn naar een eigen plekje met privacy of mensen die ervan dromen om een B&B te runnen. Dit geheel verleent zich ook uitstekend voor 'kangoeroe wonen'
+            
+            B&B (2) (appartement)
+            Aan de voorzijde van de woning bevindt zich nog een individuele B&B op de eerste verdieping, met een eigen ingang. Dit appartement heeft een volledig uitgeruste keuken, een eigen badkamer en een slaapkamer. Deze ruimte is perfect geschikt voor de verhuur van een Bed & Breakfast of voor de toekomst, bijvoorbeeld wanneer de kinderen ouder worden. Hier is ook de optie om eventueel een tweede slaapkamer op de begane grond te realiseren
+            
+            De B&B's zijn onderling aan elkaar verbonden, dit creërt een zeldzame gelegenheid voor een gastenverblijf of groepsverhuur, geschikt voor 7 tot mogelijk 9 personen. Deze veelzijdige woning zorgt ook voor meer capaciteit, voor kinderen die later op zichzelf willen wonen, of als kangoeroewoning.
+            
+            Buiten
+            Dankzij de gunstige ligging van de tuin op het zuidoosten kunt u de hele dag genieten van de zon. Voor kinderen is het een waar speelparadijs. Met een ingegraven trampoline en twee speeltoestellen kunnen zij zich hier uren vermaken. In de tuin vindt u een schuuropslag met een royale veranda, compleet met een gezellige houtkachel waar zomers precies het avondzonnetje invalt door de juiste ligging. Met uw eigen oprit heeft u voldoende parkeerruimte voor meerdere auto’s.
+            
+            Omgeving
+            De woning is gelegen in het buitengebied van Schagerbrug. Schagerbrug is een gezellig dorp dat bekend staat om zijn rustige en landelijke sfeer, omgeven door prachtige natuur en waterwegen. Het is een ideale plek voor liefhebbers van het buitenleven. Op fietsafstand (6 km) vindt u uitgestrekte stranden en duinen waar u heerlijk kunt wandelen, fietsen of genieten van een dagje aan zee. Het is de perfecte plek om te ontspannen en te genieten van de natuur. In het dorp vindt u een basisschool, sportvereniging en eetgelegenheden. Op 10 minuten rijden vindt u Schagen, een gezellige stad met vele terrassen en winkels. Met een bushalte voor de deur brengt de bus u met een directe verbinding naar de stad, waar zich een treinstation bevindt. Mocht u liever een grotere stad opzoeken, dan bent u binnen een half uur in het hart van Alkmaar dankzij de gunstige ligging ten opzichte van de A9.
+            
+            Perceeloppervlakte: 976 m²
+            Inhoud: 1.677 m³
+            Woonoppervlakte: 452 m²
+            Berging: 10 m²
+            Bouwjaar: 1890
+            
+            Voor meer informatie kunt u de uitgebreide brochure aanvragen, tevens kunt u diverse aanvullende documenten (onder andere NVM vragenlijst, kadastrale kaart, berekening gebruiksoppervlakte & inhoud, bestemming, enzovoort) downloaden via onze website (met een Klaver Profiel).</p>
+            </div>
+
+            <button id="plusbutton">+ Lees de volledige omschrijving</button>
+
+    </section>
+</body>
+</html>
