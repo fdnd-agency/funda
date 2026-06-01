@@ -82,5 +82,6 @@ You can view the response in your browser or retrieve it using fetch/async-await
 ## Resources
 
 - API response: https://fdnd-agency.directus.app/items/f_houses
-- Figma: https://www.figma.com/design/ZV3q9GITY3nRVlvbRPhRtd/Listing-Detail-Page?node-id=0-1&p=f&t=a1VwtiMBJr01U0i5-0
+- Figma: https://www.figma.com/design/txHXq9u8hZ44xLBhYWyNSN/LDP?node-id=0-1&p=f&m=dev
+- Figma password: 18hyrvert7a
 - Funda brand guide and assets: https://brand.funda.nl/
