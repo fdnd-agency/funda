@@ -55,7 +55,9 @@ This opens a Listing Detail Page (LDP) that you can use as visual and content re
 
 Favorites on Funda are shown here: https://www.funda.nl/favorieten/
 
-This page requires login. If needed, you can create an account using any email address.
+On funda.nl this page requires login, but for this assignment it is reference only.
+
+You do not need to implement login or authentication. Your favorites overview can be a regular page without login.
 
 ## Requirements
 
@@ -64,6 +66,7 @@ This page requires login. If needed, you can create an account using any email a
 - You make API calls to fetch housing data.
 - The LDP includes a heart icon to add/remove a house to/from favorites.
 - Favorited houses are stored and shown in a separate favorites overview page.
+- Implementing login/authentication is not required for this assignment.
 - You apply principles from semesters 1 and 2 (semantics, accessibility, responsive design, SSR/PE where relevant).
 - You work within the Funda brand identity and design guidelines.
 - You implement your design according to the provided Figma file.
